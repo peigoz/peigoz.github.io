@@ -26,9 +26,7 @@ jobs:
       - name: Deploy
         uses: TencentCloudBase/cloudbase-action@v1.1.1
         with:
-          secretId: ${{ AKIDfiiWJx9XdWAj4ReXDgFZkfXCfvoVbnEl }}
-          secretKey: ${{ Wp7By5xmQFxfAUhkeddQ0LUN2c68zav0 }}
-          envId: ${{ peigo-1605fd }}
+          secretId: ${{ secrets.SECRET_ID }}
+          secretKey: ${{ secrets.SECRET_KEY }}
+          envId: ${{ secrets.ENV_ID }}
           staticSrcPath: docs/.vuepress/dist
-
-          
