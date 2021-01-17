@@ -40,7 +40,7 @@ jobs:
       - name: Checkout
         uses:
           actions/checkout@v2
-        # 生成静态文件
+        # 生成静态文件#
       - name: Build
         run: npm install && npm run docs:build
       - name: Deploy static to Tencent CloudBase
