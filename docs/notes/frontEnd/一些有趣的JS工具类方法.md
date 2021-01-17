@@ -8,8 +8,8 @@ tags:
 publish: true
 ---
 
-::: primary 数组取随机数
-
+::: primary
+数组取随机数
 :::
 
 ```javascript
