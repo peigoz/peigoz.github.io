@@ -13,7 +13,7 @@ const nav = [
       //   { text: 'Html-Css', link: '/categories/html-css/' }
       // ]},
       // {text: '团队协作',items:[
-      //   { text: 'Git-Github', link: '/categories/git-github/' }
+      //   { text: 'Git-Github', link: '/categories/git-github/' }q
       // ]}
     ],
   },

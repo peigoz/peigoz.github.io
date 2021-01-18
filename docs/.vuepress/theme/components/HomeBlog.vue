@@ -9,7 +9,8 @@
         <a href="#blog-top"
            class="home-more"></a>
       </div>
-      <bubbles-effect :options="options"></bubbles-effect>
+      <!-- <bubbles-effect :options="options"></bubbles-effect> -->
+      <component v-if="bubbles" :is="bubbles" :options="options"></component>
       <div id="blog-top"></div>
       <!-- <div>
         <ModuleTransition>
@@ -115,6 +116,7 @@ export default {
         densety: 0.5, // 气泡密度 越大越密集(建议不要大于1)
         clearOffset: 0.4, // 气泡消失距离[0-1] 越大越晚消失
       },
+      bubbles: null,
     }
   },
   computed: {
@@ -163,6 +165,15 @@ export default {
     import('vue-canvas-effect/src/components/bubbles').then((module) => {
       this.bubbles = module.default
     })
+  },
+  methods: {
+    // 获取当前页码
+    getCurrentPage(page) {
+      this._setPage(page)
+      setTimeout(() => {
+        window.scrollTo(0, this.heroHeight)
+      }, 100)
+    },
     // 根据分类获取页面数据
     getPages() {
       let pages = this.$site.pages
