@@ -160,15 +160,9 @@ export default {
   mounted() {
     this.recoShow = true
     this._setPage(this._getStoragePage())
-  },
-  methods: {
-    // 获取当前页码
-    getCurrentPage(page) {
-      this._setPage(page)
-      setTimeout(() => {
-        window.scrollTo(0, this.heroHeight)
-      }, 100)
-    },
+    import('vue-canvas-effect/src/components/bubbles').then((module) => {
+      this.bubbles = module.default
+    })
     // 根据分类获取页面数据
     getPages() {
       let pages = this.$site.pages
