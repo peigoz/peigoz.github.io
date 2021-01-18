@@ -1,12 +1,12 @@
 const nav = [
   { text: '主页', link: '/', icon: 'reco-home' },
-  { text: '学习笔记', link: '/notes/', icon: 'icon-book iconfont'},
+  { text: '学习笔记', link: '/notes/', icon: 'icon-book iconfont' },
   {
     text: '课外分类',
     icon: 'reco-category',
     items: [
-      { text: '博客', link: '/categories/Blog/',icon:'reco-blog' },
-      { text: '软件', link: '/categories/SoftWare/',icon:'fa-archive fas' },
+      { text: '博客', link: '/categories/Blog/', icon: 'reco-blog' },
+      { text: '软件', link: '/categories/SoftWare/', icon: 'fa-archive fas' },
       // { text: '后端', link: '/categories/' },
       // { text: '团队协作', link: '/team/categories/' },
       // {text: '前端',items:[
