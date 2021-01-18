@@ -71,14 +71,14 @@ const plugins = [
       ribbonAnimationShow: true, // 滑动彩带
     },
   ],
-  // [
-  //   '@vuepress/blog',
-  //   {
-  //     sitemap: {
-  //       hostname: 'https://www.peigp.top',
-  //     },
-  //   },
-  // ],
+  [
+    '@vuepress/blog',
+    {
+      sitemap: {
+        hostname: 'https://www.peigp.top',
+      },
+    },
+  ],
   [
     'vuepress-plugin-sponsor',
     {
