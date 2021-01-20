@@ -31,7 +31,12 @@ const sidebar = {
     {
       title: '前端',
       collapsable: true,
-      children: ['/notes/frontEnd/HTML常见问题', '/notes/frontEnd/CSS知识点','/notes/frontEnd/一些有趣的JS工具类方法'],
+      children: [
+        '/notes/frontEnd/HTML常见问题',
+        '/notes/frontEnd/CSS知识点',
+        '/notes/frontEnd/JS类型转换',
+        '/notes/frontEnd/一些有趣的JS工具类方法',
+      ],
     },
   ],
 }

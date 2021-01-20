@@ -90,6 +90,14 @@ const plugins = [
       duration: 2000,
     },
   ],
+  [
+    '@vuepress/last-updated',
+    {
+      dateOptions: {
+        hour12: false,
+      },
+    },
+  ],
 ]
 
 module.exports = plugins

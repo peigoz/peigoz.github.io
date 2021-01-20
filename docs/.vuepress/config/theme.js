@@ -6,8 +6,8 @@ const themeConfig = {
   logo: '/listen.png',
   author: 'peigo',
   authorAvatar: '/avatar.jpg',
-  record: '粤 ICP 备 19037674 号 - 1',
-  recordLink: 'https://www.miit.gov.cn/',
+  record: '粤ICP备19037674号',
+  recordLink: 'https://beian.miit.gov.cn',
   startYear: '2020',
   smoothScroll: true,
   // 博客配置
