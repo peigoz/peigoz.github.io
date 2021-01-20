@@ -10,7 +10,7 @@ module.exports = {
     },
   },
   title: '别来无恙',
-  description: '一枚小前端，专注于分享我的所见所闻',
+  description: '懂得越多，写出来的BUG也越加高级',
   head: [
     ['link', { rel: 'icon', href: `/favicon.ico` }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],

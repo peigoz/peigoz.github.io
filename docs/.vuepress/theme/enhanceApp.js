@@ -12,8 +12,11 @@ export default async ({ Vue, siteData, isServer, router }) => {
   if (!isServer) {
     // const bubbles = await (await import('vue-canvas-effect/src/components/bubbles')).default
     // Vue.component(bubbles.name, bubbles)
+    //我的阿里图标
+    addLinkToHead('//at.alicdn.com/t/font_2330514_5481d1wip64.css')
+
+    //reco
     addLinkToHead('//at.alicdn.com/t/font_1030519_2ciwdtb4x65.css')
-    addLinkToHead('//at.alicdn.com/t/font_2330514_4fvtpq5qd67.css')
     addScriptToHead('//kit.fontawesome.com/51b01de608.js')
     registerCodeThemeCss(siteData.themeConfig.codeTheme)
   }

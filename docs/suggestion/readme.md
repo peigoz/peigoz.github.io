@@ -2,9 +2,15 @@
 title: 留言板
 date: 2021-1-12
 showSponsor: true
+subSidebar: false
+# layout: DynamicBackground
 ---
 
-::: primary 介绍
+<ClientOnly>
+  <DynamicBackground/>
+</ClientOnly>
+
+::: primary 留言板
 
 ### 对此博客有任何疑问欢迎留言
 

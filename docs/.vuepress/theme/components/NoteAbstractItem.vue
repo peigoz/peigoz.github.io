@@ -261,15 +261,15 @@ export default {
 }
 
 .center::before {
-  border-top: 2px solid var(--border-color);
-  border-bottom: 2px solid var(--border-color);
+  border-top: 3px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
   -webkit-transform: scale3d(0, 1, 1);
   transform: scale3d(0, 1, 1);
 }
 
 .center::after {
-  border-left: 2px solid var(--border-color);
-  border-right: 2px solid var(--border-color);
+  border-left: 3px solid var(--border-color);
+  border-right: 3px solid var(--border-color);
   -webkit-transform: scale3d(1, 0, 1);
   transform: scale3d(1, 0, 1);
 }

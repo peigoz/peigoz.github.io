@@ -6,7 +6,7 @@ const nav = [
     icon: 'reco-category',
     items: [
       { text: '博客', link: '/categories/Blog/', icon: 'reco-blog' },
-      { text: '软件', link: '/categories/SoftWare/', icon: 'fa-archive fas' },
+      { text: '软件', link: '/categories/SoftWare/', icon: 'icon-yingyongruanjian iconfont' },
       // { text: '后端', link: '/categories/' },
       // { text: '团队协作', link: '/team/categories/' },
       // {text: '前端',items:[

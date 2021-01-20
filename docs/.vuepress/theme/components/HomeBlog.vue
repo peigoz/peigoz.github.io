@@ -4,13 +4,17 @@
          :style="{ ...bgImageStyle }">
       <div class='content'>
         <div class='boxx'>
-          <Boxx />
+          <keep-alive>
+            <Boxx />
+          </keep-alive>
         </div>
         <a href="#blog-top"
            class="home-more"></a>
       </div>
       <!-- <bubbles-effect :options="options"></bubbles-effect> -->
-      <component v-if="bubbles" :is="bubbles" :options="options"></component>
+      <component v-if="bubbles"
+                 :is="bubbles"
+                 :options="options"></component>
       <div id="blog-top"></div>
       <!-- <div>
         <ModuleTransition>
@@ -93,7 +97,7 @@ import NoteAbstract from '@theme/components/NoteAbstract'
 import pagination from '@theme/mixins/pagination'
 import { ModuleTransition, RecoIcon } from '@vuepress-reco/core/lib/components'
 import PersonalInfo from '@theme/components/PersonalInfo'
-import { getOneColor } from '@theme/helpers/other'
+import { getOneColor, getOneBgImg } from '@theme/helpers/other'
 
 export default {
   mixins: [pagination],
@@ -113,8 +117,8 @@ export default {
       options: {
         color: 'rgba(225,225,225,0.5)', //气泡颜色
         radius: 20, //气泡半径
-        densety: 0.5, // 气泡密度 越大越密集(建议不要大于1)
-        clearOffset: 0.4, // 气泡消失距离[0-1] 越大越晚消失
+        densety: 0.4, // 气泡密度 越大越密集(建议不要大于1)
+        clearOffset: 0.3, // 气泡消失距离[0-1] 越大越晚消失
       },
       bubbles: null,
     }
@@ -143,7 +147,9 @@ export default {
         overflow: 'hidden',
         background: `
           url(${
-            this.$frontmatter.bgImage
+            getOneBgImg()
+              ? getOneBgImg()
+              : this.$frontmatter.bgImage
               ? this.$withBase(this.$frontmatter.bgImage)
               : require('../images/bg.svg')
           }) center/cover no-repeat

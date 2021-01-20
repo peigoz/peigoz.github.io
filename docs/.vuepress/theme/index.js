@@ -10,7 +10,6 @@ module.exports = (options, ctx) => ({
       Object.keys((siteConfig.locales && themeConfig.locales) || {}).some(
         base => themeConfig.locales[base].algolia
       )
-      console.log(__dirname);
     return {
       '@AlgoliaSearchBox': isAlgoliaSearch
         ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')

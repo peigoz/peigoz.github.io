@@ -6,4 +6,9 @@ export default async ({
   siteData, // 站点元数据
   isServer, // 当前应用配置是处于 服务端渲染 或 客户端
 }) => {
+  // https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN
+  // if(!isServer){
+  //   const bubbles = await (await import('vue-canvas-effect/src/components/bubbles')).default
+  //   Vue.component(bubbles.name, bubbles)
+  // }
 }
