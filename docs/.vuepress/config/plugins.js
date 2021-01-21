@@ -98,6 +98,7 @@ const plugins = [
       },
     },
   ],
+  ['@vuepress-reco/extract-code'],
 ]
 
 module.exports = plugins
