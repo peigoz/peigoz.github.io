@@ -41,6 +41,7 @@ const imageMap = {
     '/images/animePerson/7.jpg',
     '/images/animePerson/8.jpg',
     '/images/animePerson/9.jpg',
+    '/images/animePerson/50.jpg',
   ],
   animeScenery: [
     '/images/animeScenery/1.jpg',
@@ -70,6 +71,8 @@ const imageMap = {
     '/images/plant/7.jpg',
     '/images/plant/8.jpg',
     '/images/plant/9.jpg',
+    '/images/plant/11.jpg',
+    '/images/plant/12.jpg',
   ],
   realPerson: [
     '/images/realPerson/1.jpg',
