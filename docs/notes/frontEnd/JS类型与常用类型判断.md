@@ -12,9 +12,9 @@ publish: true
 ## JS 数据类型
 
 1. JS 目前有 8 种数据类型:分为基本数据类型和引用数据类型两大类。  
-   基本数据类型有 7 种:Number、String、Boolean、Null、undefined、symbol(ES6)、BigInt(ES2020）  
+   基本数据类型有 7 种:number、string、boolean、null、undefined、symbol(ES6)、BigInt(ES2020）  
     引用数据类型只有 1 种:Object
-2. Object 包含以下多种引用类型:Function,Array,Object，Date、正则、Math
+2. Object 包含以下多种引用类型:Function,Array,Object，Date、RegExp、Math、String、Boolean、Number(区别前面三种是指JS内置的对象，通过 new 创建，如[`a = new String('aaa')`])和自定义类
 
 ## undefined 与 null 的区别
 
@@ -159,3 +159,50 @@ fn();  //b是自动释放，b所指向的对象是在后面的某个时刻被垃
    let a = new Person()
    console.log(a instanceof Person)
    ```
+
+## 通用数据类型判断
+
+1. 除了自定义类使用 instanceof 判断外，其他皆可使用 Object.prototype.toString.call()
+
+```JavaScript
+// 是否是字符串
+function isString(value){
+   return Object.prototype.toString.call(value) == "[object String]";
+}
+// 是否是数字
+function isNumber(value){
+   return Object.prototype.toString.call(value) == "[object Number]";
+}
+// 是否是布尔值
+function isBoolean(value){
+   return Object.prototype.toString.call(value) == "[object Boolean]";
+}
+// 是否undefined
+function isUndefined(value){
+   return Object.prototype.toString.call(value) == "[object Undefined]";
+}
+// 是否是null
+function isNull(value){
+   return Object.prototype.toString.call(value) == "[object Null]";
+}
+// 是否数组
+function isArray(value){
+   return Object.prototype.toString.call(value) == "[object Array]";
+}
+// 是否是函数
+function isFunction(value){
+   return Object.prototype.toString.call(value) == "[object Function]";
+}
+// 是否是对象
+function isObject(value){
+   return Object.prototype.toString.call(value) == "[object Object]";
+}
+// 是否是正则表达式
+function isRegExp(value){
+   return Object.prototype.toString.call(value) == "[object RegExp]";
+}
+// 是否是日期对象
+function isDate(value){
+   return Object.prototype.toString.call(value) == "[object Date]";
+}
+```

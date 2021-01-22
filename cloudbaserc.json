@@ -11,7 +11,7 @@
       "vuepress": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
-          "buildCommand": "git add . && git commit -m 'JS类型与常用类型判断' && npm run docs:build",
+          "buildCommand": "git add . && git commit -m '' && npm run docs:build",
           "outputPath": "docs/.vuepress/dist",
           "ignore": [
             ".git",
