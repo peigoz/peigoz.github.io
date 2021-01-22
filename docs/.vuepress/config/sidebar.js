@@ -37,6 +37,7 @@ const sidebar = {
         '/notes/frontEnd/JS类型转换',
         '/notes/frontEnd/JS类型与常用类型判断',
         '/notes/frontEnd/JS事件',
+        '/notes/frontEnd/JS函数',
         '/notes/frontEnd/JS与DOM坐标计算有关的操作属性',
         '/notes/frontEnd/一些有趣的JS工具类方法',
       ],

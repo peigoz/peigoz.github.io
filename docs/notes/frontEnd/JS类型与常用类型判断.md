@@ -153,7 +153,7 @@ fn();  //b是自动释放，b所指向的对象是在后面的某个时刻被垃
    console.log(Array.isArray(arr)) //true
    ```
 
-6. Function:一般只会用 instanceof 判断是否为某个类下面的实例
+6. Function:使用typeof检查一个函数对象时，会返回function。一般只会用 instanceof 判断是否为某个类下面的实例
 
    ```JavaScript
    let a = new Person()

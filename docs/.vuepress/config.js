@@ -30,4 +30,7 @@ module.exports = {
   theme: 'reco',
   themeConfig,
   plugins,
+  markdown: {
+    lineNumbers: true,
+  },
 }
