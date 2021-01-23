@@ -18,5 +18,8 @@
     "shiftkey",
     "substr",
     "yingyongruanjian"
+  ],
+  "cSpell.ignoreWords": [
+    "proto"
   ]
 }

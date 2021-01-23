@@ -14,7 +14,7 @@ publish: true
 1. JS 目前有 8 种数据类型:分为基本数据类型和引用数据类型两大类。  
    基本数据类型有 7 种:number、string、boolean、null、undefined、symbol(ES6)、BigInt(ES2020）  
     引用数据类型只有 1 种:Object
-2. Object 包含以下多种引用类型:Function,Array,Object，Date、RegExp、Math、String、Boolean、Number(区别前面三种是指JS内置的对象，通过 new 创建，如[`a = new String('aaa')`])和自定义类
+2. Object 包含以下多种引用类型:Function,Array,Object，Date、RegExp、Math、String、Boolean、Number(区别前面三种是指 JS 内置的对象，通过 new 创建，如[`a = new String('aaa')`])和自定义类
 
 ## undefined 与 null 的区别
 
@@ -101,6 +101,12 @@ function fn(){
 fn();  //b是自动释放，b所指向的对象是在后面的某个时刻被垃圾回收器回收。
 ```
 
+## 垃圾回收（GC）
+
+1. 当一个对象没有任何的变量或属性对它进行引用，此时我们将永远无法操作该对象，此时这种对象就是一个程序垃圾，这种垃圾过多会占用大量内存空间，导致程序变慢。
+2. 在 JS 中拥有自动的垃圾回收机制，会自动将这些垃圾对象从内存中销毁，我们不需要也不能进行垃圾回收的操作。
+3. 我们需要做的只是要将不再使用的对象设置为 null 即可。
+
 ## 常用类型判断
 
 1. Number、String、Boolean、BigInt:判断是否是该类型用 typeof,判断具体用全等: === 、`toString()`
@@ -153,7 +159,7 @@ fn();  //b是自动释放，b所指向的对象是在后面的某个时刻被垃
    console.log(Array.isArray(arr)) //true
    ```
 
-6. Function:使用typeof检查一个函数对象时，会返回function。一般只会用 instanceof 判断是否为某个类下面的实例
+6. Function:使用 typeof 检查一个函数对象时，会返回 function。一般只会用 instanceof 判断是否为某个类下面的实例
 
    ```JavaScript
    let a = new Person()

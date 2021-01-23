@@ -1,5 +1,5 @@
 ---
-title: JS函数与作用域
+title: JS函数
 date: 2021-01-22 17:41:15
 categories:
   - JavaScript

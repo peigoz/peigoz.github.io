@@ -38,6 +38,8 @@ const sidebar = {
         '/notes/frontEnd/JS类型与常用类型判断',
         '/notes/frontEnd/JS事件',
         '/notes/frontEnd/JS函数',
+        '/notes/frontEnd/JS作用域与执行上下文',
+        '/notes/frontEnd/JS原型与原型链',
         '/notes/frontEnd/JS与DOM坐标计算有关的操作属性',
         '/notes/frontEnd/一些有趣的JS工具类方法',
       ],
