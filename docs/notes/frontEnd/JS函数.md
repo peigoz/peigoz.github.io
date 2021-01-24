@@ -116,6 +116,26 @@ per1.sayName(); //apple
    2. 不会污染外部（全局）命名空间
    3. 用来它编写 js 模块
 
+```JavaScript
+(function () { //匿名函数自调用
+    var a = 3
+    console.log(a + 3)
+})()
+
+;(function () {
+    var a = 1
+    function test () {
+      console.log(++a)
+    }
+    window.$ = function () { // 向外暴露一个全局函数
+      return {
+        test: test
+      }
+    }
+  })()
+$().test() // 1. $是一个函数 2. $执行后返回的是一个对象
+```
+
 ## 函数的 arguments
 
 1. 在调用函数时，浏览器每次都会传递进了两个隐含的参数。
@@ -154,7 +174,7 @@ var result = create()(5) // returns 120 (5 * 4 * 3 * 2 * 1)
 1. 可以使用 return 来设置函数的返回值。
 2. return 后的值将会作为函数的执行结果返回。可以定义一个变量，来接受该结果。
 3. 在函数中 return 后的语句都不会执行。如果 return 语句后不跟任何值就相当于返回一个 undefined，如果函数中不写 return 语句，也会返回 undefined。
-4. return返回值可以是任意的数据类型，也可以是一个对象、函数。
+4. return 返回值可以是任意的数据类型，也可以是一个对象、函数。
 
 ## 函数中的 this
 
