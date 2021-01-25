@@ -99,6 +99,13 @@ const plugins = [
     },
   ],
   ['@vuepress-reco/extract-code'],
+  // [
+  //   '@vuepress/google-analytics',
+  //   {
+  //     ga: '188010144', // UA-00000000-0
+  //   },
+  // ],
 ]
 
 module.exports = plugins
+
