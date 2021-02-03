@@ -46,8 +46,8 @@ export default {
   data() {
     return {
       boxx: {
-        title: list[(Math.random() * 10) | 0].title,
-        content: list[(Math.random() * 10) | 0].content,
+        title: list[(Math.random() * list.length) | 0].title,
+        content: list[(Math.random() * list.length) | 0].content,
       }, //展示的title和content
       class_boxx: '', //展示的class样式
       list: list, //名人名言数组
@@ -147,10 +147,10 @@ export default {
         // onLastStringBackspaced: () => {
         //   console.log('onLastStringBackspaced222')
         // },
-        onTypingResumed: (self) => {
+        onTypingResumed: (...args) => {
           if (this.loopIndex == this.loopCount * 2 - 1) {
             this.getboxx()
-            this.typed.destroy()
+            args[1].destroy()
           }
           this.loopIndex = (this.loopIndex + 1) % (this.loopCount * 2)
         },
