@@ -5,6 +5,7 @@ const nav = [
     text: '课外分类',
     icon: 'reco-category',
     items: [
+      { text: '数据结构与算法', link: '/categories/数据结构与算法/', icon: 'reco-coding' },
       { text: '博客', link: '/categories/Blog/', icon: 'reco-blog' },
       { text: '软件', link: '/categories/SoftWare/', icon: 'icon-yingyongruanjian iconfont' },
       // { text: '后端', link: '/categories/' },
