@@ -45,6 +45,8 @@ const sidebar = {
         '/notes/frontEnd/JS与DOM坐标计算有关的操作属性',
         '/notes/frontEnd/JS浏览器BOM对象',
         '/notes/frontEnd/JS线程机制与事件机制',
+        '/notes/frontEnd/JS异步任务与事件循环机制',
+        '/notes/frontEnd/ES6知识点',
         '/notes/frontEnd/一些有趣的JS工具类方法',
       ],
     },
