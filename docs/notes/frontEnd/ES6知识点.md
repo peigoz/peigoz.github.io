@@ -413,7 +413,7 @@ console.log(arrLi)
 
 ### json
 
-1.  对象简介语法
+1. 对象简介语法
 
 ```javascript
 let name = 'Bob'
@@ -861,7 +861,7 @@ console.log(...show())
 4. async 函数返回是一个 promise 对象
 5. 只要 await 语句后面的 promise 状态变成 reject，那么整个 async 函数会中断，后续代码将不会执行
 
-### promise、generator、async 读取文件 fs.readFile 对比：
+### promise、generator、async 读取文件 fs.readFile 对比
 
 ```javascript
 const fs = require('fs')
@@ -1036,7 +1036,7 @@ console.log(set) //2,4,6
 
 ## map、WeakMap 数据结构
 
-### map
+### map 数据结构
 
 1. 类似 json,区别是 json 中数据的 key 只能是字符串，而 map 中的 key 可以是任意数据类型
 
@@ -1054,7 +1054,7 @@ let json = {
   a: 1,
   b: 2,
 }
-map.set('a', 'appale')
+map.set('a', 'apple')
 map.set(json, 'aaa')
 map.set('aaa', json)
 console.log(map.get(json)) //aaa
@@ -1159,7 +1159,7 @@ str.replace(reg, (...args) => {
 
 ```javascript
 let reg = /^\w+.\w+$/s
-let str = 'wsfd\nsf']
+let str = 'wsfd\nsf'
 console.log(str.test(reg)) //true
 ```
 
@@ -1217,7 +1217,7 @@ let newObj = new Proxy(obj,{
         if(property in target){
             return target[property]
         }else{
-            //thorw new ReferenceError(`该对象上没有${property}属性`)
+            //throw new ReferenceError(`该对象上没有${property}属性`)
             //console.warn(`该对象上没有${property}属性`)
         }
     }

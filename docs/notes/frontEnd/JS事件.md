@@ -176,10 +176,10 @@ function bind(obj, eventStr, callback) {
        //①为obj绑定一个鼠标按下事件
        obj.onmousedown = function(event){
            //取消浏览器默认行为，兼容IE8，为box1设置捕获所有鼠标按下的事件，防止chrome报错要添加if判断
-           //if(box1.setCaptrue){
-         //     box1.setCaptrue();
+           //if(box1.setCapture){
+         //     box1.setCapture();
          // }
-           obj.setCaptrue && obj.setCaptrue();//利用&&与运算的短路作简化判断，if判断的简写，返回第一个假或最后一个真。
+           obj.setCapture && obj.setCapture();//利用&&与运算的短路作简化判断，if判断的简写，返回第一个假或最后一个真。
 
            event = event || windows.event;
            //div的偏移量 鼠标.clientX - 元素.offsetLeft
@@ -203,7 +203,7 @@ function bind(obj, eventStr, callback) {
                //取消document的onmouseup事件
                document.onmouseup = null;
                //取消box1对事件的捕获
-               obj.releaseCaptrue && obj.releaseCaptrue(); //防止chrome报错，判断是否存在该方法，存在则调用
+               obj.releaseCapture && obj.releaseCapture(); //防止chrome报错，判断是否存在该方法，存在则调用
            }
            //取消浏览器默认行为
            return false;
@@ -213,13 +213,13 @@ function bind(obj, eventStr, callback) {
 
 2. 取消浏览器默认行为
    1. 当我们拖拽一个网页中的内容时，浏览器会默认去搜索引擎中搜索内容，此时会导致拖拽功能的异常。这个是浏览器提供的默认行为，如果不希望发生这个行为，可通过 return false 来取消默认行为。
-   2. 但是这个方法对 IE8 不起作用。如果要兼容 IE8 需要对拖拽元素使用 `setCaptrue()`方法
+   2. 但是这个方法对 IE8 不起作用。如果要兼容 IE8 需要对拖拽元素使用 `setCapture()`方法
 
 ```text
-setCaptrue()
-1. 当调用于一个元素的setCaptrue()以后，这个元素将会把下一次所有的其他元素（包括点击刷新浏览器窗口甚至点击桌面）鼠标按下相关事件捕获到自身上.
-2. 使用releaseCaptrue()取消元素对事件的捕获。
-3. setCaptrue()方法只有IE支持，但是在火狐中调用不会报错，而在chrome中调用则会报错。
+setCapture()
+1. 当调用于一个元素的setCapture()以后，这个元素将会把下一次所有的其他元素（包括点击刷新浏览器窗口甚至点击桌面）鼠标按下相关事件捕获到自身上.
+2. 使用releaseCapture()取消元素对事件的捕获。
+3. setCapture()方法只有IE支持，但是在火狐中调用不会报错，而在chrome中调用则会报错。
 ```
 
 ## 鼠标滚轮滚动事件
