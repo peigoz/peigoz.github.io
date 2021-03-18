@@ -99,6 +99,39 @@ const plugins = [
     },
   ],
   ['@vuepress-reco/extract-code'],
+  ['@vuepress-reco/vuepress-plugin-bulletin-popover', {
+    width: '300px', // 默认 260px
+    title: '公告',
+    body: [
+      {
+        type: 'title',
+        content: '如果你也喜欢前端',
+        style: 'text-align: center;'
+      },
+      {
+        type: 'title',
+        content: '欢迎加入QQ交流群 🎉🎉🎉',
+        style: 'text-align: center;'
+      },
+      {
+        type: 'text',
+        content: 'QQ 群 ：512250251',
+        style: 'text-align: center;'
+      }
+    ],
+    // footer: [
+    //   {
+    //     type: 'button',
+    //     text: '打赏',
+    //     link: '/donate'
+    //   },
+    //   {
+    //     type: 'button',
+    //     text: '打赏',
+    //     link: '/donate'
+    //   }
+    // ]
+  }]
   // [
   //   '@vuepress/google-analytics',
   //   {

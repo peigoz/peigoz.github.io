@@ -1034,19 +1034,19 @@ console.log(set) //2,4,6
    1. new Set([]) 存储数组
    2. new WeakSet({}) 存储 json 对象
 
-## map、WeakMap 数据结构
+## Map、WeakMap 数据结构
 
-### map 数据结构
+### Map 数据结构
 
-1. 类似 json,区别是 json 中数据的 key 只能是字符串，而 map 中的 key 可以是任意数据类型
+1. 类似 json,区别是 json 中数据的 key 只能是字符串，而 Map 中的 key 可以是任意数据类型
 
-### 使用 map
+### 使用 Map
 
-1. map.set(key,value) 设置一个值
-2. map.get(key) 获取 key 值对应的 value
-3. map.delete(key) 删除 key 值对应的项
-4. map.has(key) 判断有没有 key
-5. map.clear() 清空 map
+1. Map.set(key,value) 设置一个值
+2. Map.get(key) 获取 key 值对应的 value
+3. Map.delete(key) 删除 key 值对应的项
+4. Map.has(key) 判断有没有 key
+5. Map.clear() 清空 Map
 
 ```javascript
 let map = new Map()
