@@ -16,7 +16,8 @@
           "ignore": [
             ".git",
             ".github",
-            "node_modules"
+            "node_modules",
+            "nginx.conf"
           ]
         }
       }
