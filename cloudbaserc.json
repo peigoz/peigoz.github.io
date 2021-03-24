@@ -17,7 +17,8 @@
             ".git",
             ".github",
             "node_modules",
-            "nginx.conf"
+            "nginx.conf",
+            "full.json"
           ]
         }
       }
