@@ -15,14 +15,17 @@
     "ctrlkey",
     "fvtpq",
     "leetcode",
+    "metatype",
     "miit",
     "mousewheel",
     "msie",
     "reco",
     "shiftkey",
     "substr",
+    "typeorm",
     "wsfd",
-    "yingyongruanjian"
+    "yingyongruanjian",
+    "zhangsan"
   ],
   "cSpell.ignoreWords": [
     "proto"

@@ -114,13 +114,13 @@ publish: true
        return `${name}---age不存在`
      }
    }
-   console.log(getInfo('zhangsang'))
+   console.log(getInfo('zhangsan'))
 
    //默认参数：es5 中没法设置默认参数，es6 和 ts 都可以设置默认参数
    function getInfo(name: string, age: number = 20): string {
      return `${name}---${age}`
    }
-   console.log(getInfo('zhangsang')) //zhangsang---20
+   console.log(getInfo('zhangsan')) //zhangsan---20
 
    //剩余参数
    function sum(a: number, b: number, c: number): number {
@@ -375,7 +375,7 @@ publish: true
 
 1. 接口
 
-   - 接口的作用：在面向对象的编程中，接口是一种规范的定义，它定义了行为和动作的规范，在程序设计里面，接口起到一种限制和规范的作用。接口定义了某一批类所需要遵守的规范，接口不关心这些类的内部状态数据，也不关心这些类里方法的实现细节，它只规定这批类里必须提供某些方法，提供这些方法的类就可以满足实际需要。typescrip 中的接口类似于 java，同时还增加了更灵活的接口类型，包括属性、函数、可索引和类等。
+   - 接口的作用：在面向对象的编程中，接口是一种规范的定义，它定义了行为和动作的规范，在程序设计里面，接口起到一种限制和规范的作用。接口定义了某一批类所需要遵守的规范，接口不关心这些类的内部状态数据，也不关心这些类里方法的实现细节，它只规定这批类里必须提供某些方法，提供这些方法的类就可以满足实际需要。typescript 中的接口类似于 java，同时还增加了更灵活的接口类型，包括属性、函数、可索引和类等。
    - 接口也是定义标准的一种
 
 2. 属性接口
