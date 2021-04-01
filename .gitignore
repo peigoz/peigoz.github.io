@@ -1,3 +1,4 @@
 node_modules
 nginx.conf
 docs/.vuepress/dist
+.github
