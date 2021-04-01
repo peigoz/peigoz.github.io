@@ -50,6 +50,15 @@ const sidebar = {
         '/notes/frontEnd/一些有趣的JS工具类方法',
       ],
     },
+    {
+      title: '后端',
+      collapsable: true,
+      children: [
+        '/notes/backEnd/Node的IO机制',
+        '/notes/backEnd/影响Node的性能因素',
+        '/notes/backEnd/Node的CPU过载保护机制',
+      ],
+    },
   ],
 }
 
