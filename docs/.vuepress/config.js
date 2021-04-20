@@ -10,7 +10,8 @@ module.exports = {
     },
   },
   title: '别来无恙',
-  description: '懂得越多，写出来的BUG也越加高级',
+  // description: '懂得越多，写出来的BUG也越加高级',
+  description: '每天更新自己，慢慢理解世界',
   head: [
     ['link', { rel: 'icon', href: `/favicon.ico` }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
