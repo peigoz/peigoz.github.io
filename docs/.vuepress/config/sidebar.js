@@ -34,6 +34,7 @@ const sidebar = {
       children: [
         '/notes/frontEnd/HTML常见问题',
         '/notes/frontEnd/CSS知识点',
+        '/notes/frontEnd/CSS-Flex',
         '/notes/frontEnd/JS类型转换',
         '/notes/frontEnd/JS类型与常用类型判断',
         '/notes/frontEnd/JS事件',
