@@ -51,12 +51,26 @@ const sidebar = {
       ],
     },
     {
+      title: '前端进阶',
+      collapsable: true,
+      children: [
+        '/notes/front-end-promotion/web性能优化',
+      ],
+    },
+    {
       title: '后端',
       collapsable: true,
       children: [
         '/notes/backEnd/Node的IO机制',
         '/notes/backEnd/影响Node的性能因素',
         '/notes/backEnd/Node的CPU过载保护机制',
+      ],
+    },
+    {
+      title: '面试',
+      collapsable: true,
+      children: [
+        '/notes/interview/手撕系列',
       ],
     },
   ],
