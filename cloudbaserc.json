@@ -16,6 +16,7 @@
           "ignore": [
             ".git",
             ".github",
+            "readme.md",
             "node_modules",
             "nginx.conf",
             "full.json"
