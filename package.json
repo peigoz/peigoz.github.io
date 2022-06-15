@@ -11,8 +11,10 @@
     "vuepress-plugin-meting": "^0.1.1"
   },
   "scripts": {
-    "docs:dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
-    "docs:build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:dev2": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
+    "docs:build2": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs"
   },
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.5.7",
