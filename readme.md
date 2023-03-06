@@ -1,7 +1,3 @@
-## cloudbase 发布
-
-tcb framework deploy
-
 ## picgo 插件
 
 1. 从剪贴板上传图像： Ctrl Alt u

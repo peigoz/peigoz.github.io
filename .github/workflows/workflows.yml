@@ -24,12 +24,11 @@ jobs:
 
       # 部署到 GitHub Pages
       - name: Deploy
-        uses: TencentCloudBase/cloudbase-action@v1.1.1
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          secretId: ${{ secrets.SECRET_ID }}
-          secretKey: ${{ secrets.SECRET_KEY }}
-          envId: ${{ secrets.ENV_ID }}
-          staticSrcPath: docs/.vuepress/dist
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: blog-pages
+          FOLDER: docs/.vuepress/dist
 # on: [push]
 
 # jobs:
