@@ -13,7 +13,7 @@ publish: true
 
 ## 场景
 
-![场景说明](https://blog.candane.top/peigo/2022-05-24-23-43-12.png)
+![场景说明](https://blog.peigo.top/peigo/2022-05-24-23-43-12.png)
 
 1. 线上的开发分支为 origin/dev 此时项目进度为 a
 
@@ -31,7 +31,7 @@ publish: true
    2. 切换本地 dev-1 分支执行`git merge dev`,此时分支情况：dev 分支有 ac,dev-1 有 ab,存在冲突情况,解完冲突后提交至远程 origin/dev-1 分支
    3. 创建合并请求合并至 origin/dev
 
-2. merge 后的 commit 记录： ![多路合并commit记录](https://blog.candane.top/peigo/2022-05-24-23-42-37.png)
+2. merge 后的 commit 记录： ![多路合并commit记录](https://blog.peigo.top/peigo/2022-05-24-23-42-37.png)
 
 3. 解完冲突后执行`git log` 会发现此时 commit 记录多出了上面的这种信息,然而这种消息记录在实际上并没有太大作用,反而会干扰整个 commit 记录
 
@@ -46,13 +46,13 @@ publish: true
 2. 这是整个 merge 流程情况：
 
    1. 本地 dev(图例是 delete）执行 merge 前 dev 的 commit 记录：  
-      ![merge前本地dev的commit记录](https://blog.candane.top/peigo/2022-05-24-23-47-15.png)
+      ![merge前本地dev的commit记录](https://blog.peigo.top/peigo/2022-05-24-23-47-15.png)
    2. 执行 merge 前 dev-1 的 commit 记录：  
-      ![merge前dev-1的commit记录](https://blog.candane.top/peigo/2022-05-24-23-47-46.png)
+      ![merge前dev-1的commit记录](https://blog.peigo.top/peigo/2022-05-24-23-47-46.png)
    3. 执行 merge 时会发现提示 Fast-forword 信息,表示这是一个快路合并,不存在冲突：  
-      ![执行merge的提示](https://blog.candane.top/peigo/2022-05-24-23-48-21.png)
+      ![执行merge的提示](https://blog.peigo.top/peigo/2022-05-24-23-48-21.png)
    4. 执行 merge 后 dev 和 dev-1 的 commit 记录：  
-      ![执行merge后的dev和dev-1的commit记录](https://blog.candane.top/peigo/2022-05-24-23-48-39.png)
+      ![执行merge后的dev和dev-1的commit记录](https://blog.peigo.top/peigo/2022-05-24-23-48-39.png)
 
 3. 我们会发现多出了一条快路合并的 commit 信息(b 功能）,且没有第一种情况那个 merge 记录信息
 

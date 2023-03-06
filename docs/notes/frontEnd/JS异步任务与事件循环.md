@@ -36,7 +36,7 @@ publish: true
 - 主线程之外，事件触发线程管理着一个任务队列，只要异步任务有了运行结果，就在任务队列之中放置一个事件。
 - 一旦执行栈中的所有同步任务执行完毕（此时 JS 引擎空闲），系统就会读取任务队列，将可运行的异步任务添加到可执行栈中，开始执行。
 
-![Event Loop](https://blog.candane.top/peigo/2021-03-05-16-35-53.png)
+![Event Loop](https://blog.peigo.top/peigo/2021-03-05-16-35-53.png)
 
 ### 宏任务
 
@@ -88,7 +88,7 @@ process.nextTick(Node.js 环境)
 
 如图：
 
-![运行机制](https://blog.candane.top/peigo/2021-03-05-16-36-43.jpg)
+![运行机制](https://blog.peigo.top/peigo/2021-03-05-16-36-43.jpg)
 
 ### 总结
 

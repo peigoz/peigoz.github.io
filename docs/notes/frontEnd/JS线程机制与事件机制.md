@@ -14,7 +14,7 @@ publish: true
 1. 图解：
    1. 程序 A 为多进程程序，程序 B 为单进程程序
    2. 一个进程有多个线程则为多线程程序，一个进程只有一个线程则为单线程程序（与该程序有多少个进程没有关系）
-      ![进程与线程](https://blog.candane.top/peigo/2021-01-25-21-29-04.png)
+      ![进程与线程](https://blog.peigo.top/peigo/2021-01-25-21-29-04.png)
 
 ## 定时器引发的思考
 
@@ -100,9 +100,9 @@ console.log('alert()之后')
 2. 当事件发生时，管理模块会将回调函数及其数据添加到回调列队中
 3. 只有当初始化代码执行完毕后（可能要一定时间），才会遍历读取回调队列中的回调函数执行
 4. 事件循环模型图解
-   ![事件循环模型图](https://blog.candane.top/peigo/2021-01-25-21-35-33.png)
+   ![事件循环模型图](https://blog.peigo.top/peigo/2021-01-25-21-35-33.png)
 5. 浏览器运行原理图解
-   ![浏览器运行原理图解](https://blog.candane.top/peigo/2021-01-25-21-40-27.png)
+   ![浏览器运行原理图解](https://blog.peigo.top/peigo/2021-01-25-21-40-27.png)
 
 ## Web Workers
 
@@ -116,7 +116,7 @@ console.log('alert()之后')
    2. 不能跨域加载 JS
    3. 不是每个浏览器都支持这个新特性
 4. 图解
-   ![Web Workers](https://blog.candane.top/peigo/2021-01-25-21-47-59.png)
+   ![Web Workers](https://blog.peigo.top/peigo/2021-01-25-21-47-59.png)
 
 ::: details
 

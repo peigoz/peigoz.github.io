@@ -41,7 +41,7 @@ export default {
           url(${
             getOneBgImg()
               ? getOneBgImg()
-              : 'https://blog.candane.top/background/20210119211251.jpg'
+              : 'https://blog.peigo.top/background/20210119211251.jpg'
           }?imageView2/1/w/1920/h/1080/interlace/1/q/70) center/cover no-repeat
         `,
       }

@@ -163,7 +163,7 @@ function Person(name, age) { //在构造函数中只初始化一般函数
    ```
 
 3. 图解
-   ![基于原型链继承](https://blog.candane.top/peigo/2021-01-24-20-29-23.png)
+   ![基于原型链继承](https://blog.peigo.top/peigo/2021-01-24-20-29-23.png)
 
 #### 借用构造函数继承
 

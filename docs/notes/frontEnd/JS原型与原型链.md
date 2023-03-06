@@ -66,7 +66,7 @@ console.log(per);  //实际上是console.log(per.toString());
    2. 原型对象中有一个属性 constructor，它指向函数对象
    3. 构造函数和它的原型对象是相互引用的关系
    4. 图解如下
-      ![prototype与constructor](https://blog.candane.top/peigo/2021-01-23-21-37-30.jpg)
+      ![prototype与constructor](https://blog.peigo.top/peigo/2021-01-23-21-37-30.jpg)
 2. 给原型对象添加属性（一般都是方法）
 
    1. 作用：函数的所有实例对象自动拥有原型中的属性（方法）
@@ -98,7 +98,7 @@ console.log(per);  //实际上是console.log(per.toString());
    3. 对象的隐式原型的值为其对应构造函数的显式原型的值(fun.\_\_proto\_\_ = Fun.prototype)
    4. 所有函数(Fun)的隐式原型**\_\_proto\_\_**属性的值都是一样的，等于 Function(JS 内置函数对象) 的显式原型 prototype 的值。
    5. 内存结构图解
-      ![显式原型与隐式](https://blog.candane.top/peigo/2021-01-23-21-42-34.png)
+      ![显式原型与隐式](https://blog.peigo.top/peigo/2021-01-23-21-42-34.png)
       ::: danger
       总结：
       1. 函数的 prototype 属性：在定义函数时自动添加的，默认值是一个空 Object 对象
@@ -137,9 +137,9 @@ fn.test()
    2. 如果没有，在沿着**\_\_proto\_\_**这条链向上寻找，找到返回
    3. 如果最终没有找到，返回 undefined
 4. 构造函数/原型/实体对象的关系（图解）
-   ![构造函数/原型/实体对象的关系1](https://blog.candane.top/peigo/2021-01-23-21-58-53.png)
+   ![构造函数/原型/实体对象的关系1](https://blog.peigo.top/peigo/2021-01-23-21-58-53.png)
 5. 构造函数/原型/实体对象的关系 2（图解）
-   ![构造函数/原型/实体对象的关系](https://blog.candane.top/peigo/2021-01-23-21-24-16.png)
+   ![构造函数/原型/实体对象的关系](https://blog.peigo.top/peigo/2021-01-23-21-24-16.png)
 6. 原型链的补充：
 
    1. 函数的显式原型指向的对象默认是空 Object 实例对象。(但 Object(JS 内置对象，) 不满足)
