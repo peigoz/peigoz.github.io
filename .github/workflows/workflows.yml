@@ -17,6 +17,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           persist-credentials: false
+    
+       # 步骤2 给当前服务器安装node
+      - name: use node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16 # node版本
 
       # 生成静态文件
       - name: Build
