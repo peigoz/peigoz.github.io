@@ -2382,9 +2382,9 @@
     "lodash.uniq" "^4.5.0"
 
 "caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001109", "caniuse-lite@^1.0.30001173":
-  "integrity" "sha1-DyrKIVP9iM6weiu5gvwqy3h2I8Q="
-  "resolved" "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001174.tgz?cache=0&sync_timestamp=1610313619983&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcaniuse-lite%2Fdownload%2Fcaniuse-lite-1.0.30001174.tgz"
-  "version" "1.0.30001174"
+  "integrity" "sha512-Bud7abqjvEjipUkpLs4D7gR0l8hBYBHoa+tGtKJHvT2AYzLp1z7EmVkUT4ERpVUfca8S2HGIVs883D8pUH1ZzQ=="
+  "resolved" "https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001460.tgz"
+  "version" "1.0.30001460"
 
 "caseless@~0.12.0":
   "integrity" "sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw="
