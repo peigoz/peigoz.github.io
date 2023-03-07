@@ -13,6 +13,7 @@
 
 <script>
 import { getOneBgImg } from '../theme/helpers/other'
+import CDN_URL from '../../config/index'
 export default {
   name: 'DynamicBackground',
   components: {},
@@ -41,7 +42,7 @@ export default {
           url(${
             getOneBgImg()
               ? getOneBgImg()
-              : 'https://blog.peigo.top/background/20210119211251.jpg'
+              : `${CDN_URL}/background/20210119211251.jpg`
           }?imageView2/1/w/1920/h/1080/interlace/1/q/70) 100% no-repeat
         `,
       }

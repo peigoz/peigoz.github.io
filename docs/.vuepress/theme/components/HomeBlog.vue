@@ -152,13 +152,13 @@ export default {
               : this.$frontmatter.bgImage
               ? this.$withBase(this.$frontmatter.bgImage)
               : require('../images/bg.svg')
-          }) 100% no-repeat
+          }) center/100% no-repeat
         `,
       }
       const { bgImageStyle } = this.$frontmatter
 
       return bgImageStyle
-        ? { ...initBgImageStyle, ...bgImageStyle }
+        ? {  ...bgImageStyle,...initBgImageStyle }
         : initBgImageStyle
     },
     heroHeight() {

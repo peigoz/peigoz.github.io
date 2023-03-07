@@ -1,20 +1,26 @@
 <template>
   <div class="abstract-wrapper">
     <NoteAbstractItem
-      v-for="(item) in currentPageData"
+      v-for="(item,idx) in currentPageData"
       :key="item.path"
       :item="item"
       :currentPage="currentPage"
+      :imgSrc="imgList[idx % imgList.length]"
       :currentTag="currentTag" />
   </div>
 </template>
 
 <script>
 import NoteAbstractItem from './NoteAbstractItem'
-
+import { getOneImgArr } from '@theme/helpers/other'
 export default {
   components: { NoteAbstractItem },
   props: ['data', 'currentPage', 'currentTag'],
+  data() {
+    return {
+      imgList:getOneImgArr()
+    }
+  },
   computed: {
     currentPageData () {
       const start = (this.currentPage - 1) * this.$perPage

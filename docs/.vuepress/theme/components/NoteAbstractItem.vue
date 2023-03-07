@@ -6,7 +6,7 @@
     <div class="abstract-item-left">
       <!-- <img src="http://www.zpzpup.com/assets/image/gd04.jpg"
            alt=""> -->
-      <img :src="$withBase(getOneImgSrc)"
+      <img :src="imgSrc"
            alt="">
     </div>
     <div class="abstract-item-right">
@@ -30,15 +30,10 @@
 <script>
 import { RecoIcon } from '@vuepress-reco/core/lib/components'
 import PageInfo from './PageInfo'
-import { getOneColor, getOneImgArr } from '@theme/helpers/other'
+import { getOneColor } from '@theme/helpers/other'
 export default {
   components: { PageInfo, RecoIcon },
-  props: ['item', 'currentPage', 'currentTag'],
-  data() {
-    return {
-      index: 0,
-    }
-  },
+  props: ['item', 'currentPage', 'currentTag','imgSrc'],
   computed: {
     getAnimate() {
       const arr = ['draw', 'wind', 'center', 'meet']
@@ -48,11 +43,7 @@ export default {
       return {
         '--border-color': getOneColor(),
       }
-    },
-    getOneImgSrc() {
-      const ImgArr = getOneImgArr()
-      return ImgArr[this.index++ % ImgArr.length]
-    },
+    }
   },
 }
 </script>
