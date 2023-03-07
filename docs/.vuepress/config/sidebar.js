@@ -56,6 +56,7 @@ const sidebar = {
       collapsable: true,
       children: [
         '/notes/front-end-promotion/web性能优化',
+        '/notes/front-end-promotion/如何优雅的解耦if-else',
       ],
     },
     {

@@ -8,14 +8,6 @@ const nav = [
       { text: '博客', link: '/categories/Blog/', icon: 'reco-blog' },
       { text: '软件', link: '/categories/SoftWare/', icon: 'icon-yingyongruanjian iconfont' },
       { text: 'LeetCode', link: '/categories/leetcode/', icon: 'reco-coding' },
-      // { text: '后端', link: '/categories/' },
-      // { text: '团队协作', link: '/team/categories/' },
-      // {text: '前端',items:[
-      //   { text: 'Html-Css', link: '/categories/html-css/' }
-      // ]},
-      // {text: '团队协作',items:[
-      //   { text: 'Git-Github', link: '/categories/git-github/' }q
-      // ]}
     ],
   },
   { text: '标签', link: '/tag/', icon: 'reco-tag' },
