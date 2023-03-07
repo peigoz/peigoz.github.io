@@ -152,7 +152,7 @@ export default {
               : this.$frontmatter.bgImage
               ? this.$withBase(this.$frontmatter.bgImage)
               : require('../images/bg.svg')
-          }) center/cover no-repeat
+          }) 100% no-repeat
         `,
       }
       const { bgImageStyle } = this.$frontmatter
