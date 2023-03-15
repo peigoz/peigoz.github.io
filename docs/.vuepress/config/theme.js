@@ -14,7 +14,7 @@ const themeConfig = {
   blogConfig: {
     socialLinks: [
       // 信息栏展示社交信息
-      { icon: 'reco-github', link: 'https://github.com/candane' },
+      { icon: 'reco-github', link: 'https://github.com/peigoz' },
       { icon: 'reco-mayun', link: 'https://gitee.com/candane' },
       { icon: 'reco-mail', link: 'mailto:candane@126.com' },
     ],
