@@ -126,20 +126,20 @@ const plugins = [
   //         style: 'text-align: center;',
   //       },
   //     ],
-      footer: [
-        // {
-        //   type: 'text',
-        //   content: '请在PC端下浏览👻👻👻',
-        //   style: 'text-align: center;margin:0',
-        // },
-        // {
-        //   type: 'button',
-        //   text: '打赏',
-        //   link: '/donate'
-        // }
-      ],
-    },
-  ],
+  //     footer: [
+  //       {
+  //         type: 'text',
+  //         content: '请在PC端下浏览👻👻👻',
+  //         style: 'text-align: center;margin:0',
+  //       },
+  //       {
+  //         type: 'button',
+  //         text: '打赏',
+  //         link: '/donate'
+  //       }
+  //     ],
+  //   },
+  // ],
   // [
   //   '@vuepress/google-analytics',
   //   {
