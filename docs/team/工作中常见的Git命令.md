@@ -80,6 +80,34 @@ git cherry-pick XXX #找回删除的提交记录
 
 ### 其他Tips
 
+#### 使用**rimraf**卸载`node_modules`文件
+
+1. 安装 `npm i -g rimraf`
+
+```json
+// package.json
+{
+    "scripts": {
+         "reset": "rimraf node_modules package-lock.json yarn.lock && npm i"
+     }
+}
+  ```
+
+#### 工具[ni](https://github.com/antfu/ni)
+
+1. 会自动识别目前项目使用的npm工具(npm、yarn、pnpm)并替换为对应命令
+2. 安装`npm i -g @antfu/ni`
+
+```json
+// ni - install
+ni
+
+# npm install
+# yarn install
+# pnpm install
+# bun install
+```
+
 #### npm ci
 
 1. 使用 npm ci 代替 npm install，这将强制执行 lockfile，避免它与 package.json 文件之间的不一致会导致错误
