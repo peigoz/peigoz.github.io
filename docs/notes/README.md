@@ -12,7 +12,7 @@ isShowComments: false
 
 ## 最近计划
 
-1. 掘金小册: 《前端调试通关秘籍》
+1. 掘金小册: 《前端调试通关秘籍》√
 2. 图解 HTTP
 3. 你不知道的 JavaScript (中)
 
@@ -56,3 +56,4 @@ isShowComments: false
 ## 已完成
 
 1. 掘金小册: 《TypeScript 类型体操通关秘籍》
+2. 掘金小册: 《从 0 到 1 落地前端工程化》
