@@ -8150,11 +8150,6 @@
     "media-typer" "0.3.0"
     "mime-types" "~2.1.24"
 
-"typed.js@^2.0.11":
-  "integrity" "sha1-0pipH5WfEaOAO/SLhBpvrdKWQNk="
-  "resolved" "https://registry.npm.taobao.org/typed.js/download/typed.js-2.0.11.tgz"
-  "version" "2.0.11"
-
 "typedarray-to-buffer@^3.1.5":
   "integrity" "sha1-qX7nqf9CaRufeD/xvFES/j/KkIA="
   "resolved" "https://registry.npm.taobao.org/typedarray-to-buffer/download/typedarray-to-buffer-3.1.5.tgz"
