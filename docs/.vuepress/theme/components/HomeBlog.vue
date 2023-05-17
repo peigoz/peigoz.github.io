@@ -3,9 +3,7 @@
     <div class="hero" :style="{ ...bgImageStyle }">
       <div class='content'>
         <div class='boxx'>
-          <keep-alive>
-            <Boxx />
-          </keep-alive>
+          <!-- <Boxx /> -->
         </div>
         <a href="#blog-top" class="home-more"></a>
       </div>

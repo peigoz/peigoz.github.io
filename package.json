@@ -19,7 +19,6 @@
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.5.7",
     "axios": "^0.21.1",
-    "typed.js": "^2.0.11",
     "vue-canvas-effect": "^0.0.12",
     "vuepress-plugin-nuggets-style-copy": "^1.0.3",
     "vuepress-plugin-ribbon-animation": "^1.1.3",

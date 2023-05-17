@@ -43,14 +43,14 @@ export default {
       default: '5000',
     },
   },
-  data() {
+  data () {
     return {
       boxx: {
         title: list[(Math.random() * list.length) | 0].title,
         content: list[(Math.random() * list.length) | 0].content,
       }, //展示的title和content
       class_boxx: '', //展示的class样式
-      list: list, //名人名言数组
+      list: defaultList, //名人名言数组
       type_boxx_list: type_boxx_list, //type样式数组
       show_content: true,
       show_title: true,
@@ -59,11 +59,12 @@ export default {
       style_content: {},
       interval: {}, //定时器
       typed: null,
+      timer: null,
       loopIndex: 0,
       loopCount: 1,
     }
   },
-  mounted() {
+  mounted () {
     // this.getContent()
     // this.checkTitleAndConten()
     // this.checkStyleWithTitleAndContenAndBlock()
@@ -72,27 +73,18 @@ export default {
     if (this.typed === null) {
       this.print()
     }
-    setInterval(() => {
+    this.timer = setInterval(() => {
       this.getContent()
     }, 1000 * 60 * 60 * 24)
   },
-  // watch: {
-  //   boxx: {
-  //     handler(newName, oldName) {
-  //       clearTimeout(this.interval)
-  //       this.interval = setTimeout(() => {
-  //         this.getContent()
-  //         this.getboxx()
-  //       }, this.changeTime)
-  //     },
-  //     immediate: true,
-  //     deep: true,
-  //   },
-  // },
+  destroy(){
+    clearInterval(this.timer)
+    this.typed?.destroy()
+  },
   methods: {
-    async getContent() {
+    async getContent () {
       if (this.list.length >= 200) {
-        this.list = list
+        this.list = defaultList
       }
       await axios.get('https://v1.jinrishici.com/all.json').then((response) => {
         let author = response.data.author
@@ -127,12 +119,12 @@ export default {
     //   //default classs style: if(type == "tip")
     //   this.class_boxx = type_boxx_list[0].class
     // },
-    getboxx() {
+    getboxx () {
       return (this.boxx = this.list[
         Math.floor(Math.random() * this.list.length)
       ])
     },
-    print() {
+    print () {
       const options = {
         strings: [this.boxx.content + '^1000 •  ' + this.boxx.title + '^2000 '],
         typeSpeed: 150, //打印速度
@@ -157,75 +149,10 @@ export default {
         onDestroy: (self) => {
           this.typed = null
           this.print()
-          // console.log(this.typed)
-          // setTimeout(() => {
-          //   this.print()
-          // }, 1000)
         },
       }
       this.typed = new Typed('#typed', options)
-      // setTimeout(() => {
-      //   this.typed.reset()
-      //   console.log('reset')
-      // }, 5000)
-      // setTimeout(() => {
-      //   this.typed.destroy()
-      //   console.log('destroy', this.typed)
-      // }, 10000)
     },
-    // checkTitleAndConten() {
-    // if (this.title != '' && this.content == '') {
-    //   this.boxx.title = this.title
-    //   this.show_content = false
-    //   return
-    // }
-    // if (this.title == '' && this.content != '') {
-    //   this.boxx.content = this.content
-    //   this.style_content = { 'margin-top': '1rem', 'margin-bottom': '0.4rem' }
-    //   this.show_title = false
-    //   return
-    // }
-    // if (this.title == '' || this.content == '') {
-    //   this.getboxx()
-    // } else {
-    //   this.boxx.title = this.title
-    //   this.boxx.content = this.content
-    // }
-    // },
-    // checkStyleWithTitleAndContenAndBlock() {
-    //   if (this.titleStyle != null) {
-    //     this.style_title = this.titleStyle
-    //   }
-    //   if (this.contentStyle != null) {
-    //     this.style_content = this.contentStyle
-    //   }
-    //   if (this.blockStyle != null) {
-    //     this.style_boxx = this.blockStyle
-    //   }
-    // },
-    // dynamicUpdateType(time) {
-    //   if (time != '' && time != 'false' && /^\d+$/.test(time)) {
-    //     // var index = 0
-    //     // for (var i in type_boxx_list) {
-    //     //   if (this.type == type_boxx_list[i].type) {
-    //     //     index = i
-    //     //   }
-    //     // }
-
-    //     clearInterval(this.interval) //停止
-
-    //     this.interval = setInterval(() => {
-    //       // index++
-    //       // if (index == type_boxx_list.length) {
-    //       //   index = 0
-    //       // }
-    //       // this.getShowType(type_boxx_list[index].type)
-    //       // this.checkTitleAndConten()
-    //       this.getContent()
-    //       this.getboxx()
-    //     }, time)
-    //   }
-    // },
   },
 }
 
@@ -235,7 +162,7 @@ const type_boxx_list = [
   { type: 'danger', class: 'danger custom-block' },
 ]
 
-const list = [
+const defaultList = [
   { title: '佚名', content: '勇敢不是不害怕，而是害怕的时候你还能坚持去做' },
   {
     title: '罗素',
@@ -554,8 +481,6 @@ const list = [
   { title: '林则徐', content: '海纳百川，有容乃大；壁立千仞，无欲则刚' },
   { title: '王安石', content: '不畏浮云遮望眼，自缘身在最高层' },
   { title: '曹学', content: '若要功夫深，铁杵磨成针' },
-  // {title:'友人c',content:"这个世界上没有忽然崩溃的感情，只有压弯骆驼的最后一根稻草。"},
-  // {title:'媳妇儿',content:"心里有我，想着我，有什么事告诉我，不要让我问，不要让我等。"},
 ]
 </script>
 
