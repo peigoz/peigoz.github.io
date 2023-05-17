@@ -1,4 +1,4 @@
-import CDN_URL from '../../../config/index.js'
+import { CDN_URL } from '../../../config/index.js'
 const bgImgUrlArr = [
   `${CDN_URL}/background/20210119211251.jpg`,
   `${CDN_URL}/background/20210119210221.jpg`,

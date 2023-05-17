@@ -1,20 +1,16 @@
 <template>
   <div class="home-blog">
-    <div class="hero"
-         :style="{ ...bgImageStyle }">
+    <div class="hero" :style="{ ...bgImageStyle }">
       <div class='content'>
         <div class='boxx'>
           <keep-alive>
             <Boxx />
           </keep-alive>
         </div>
-        <a href="#blog-top"
-           class="home-more"></a>
+        <a href="#blog-top" class="home-more"></a>
       </div>
       <!-- <bubbles-effect :options="options"></bubbles-effect> -->
-      <component v-if="bubbles"
-                 :is="bubbles"
-                 :options="options"></component>
+      <component v-if="bubbles" :is="bubbles" :options="options"></component>
       <div id="blog-top"></div>
       <!-- <div>
         <ModuleTransition>
@@ -41,41 +37,35 @@
       </div> -->
     </div>
     <ModuleTransition delay="0.16">
-      <div v-show="recoShowModule"
-           class="home-blog-wrapper">
+      <div v-show="recoShowModule" class="home-blog-wrapper">
         <div class="blog-list">
           <!-- 博客列表 -->
-          <note-abstract :data="$recoPosts"
-                         :currentPage="currentPage"></note-abstract>
+          <note-abstract :data="$recoPosts" :currentPage="currentPage"></note-abstract>
           <!-- 分页 -->
-          <pagation class="pagation"
-                    :total="$recoPosts.length"
-                    :currentPage="currentPage"
-                    @getCurrentPage="getCurrentPage" />
+          <pagation class="pagation" :total="$recoPosts.length" :currentPage="currentPage"
+            @getCurrentPage="getCurrentPage" />
         </div>
         <div class="info-wrapper">
           <PersonalInfo />
           <h4>
-            <reco-icon icon="reco-category" /> {{homeBlogCfg.category}}
+            <reco-icon icon="reco-category" /> {{ homeBlogCfg.category }}
           </h4>
           <ul class="category-wrapper">
-            <li class="category-item"
-                v-for="(item, index) in this.$categories.list"
-                :key="index">
+            <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
               <router-link :to="item.path">
                 <span class="category-name">{{ item.name }}</span>
-                <span class="post-num"
-                      :style="{ 'backgroundColor': getOneColor() }">{{ item.pages.length }}</span>
+                <span class="post-num" :style="{ 'backgroundColor': getOneColor() }">{{
+                  item.pages.length }}</span>
               </router-link>
             </li>
           </ul>
           <hr>
           <h4 v-if="$tags.list.length !== 0">
-            <reco-icon icon="reco-tag" /> {{homeBlogCfg.tag}}
+            <reco-icon icon="reco-tag" /> {{ homeBlogCfg.tag }}
           </h4>
           <TagList @getCurrentTag="getPagesByTags" />
           <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0">
-            <reco-icon icon="reco-friend" /> {{homeBlogCfg.friendLink}}
+            <reco-icon icon="reco-friend" /> {{ homeBlogCfg.friendLink }}
           </h4>
           <FriendLink />
         </div>
@@ -83,9 +73,7 @@
     </ModuleTransition>
 
     <ModuleTransition delay="0.24">
-      <Content v-show="recoShowModule"
-               class="home-center"
-               custom />
+      <Content v-show="recoShowModule" class="home-center" custom />
     </ModuleTransition>
   </div>
 </template>
@@ -98,6 +86,7 @@ import pagination from '@theme/mixins/pagination'
 import { ModuleTransition, RecoIcon } from '@vuepress-reco/core/lib/components'
 import PersonalInfo from '@theme/components/PersonalInfo'
 import { getOneColor, getOneBgImg } from '@theme/helpers/other'
+import { IMAGE_1080P } from '../../../config/index'
 
 export default {
   mixins: [pagination],
@@ -109,7 +98,7 @@ export default {
     PersonalInfo,
     RecoIcon,
   },
-  data() {
+  data () {
     return {
       recoShow: false,
       currentPage: 1,
@@ -124,13 +113,13 @@ export default {
     }
   },
   computed: {
-    recoShowModule() {
+    recoShowModule () {
       return this.$parent.recoShowModule
     },
-    homeBlogCfg() {
+    homeBlogCfg () {
       return this.$recoLocales.homeBlog
     },
-    actionLink() {
+    actionLink () {
       const { actionLink: link, actionText: text } = this.$frontmatter
 
       return {
@@ -138,34 +127,31 @@ export default {
         text,
       }
     },
-    heroImageStyle() {
+    heroImageStyle () {
       return this.$frontmatter.heroImageStyle || {}
     },
-    bgImageStyle() {
+    bgImageStyle () {
       const initBgImageStyle = {
         textAlign: 'center',
         overflow: 'hidden',
         background: `
-          url(${
-            getOneBgImg()
-              ? getOneBgImg()
-              : this.$frontmatter.bgImage
-              ? this.$withBase(this.$frontmatter.bgImage)
-              : require('../images/bg.svg')
-          }) center/100% no-repeat
+          url(${getOneBgImg()
+            ? `${getOneBgImg()}${IMAGE_1080P}`
+            : require('../images/bg.svg')
+          }) center/cover no-repeat
         `,
       }
       const { bgImageStyle } = this.$frontmatter
 
       return bgImageStyle
-        ? {  ...bgImageStyle,...initBgImageStyle }
+        ? { ...bgImageStyle, ...initBgImageStyle }
         : initBgImageStyle
     },
-    heroHeight() {
+    heroHeight () {
       return document.querySelector('.hero').clientHeight
     },
   },
-  mounted() {
+  mounted () {
     this.recoShow = true
     this._setPage(this._getStoragePage())
     import('vue-canvas-effect/src/components/bubbles').then((module) => {
@@ -174,14 +160,14 @@ export default {
   },
   methods: {
     // 获取当前页码
-    getCurrentPage(page) {
+    getCurrentPage (page) {
       this._setPage(page)
       setTimeout(() => {
         window.scrollTo(0, this.heroHeight)
       }, 100)
     },
     // 根据分类获取页面数据
-    getPages() {
+    getPages () {
       let pages = this.$site.pages
       pages = pages.filter((item) => {
         const { home, date } = item.frontmatter
@@ -190,10 +176,10 @@ export default {
       // reverse()是为了按时间最近排序排序
       this.pages = pages.length == 0 ? [] : pages
     },
-    getPagesByTags(tagInfo) {
+    getPagesByTags (tagInfo) {
       this.$router.push({ path: tagInfo.path })
     },
-    _setPage(page) {
+    _setPage (page) {
       this.currentPage = page
       this.$page.currentPage = page
       this._setStoragePage(page)

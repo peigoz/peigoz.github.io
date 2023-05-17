@@ -1,23 +1,20 @@
 <template>
-  <div class="DynamicBackground"
-       :style="{...bgImageStyle}">
+  <div class="DynamicBackground" :style="{ ...bgImageStyle }">
     <div class="content">
-      thank you for standing behind me 
+      thank you for standing behind me
     </div>
-    <component v-if="bubbles"
-               :is="bubbles"
-               :options="options"></component>
+    <component v-if="bubbles" :is="bubbles" :options="options"></component>
 
   </div>
 </template>
 
 <script>
 import { getOneBgImg } from '../theme/helpers/other'
-import CDN_URL from '../../config/index'
+import { CDN_URL, IMAGE_1440P } from '../../config/index'
 export default {
   name: 'DynamicBackground',
   components: {},
-  data() {
+  data () {
     return {
       bubbles: null,
       options: {
@@ -28,22 +25,19 @@ export default {
       },
     }
   },
-  mounted() {
+  mounted () {
     import('vue-canvas-effect/src/components/bubbles').then((module) => {
       this.bubbles = module.default
     })
   },
   computed: {
-    bgImageStyle() {
+    bgImageStyle () {
       return {
         textAlign: 'center',
         overflow: 'hidden',
         background: `
-          url(${
-            getOneBgImg()
-              ? getOneBgImg()
-              : `${CDN_URL}/background/20210119211251.jpg`
-          }?imageView2/1/w/1920/h/1080/interlace/1/q/70) 100% no-repeat
+          url(${getOneBgImg() && `${CDN_URL}/background/20210119211251.jpg`
+          }${IMAGE_1440P}) 100% no-repeat
         `,
       }
     },
@@ -59,9 +53,10 @@ export default {
   display: flex;
   justify-self: start;
   justify-content: center;
-  align-items:flex-end;
+  align-items: flex-end;
 }
-.content{
+
+.content {
   font-size: 2rem;
   font-weight: 600;
 }

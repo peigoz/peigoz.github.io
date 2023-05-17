@@ -69,10 +69,17 @@ const sidebar = {
       ],
     },
     {
+      title: '数据结构与算法',
+      collapsable: true,
+      children: [
+        '/notes/interview/分别使用迭代法和递归法实现二叉树的DFS',
+      ],
+    },
+    {
       title: '面试',
       collapsable: true,
       children: [
-        '/notes/interview/手撕系列',
+        '/notes/data-structures/手撕系列',
       ],
     },
   ],

@@ -56,9 +56,10 @@ type B = TestNever<never>; // true
 ## Readonly
 
 1. 加上readonly后的类型为原来类型的子类型。
+2. 需要注意的是在类型体操中，`T[] extends readonly T[]` 的判断是基于类型 `T[]` 是否可以被赋值给类型 `readonly T[]`。由于 `T[]` 不是只读类型，所以它可以被赋值给 `readonly T[]`。
 
 ```ts
-// readonly unknown[] 为 unknown[] 的子类型
+// readonly unknown[] 为 unknown[] 的子类型,但是 readonly unknown[] extends unknown[] 为 false
 type Test<T> = T extends readonly unknown[] ? true : false;
 type Test1<T> = T extends unknown[] ? true : false;
 

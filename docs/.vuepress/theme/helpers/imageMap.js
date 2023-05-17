@@ -1,4 +1,4 @@
-import CDN_URL from '../../../config/index.js'
+import { CDN_URL } from '../../../config/index.js'
 const imageMap = {
   animePerson: [
     `${CDN_URL}/image/anime-person/1.jpg`,
