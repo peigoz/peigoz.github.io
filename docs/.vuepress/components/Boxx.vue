@@ -65,17 +65,12 @@ export default {
     }
   },
   mounted () {
-    // this.getContent()
-    // this.checkTitleAndConten()
-    // this.checkStyleWithTitleAndContenAndBlock()
-    // this.getShowType(this.type)
-    // this.dynamicUpdateType(this.changeTime)
-    if (this.typed === null) {
-      this.print()
-    }
-    this.timer = setInterval(() => {
-      this.getContent()
-    }, 1000 * 60 * 60 * 24)
+    // if (this.typed === null) {
+    //   this.print()
+    // }
+    // this.timer = setInterval(() => {
+    //   this.getContent()
+    // }, 1000 * 60 * 60 * 24)
   },
   destroy(){
     clearInterval(this.timer)
