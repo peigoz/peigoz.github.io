@@ -1,6 +1,6 @@
 ---
 title: TS新版本类型体操的一些新特性
-date: 2023-03-13 21:47:15
+date: 2023-02-09 21:47:15
 categories:
  - TypeScript
 tags:

@@ -1,6 +1,6 @@
 ---
 title: TypeScript知识点
-date: 2021-03-26 21:46:08
+date: 2021-6-16 21:46:08
 categories:
   - TypeScript
 tags:

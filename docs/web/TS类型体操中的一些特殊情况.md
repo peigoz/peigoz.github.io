@@ -1,6 +1,6 @@
 ---
 title: TS类型体操中的一些特殊情况
-date: 2023-03-13 16:57:42
+date: 2023-02-06 16:57:42
 categories:
  - TypeScript
 tags:

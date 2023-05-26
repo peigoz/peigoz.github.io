@@ -66,20 +66,22 @@ const sidebar = {
         '/notes/backEnd/Node的IO机制',
         '/notes/backEnd/影响Node的性能因素',
         '/notes/backEnd/Node的CPU过载保护机制',
+        '/notes/backEnd/关于Koa中间件底层原理简单实现',
       ],
     },
     {
       title: '数据结构与算法',
       collapsable: true,
       children: [
-        '/notes/interview/分别使用迭代法和递归法实现二叉树的DFS',
+        '/notes/data-structures/二叉树的DFS',
       ],
     },
     {
       title: '面试',
       collapsable: true,
       children: [
-        '/notes/data-structures/手撕系列',
+        '/notes/interview/手撕系列',
+        '/notes/interview/数组转对象',
       ],
     },
   ],

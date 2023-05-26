@@ -1,6 +1,6 @@
 ---
 title: ES6知识点
-date: 2021-03-05 15:45:06
+date: 2021-03-08 15:45:06
 categories:
   - JavaScript
 tags:
