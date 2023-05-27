@@ -97,4 +97,7 @@ export default {
   .tags
     display block
     margin-left 0 !important
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
 </style>

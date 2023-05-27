@@ -113,7 +113,9 @@ export default {
       font-size: 1.6rem;
       font-weight: 600;
       line-height: 48px;
-      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       a {
         color: var(--text-color);
@@ -187,13 +189,15 @@ export default {
   .abstract-item {
     flex-direction: column;
     align-content: center;
-
+    margin: 0 auto 12px;
+    padding: 8px 12px
     .abstract-item-left {
       width: 100%;
     }
 
     .abstract-item-right {
       width: 100%;
+      margin-left: 1rem;
 
       .abstract {
         display: none;
