@@ -1,7 +1,7 @@
 // const sidebar = {
 //   '/notes': [
 //     { title: '关于', collapsable: false }],
-//   '/notes/frontEnd': [
+//   '/notes/front-end': [
 //     {
 //       title: '前端',
 //       collapsable: true,
@@ -18,7 +18,7 @@
 //   {
 //     title: '前端',
 //     collapsable: true,
-//     children: ['/notes/frontEnd/HTML常见问题', '/notes/frontEnd/CSS知识点'],
+//     children: ['/notes/front-end/HTML常见问题', '/notes/front-end/CSS知识点'],
 //   },
 // ]
 const sidebar = {
@@ -32,23 +32,23 @@ const sidebar = {
       title: '前端',
       collapsable: true,
       children: [
-        '/notes/frontEnd/HTML常见问题',
-        '/notes/frontEnd/CSS知识点',
-        '/notes/frontEnd/CSS-Flex',
-        '/notes/frontEnd/JS类型转换',
-        '/notes/frontEnd/JS类型与常用类型判断',
-        '/notes/frontEnd/JS事件',
-        '/notes/frontEnd/JS函数',
-        '/notes/frontEnd/JS作用域与执行上下文',
-        '/notes/frontEnd/JS原型与原型链',
-        '/notes/frontEnd/JS面向对象之对象创建模式',
-        '/notes/frontEnd/JS闭包',
-        '/notes/frontEnd/JS与DOM坐标计算有关的操作属性',
-        '/notes/frontEnd/JS浏览器BOM对象',
-        '/notes/frontEnd/JS线程机制与事件机制',
-        '/notes/frontEnd/JS异步任务与事件循环',
-        '/notes/frontEnd/ES6知识点',
-        '/notes/frontEnd/一些有趣的JS工具类方法',
+        '/notes/front-end/HTML常见问题',
+        '/notes/front-end/CSS知识点',
+        '/notes/front-end/CSS-Flex',
+        '/notes/front-end/JS类型转换',
+        '/notes/front-end/JS类型与常用类型判断',
+        '/notes/front-end/JS事件',
+        '/notes/front-end/JS函数',
+        '/notes/front-end/JS作用域与执行上下文',
+        '/notes/front-end/JS原型与原型链',
+        '/notes/front-end/JS面向对象之对象创建模式',
+        '/notes/front-end/JS闭包',
+        '/notes/front-end/JS与DOM坐标计算有关的操作属性',
+        '/notes/front-end/JS浏览器BOM对象',
+        '/notes/front-end/JS线程机制与事件机制',
+        '/notes/front-end/JS异步任务与事件循环',
+        '/notes/front-end/ES6知识点',
+        '/notes/front-end/一些有趣的JS工具类方法',
       ],
     },
     {
@@ -63,10 +63,10 @@ const sidebar = {
       title: '后端',
       collapsable: true,
       children: [
-        '/notes/backEnd/Node的IO机制',
-        '/notes/backEnd/影响Node的性能因素',
-        '/notes/backEnd/Node的CPU过载保护机制',
-        '/notes/backEnd/关于Koa中间件底层原理简单实现',
+        '/notes/back-end/Node的IO机制',
+        '/notes/back-end/影响Node的性能因素',
+        '/notes/back-end/Node的CPU过载保护机制',
+        '/notes/back-end/关于Koa中间件底层原理简单实现',
       ],
     },
     {
