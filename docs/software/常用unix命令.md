@@ -127,7 +127,7 @@ publish: true
 7. `scp`：通过网络，把文件从一台电脑拷贝到另一台电脑。（可使用`rz`和`sz`替代）
     - `scp root@192.168.1.5:/root/file.txt file.txt` ：表示把远程电脑上的 `file.txt` 文件拷贝到本机
 
-### Vim
+## Vim
 
 1. 模式：
     - 交互模式：默认模式，可剪切、粘贴、撤消等；
@@ -169,8 +169,7 @@ set mouse=a " 激活鼠标，用鼠标选中时相当于进入可视模式
 // ... 更多配置参考：<https://www.ruanyifeng.com/blog/2018/09/vimrc.html>
 ```
 
-### 其他
-#### PM2
+## PM2
 
 1. 启动：`pm2 start app.js --watch -i 2 -n myapp`
     - `--watch`：监听应用目录的变化，一旦发生变化，自动重启。（实际更多通过配置文件）
