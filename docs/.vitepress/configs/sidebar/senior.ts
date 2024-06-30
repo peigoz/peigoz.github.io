@@ -27,15 +27,15 @@ export const senior = {
           link: '/senior/typescript/TypeScript知识点',
         },
         {
-          text: '2. TS几个常用类型之间区别',
+          text: '2. 几个常用类型之间区别',
           link: '/senior/typescript/TS几个常用类型之间区别',
         },
         {
-          text: '3. TS类型体操中的一些特殊情况',
+          text: '3. 类型体操中的一些特殊情况',
           link: '/senior/typescript/TS类型体操中的一些特殊情况',
         },
         {
-          text: '4. TS新版本类型体操的一些新特性',
+          text: '4. 新版本类型体操的一些新特性',
           link: '/senior/typescript/TS新版本类型体操的一些新特性',
         },
       ],

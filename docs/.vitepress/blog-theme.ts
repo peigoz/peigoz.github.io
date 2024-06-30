@@ -26,7 +26,18 @@ const blogTheme = getThemeConfig({
 
   // markdown 图表支持（会增加一定的构建耗时）
   // mermaid: true
-
+  comment: {
+    type: 'giscus',
+    options: {
+      repo: 'peigoz/peigoz.github.io',
+      repoId: 'MDEwOlJlcG9zaXRvcnkzMzAyMzI2NTQ=',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOE67zTs4Cge7H',
+      inputPosition: 'top',
+      loading: 'lazy'
+    },
+    mobileMinify: true
+  },
   home: {
     analysis: {
       articles: {
