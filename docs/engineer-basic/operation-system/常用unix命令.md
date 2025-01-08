@@ -95,6 +95,10 @@ top: 1
       - `=` ：等于号，表示分配权限。
       - `chmod u+rx file`: 为文件`file`的所有者添加`rx`权限
       - `chmod u=rwx,g=r,o=- file`
+4. `chown`: 修改目录所有者
+    - `chown peigoz /works` ：修改works目录的所有者为`peigoz`用户
+    - `chown peigoz:user /works` ：修改works目录的所有者为`user`用户组下的`peigoz`用户
+    - `-R` ：递归修改
 
 ## 进阶
 
