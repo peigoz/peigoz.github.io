@@ -9,17 +9,18 @@ export const nav = [
     ]
   },
   {
-    text: '前端进阶',
+    text: '工程师进阶',
     items: [
       { text: '大前端', link: '/senior/engineer/Vue与React各个生命周期', },
       { text: 'TypeScript', link: '/senior/typescript/TypeScript知识点', },
       { text: 'NodeJs', link: '/senior/nodejs/Node的CPU过载保护机制', },
       { text: '代码协同', link: '/senior/team/Volta常用命令', },
       { text: '奇技淫巧', link: '/senior/peculiar/一些有趣的JS工具类方法', },
+      { text: 'Rust', link: '/senior/rust/前端视角下的Rust简单概念理解', },
     ],
   },
   {
-    text: '工程能力基础',
+    text: '工程基础',
     items: [
       { text: '数据结构与算法', link: '/engineer-basic/structure-algorithm/二叉树的DFS' },
       { text: '设计模式', link: '/engineer-basic/design-pattern/如何优雅的解耦if-else', },

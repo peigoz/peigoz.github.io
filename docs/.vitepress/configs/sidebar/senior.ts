@@ -118,5 +118,15 @@ export const senior = {
         },
       ],
     },
+    {
+      text: 'Rust',
+      collapsed: true,
+      items: [
+        {
+          text: '1. 前端视角下的 Rust 简单概念理解',
+          link: '/senior/rust/前端视角下的Rust简单概念理解'
+        },
+      ],
+    },
   ]
 }
