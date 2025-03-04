@@ -91,7 +91,7 @@ publish: true
 1. `LazyLoad`：通常而言，`LazyLoad` 的作用在于，当页面未滚动到相应区域，该区域内的资源（网络请求）不会被加载。反之，当页面滚动到相应区域，相关资源的请求才会被发起。
 2. 如果 `content-visibility: auto` 要能够替代 LazyLoad，则需要做到，初始化渲染的时候，在页面当前展示范围外的，设定了 `content-visibility: auto` 的元素内的一些静态资源不会被加载。
 
-::: right
+::: info
 参考 [玩转 CSS 的艺术之美](https://juejin.cn/book/6850413616484040711/section/6850413616580657159?scrollMenuIndex=1)  
 参考 [使用will-change来提高页面的渲染速度](https://juejin.cn/post/7015387929870598158)  
 参考 [使用 content-visibility 优化渲染性能](https://juejin.cn/post/7108921365628977166#heading-7)  

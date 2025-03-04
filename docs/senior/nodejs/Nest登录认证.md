@@ -143,6 +143,6 @@ publish: true
 }
 ```
 
-::: right
+::: info
 参考 [tc9011](https://juejin.cn/post/6844903903792742407#heading-2)
 :::

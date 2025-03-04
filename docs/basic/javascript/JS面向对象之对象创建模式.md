@@ -223,7 +223,7 @@ function Person(name, age) { //在构造函数中只初始化一般函数
   console.log(stu.name, stu.age, stu.price)
 ```
 
-::: primary
+::: tip
 在后续 Typescript 章节会对此部分重新详细解释
 :::
 

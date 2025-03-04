@@ -1020,7 +1020,7 @@ export class UserService {
 }
 ```
 
-::: right
+::: info
 参考 [一斤代码](https://cloud.tencent.com/developer/article/1532247)  
 参考 [tc9011](https://juejin.cn/post/6844903890777817101)
 :::

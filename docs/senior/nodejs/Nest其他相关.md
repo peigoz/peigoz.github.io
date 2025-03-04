@@ -254,7 +254,7 @@ export class AccountDto {
 }
 ```
 
-::: primary 更多 swagger 文档 用法请观看官网[OpenAPI (Swagger)](https://docs.nestjs.cn/7/openapi?id=%e4%bb%8b%e7%bb%8d)
+::: tip 更多 swagger 文档 用法请观看官网[OpenAPI (Swagger)](https://docs.nestjs.cn/7/openapi?id=%e4%bb%8b%e7%bb%8d)
 :::
 
 ## 热重载
@@ -334,6 +334,6 @@ export class AccountDto {
 
 5. 运行 `npm run webpack`之后，webpack 开始监视文件，然后在另一个命令行窗口中运行 `npm start`。
 
-::: right
+::: info
 参考 [tc9011](https://juejin.cn/post/6844903903792742407#heading-2)
 :::

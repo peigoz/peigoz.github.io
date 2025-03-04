@@ -6,7 +6,7 @@ tags:
 publish: true
 ---
 
-::: primary
+::: tip
 
 ### 数组取随机数
 
@@ -29,7 +29,7 @@ function randomSort(a, b) {
 
 ```
 
-::: primary
+::: tip
 
 ### 时间处理函数
 
@@ -65,7 +65,7 @@ function padLeftZero(str) {
 }
 ```
 
-::: primary
+::: tip
 
 ### 防抖函数
 
@@ -110,7 +110,7 @@ function debounce(func,wait) {
 }
 ```
 
-::: primary
+::: tip
 
 ### 节流函数
 
@@ -154,7 +154,7 @@ function throttle(func, wait) {
 }
 ```
 
-::: primary
+::: tip
 
 ### 基于防抖的节流函数
 
@@ -197,7 +197,7 @@ export function throttle(fn, delay=500) {
 
 ```
 
-::: primary
+::: tip
 
 ### 深拷贝函数
 

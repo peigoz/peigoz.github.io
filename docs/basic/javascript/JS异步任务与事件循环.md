@@ -110,6 +110,6 @@ js 是单线程执行的，js 中的任务按顺序一个一个的执行，但�
 [1]: https://html.spec.whatwg.org/multipage/browsers.html#browsing-context
 [2]: https://www.w3.org/TR/workers/#worker
 
-::: right
+::: info
 [参考链接](https://github.com/TigerHee/shareJS)
 :::
