@@ -15,7 +15,7 @@ export const nav = [
       { text: 'TypeScript', link: '/senior/typescript/TypeScript知识点', },
       { text: 'NodeJs', link: '/senior/nodejs/Node的CPU过载保护机制', },
       { text: '代码协同', link: '/senior/team/Volta常用命令', },
-      { text: '奇技淫巧', link: '/senior/peculiar/一些有趣的JS工具类方法', },
+      { text: '百宝箱', link: '/senior/peculiar/一些有趣的JS工具类方法', },
       { text: 'Rust', link: '/senior/rust/前端视角下的Rust简单概念理解', },
     ],
   },

@@ -101,7 +101,7 @@ export const senior = {
       ],
     },
     {
-      text: '奇技淫巧',
+      text: '百宝箱',
       collapsed: true,
       items: [
         {
