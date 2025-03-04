@@ -19,6 +19,18 @@ publish: true
   函数 `fn foo(x: &i32) -> &i32`，`x` 参数的生命周期会被自动赋给返回值 `&i32`，因此该函数等同于 `fn foo<'a>(x: &'a i32) -> &'a i32`。
 3. **若有多个输入生命周期，但其中一个是 `&self` 或 `&mut self`，那么 `&self` 的生命周期会被赋给所有的输出生命周期。**  
   拥有 `&self` 形式的参数，说明该函数是一个 **方法**，该规则让方法的使用便利度大幅提升。
+4. impl 块消除
+
+```rust
+impl<'a> Reader for BufReader<'a> {
+    // methods go here
+    // impl内部实际上没有用到'a
+}
+// 等同于
+impl Reader for BufReader<'_> {
+    // methods go here
+}
+```
 
 ## 其他规则
 
@@ -27,11 +39,35 @@ publish: true
     - 函数体中某个新建引用的生命周期(悬垂引用场景)
 2. 如果在结构体中使用引用类型,那么需要为结构体中的每一个引用标注上生命周期。且最好对内部字段的引用lifetime和这个字段类型本身的lifetime分开：  
 
-  ```rust
-  struct Interface<'text, 'manager> {
-    manager: &'manager mut Manager<'text>
-  }
-  struct Manager<'text> {
-    text: &'text str
-  }
-  ```
+```rust
+struct Interface<'text, 'manager> {
+  manager: &'manager mut Manager<'text>
+}
+struct Manager<'text> {
+  text: &'text str
+}
+
+// 生命周期约束消除
+// Rust 2015
+struct Ref<'a, T: 'a> {
+    field: &'a T
+}
+
+// Rust 2018
+struct Ref<'a, T> {
+    field: &'a T
+}
+```
+
+3. 用 Fn 特征解决闭包生命周期：
+
+```rust
+fn main() {
+   let closure_slision = fun(|x: &i32| -> &i32 { x });
+   assert_eq!(*closure_slision(&45), 45);
+}
+
+fn fun<T, F: Fn(&T) -> &T>(f: F) -> F {
+   f
+}
+```
