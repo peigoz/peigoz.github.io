@@ -6,10 +6,7 @@ tags:
 publish: true
 ---
 
-::: tip
-
-### 数组取随机数
-
+::: tip 数组取随机数
 :::
 
 ```javascript
@@ -29,10 +26,7 @@ function randomSort(a, b) {
 
 ```
 
-::: tip
-
-### 时间处理函数
-
+::: tip 时间处理函数
 :::
 
 ```javascript
@@ -65,10 +59,7 @@ function padLeftZero(str) {
 }
 ```
 
-::: tip
-
-### 防抖函数
-
+::: tip 防抖函数
 :::
 
 1. 分为非立即执行版和立即执行版。注意 this 的指向，下面用箭头函数纠正 this。
@@ -110,10 +101,7 @@ function debounce(func,wait) {
 }
 ```
 
-::: tip
-
-### 节流函数
-
+::: tip 节流函数
 :::
 
 1. 分为时间戳版和定时器版。节流会稀释函数的执行频率。注意 this 的指向，下面用箭头函数纠正 this。
@@ -154,10 +142,7 @@ function throttle(func, wait) {
 }
 ```
 
-::: tip
-
-### 基于防抖的节流函数
-
+::: tip 基于防抖的节流函数
 :::
 
 1. 无论是防抖还是节流函数都有他们局限性，在用户频繁输入但是又要获取最后一次输入时的结果时，明显上面都无法满足需求，所以需要对他们进行改造。
@@ -197,10 +182,7 @@ export function throttle(fn, delay=500) {
 
 ```
 
-::: tip
-
-### 深拷贝函数
-
+::: tip 深拷贝函数
 :::
 
 ```javascript
