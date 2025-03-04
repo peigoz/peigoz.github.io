@@ -9,7 +9,7 @@ export const nav = [
     ]
   },
   {
-    text: '工程师进阶',
+    text: '工程进阶',
     items: [
       { text: '大前端', link: '/senior/engineer/Vue与React各个生命周期', },
       { text: 'TypeScript', link: '/senior/typescript/TypeScript知识点', },

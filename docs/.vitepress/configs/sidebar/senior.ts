@@ -126,6 +126,10 @@ export const senior = {
           text: '1. 前端视角下的 Rust 简单概念理解',
           link: '/senior/rust/前端视角下的Rust简单概念理解'
         },
+        {
+          text: '2. Rust生命周期的消除规则',
+          link: '/senior/rust/Rust生命周期的消除规则'
+        },
       ],
     },
   ]

@@ -11,52 +11,6 @@ publish: true
 
 1. Rust 的语法设计确实繁琐复杂，但是编程语言底层思想终归是万变不离其宗的。在学习 TS 类型体操和函数式编程思想后，去学习 Rust 的过程中，我发现很多地方有异曲同工之妙。于是重新梳理了一下以便帮助自己更好地去理解rust一些概念。
 
-## 特征Trait
-
-类似TS中的抽象类，一般用于接口约束，表示要实现某个特征方法。  
-
-### 🌰Trait例子
-
-1. 实现接口约束：  
-
-    ```typescript
-    // 定义接口
-    interface Animals{
-      call(sound:string):void
-    }
-    // 实现接口
-    abstract class BaseAnimals implements Animals{
-      call(sound:string):void
-      // 可以有默认实现
-      sing():void{
-        console.log('wanwan...')
-      }
-    }
-    // Dog继承了BaseAnimals，相当于要去实现Animals接口，且有默认sing的能力
-    class Dog extends BaseAnimals{
-      call(sound){
-        console.log(sound)
-      }
-    }
-    ```
-
-    ```rust
-    // 定义特征
-    trait Animals{
-      fn call(&self,sound:&str);
-      // 可以有默认实现
-      fn sing(&self){
-        println!("wanwan...")
-      }
-    }
-    // 为Dog实现Animals特征,可以简单理解为继承了Animals抽象类
-    impl Animals for Dog{
-      fn call(&self,sound:&str){
-        println!("{}",sound)
-      }
-    }
-    ```
-
 ## 结构体Struct
 
 类似于TS中的对象，也可以用来表示具名元组和定义新的类型。
@@ -119,4 +73,78 @@ publish: true
 
     struct Wrapper(Vec<String>);
     let w = Wrapper(vec![String::from("hello"), String::from("world")]);
+    ```
+
+4. Struct + impl = Class
+
+    ```typescript
+    class Dog{
+      constructor(public age:number){}
+      sing(){
+        console.log('wanwan...')
+      }
+    }
+    const dog = new Dog(3)
+    dog.age // 3
+    dog.sing() // wanwan...
+    ```
+
+    ```rust
+    struct Dog{
+      age: u16
+    }
+    impl Dog{
+      fn sing(&self){
+        println!("wanwan...")
+      }
+    }
+    let dog = Dog{age:3};
+    dog.age // 3
+    dog.sing() // wanwan...
+    ```
+
+## 特征Trait
+
+类似TS中的抽象类，一般用于接口约束，表示要实现某个特征方法。  
+
+### 🌰Trait例子
+
+1. 实现接口约束：  
+
+    ```typescript
+    // 定义接口
+    interface Animals{
+      call(sound:string):void
+    }
+    // 实现接口
+    abstract class BaseAnimals implements Animals{
+      call(sound:string):void
+      // 可以有默认实现
+      sing():void{
+        console.log('wanwan...')
+      }
+    }
+    // Dog继承了BaseAnimals，相当于要去实现Animals接口，且有默认sing的能力
+    class Dog extends BaseAnimals{
+      call(sound){
+        console.log(sound)
+      }
+    }
+    ```
+
+    ```rust
+    // 定义特征
+    trait Animals{
+      fn call(&self,sound:&str);
+      // 可以有默认实现
+      fn sing(&self){
+        println!("wanwan...")
+      }
+    }
+    // 为Dog实现Animals特征,可以简单理解为继承了Animals抽象类
+    impl Animals for Dog{
+      fn call(&self,sound:&str){
+        println!("{}",sound)
+      }
+    }
     ```
