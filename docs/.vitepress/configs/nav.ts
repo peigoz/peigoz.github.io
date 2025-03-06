@@ -32,7 +32,7 @@ export const nav = [
     text: '大杂烩',
     items: [
       { text: '面试系列', link: '/mixture/interview/手撕系列' },
-      { text: '软件推荐', link: '/mixture/tools/软件推荐', },
+      { text: '工具软件', link: '/mixture/tools/软件推荐', },
     ],
   },
   { text: '关于我', link: '/about' },

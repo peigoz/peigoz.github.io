@@ -15,12 +15,16 @@ export const mixture = {
       ],
     },
     {
-      text: '软件推荐',
+      text: '工具软件',
       collapsed: true,
       items: [
         {
           text: '1. 软件推荐',
           link: '/mixture/tools/软件推荐',
+        },
+        {
+          text: '2. 定时获取免费SSL证书',
+          link: '/mixture/tools/定时获取免费SSL证书',
         },
       ],
     },
