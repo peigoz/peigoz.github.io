@@ -3,7 +3,6 @@ import { defineConfig } from 'vitepress'
 import { blogTheme } from './blog-theme'
 import { nav } from './configs/nav'
 import { sidebar } from './configs/sidebar'
-
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！

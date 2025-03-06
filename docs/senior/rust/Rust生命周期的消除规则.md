@@ -39,35 +39,35 @@ impl Reader for BufReader<'_> {
     - 函数体中某个新建引用的生命周期(悬垂引用场景)
 2. 如果在结构体中使用引用类型,那么需要为结构体中的每一个引用标注上生命周期。且最好对内部字段的引用lifetime和这个字段类型本身的lifetime分开：  
 
-```rust
-struct Interface<'text, 'manager> {
-  manager: &'manager mut Manager<'text>
-}
-struct Manager<'text> {
-  text: &'text str
-}
+    ```rust
+    struct Interface<'text, 'manager> {
+      manager: &'manager mut Manager<'text>
+    }
+    struct Manager<'text> {
+      text: &'text str
+    }
 
-// 生命周期约束消除
-// Rust 2015
-struct Ref<'a, T: 'a> {
-    field: &'a T
-}
+    // 生命周期约束消除
+    // Rust 2015
+    struct Ref<'a, T: 'a> {
+        field: &'a T
+    }
 
-// Rust 2018
-struct Ref<'a, T> {
-    field: &'a T
-}
-```
+    // Rust 2018
+    struct Ref<'a, T> {
+        field: &'a T
+    }
+    ```
 
 3. 用 Fn 特征解决闭包生命周期：
 
-```rust
-fn main() {
-   let closure_slision = fun(|x: &i32| -> &i32 { x });
-   assert_eq!(*closure_slision(&45), 45);
-}
+    ```rust
+    fn main() {
+      let closure_slision = fun(|x: &i32| -> &i32 { x });
+      assert_eq!(*closure_slision(&45), 45);
+    }
 
-fn fun<T, F: Fn(&T) -> &T>(f: F) -> F {
-   f
-}
-```
+    fn fun<T, F: Fn(&T) -> &T>(f: F) -> F {
+      f
+    }
+    ```

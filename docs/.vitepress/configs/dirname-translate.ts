@@ -1,0 +1,17 @@
+export const DirnameTranslateMap = {
+  'html': 'HTML',
+  'css': 'CSS',
+  'javascript': 'JavaScript',
+  'structure-algorithm': '数据结构与算法',
+  'design-pattern': '设计模式',
+  'operation-system': '操作系统',
+  'interview': '面试系列',
+  'tools': '工具软件',
+  'frontend': '大前端',
+  'typescript': 'TypeScript',
+  'nodejs': 'Nodejs',
+  'team': '代码协同',
+  'peculiar': '百宝箱',
+  'rust': 'Rust',
+  'fix-bug': '踩坑笔记',
+};

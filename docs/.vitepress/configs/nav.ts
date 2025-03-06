@@ -11,7 +11,7 @@ export const nav = [
   {
     text: '工程进阶',
     items: [
-      { text: '大前端', link: '/senior/engineer/Vue与React各个生命周期', },
+      { text: '大前端', link: '/senior/frontend/Vue与React各个生命周期', },
       { text: 'TypeScript', link: '/senior/typescript/TypeScript知识点', },
       { text: 'NodeJs', link: '/senior/nodejs/Node的CPU过载保护机制', },
       { text: '代码协同', link: '/senior/team/Volta常用命令', },
