@@ -18,3 +18,23 @@
 .theme-blog-popover-close{
   display: none !important;
 }
+
+// 折叠 sidebar动画
+.VPSidebarItem .items {
+  display: flex;
+  flex-direction: column;
+}
+.VPSidebarItem.collapsed .items {
+  display: flex !important;
+}
+.VPSidebarItem .items > div {
+  flex: 0 0 auto;
+  transition: flex-basis 0.5s ease, opacity 0.3s;
+  will-change: transform;
+  opacity: 1;
+}
+.VPSidebarItem.collapsed .items > div {
+  flex: 0 1 0;
+  opacity: 0;
+  overflow: hidden;
+}
