@@ -2,7 +2,7 @@
 title: 前端视角下的 Rust 简单概念理解
 date: 2025-01-08 19:51:48
 tags:
- - rust
+ - Rust
 isShowComments: true
 publish: true
 ---

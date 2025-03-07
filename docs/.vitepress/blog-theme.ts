@@ -86,28 +86,28 @@ const blogTheme = getThemeConfig({
   ],
 
   // 公告
-  popover: {
-    title: '公告',
-    body: [
-      {
-        type: 'title',
-        content: '如果你也喜欢前端',
-        style: 'text-align: center;',
-      },
-      {
-        type: 'title',
-        content: '欢迎加入QQ交流群 🎉🎉🎉',
-        style: 'text-align: center;',
-      },
-      {
-        type: 'text',
-        content: 'QQ 群 ：512250251',
-        style: 'text-align: center;',
-      },
-    ],
-    duration: 0,
-    twinkle: false,
-  },
+  // popover: {
+  //   title: '公告',
+  //   body: [
+  //     {
+  //       type: 'title',
+  //       content: '如果你也喜欢前端',
+  //       style: 'text-align: center;',
+  //     },
+  //     {
+  //       type: 'title',
+  //       content: '欢迎加入QQ交流群 🎉🎉🎉',
+  //       style: 'text-align: center;',
+  //     },
+  //     {
+  //       type: 'text',
+  //       content: 'QQ 群 ：512250251',
+  //       style: 'text-align: center;',
+  //     },
+  //   ],
+  //   duration: 0,
+  //   twinkle: false,
+  // },
   recommend: false,
   buttonAfterArticle: {
     openTitle: '赞赏',
