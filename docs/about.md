@@ -49,7 +49,7 @@ isShowComments: false
 
 - 使用 Vitepress 构建
 - 感谢粥里有勺糖的主题 [@sugarat/theme](https://github.com/ATQQ/sugar-blog)
-- 部署在 Github 上,网速慢需要自备梯子
+- 部署在 Github 上,通过 Github Actions 自动部署和国内 CDN 加速
 
 ## 📫联系我
 
