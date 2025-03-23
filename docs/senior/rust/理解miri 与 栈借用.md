@@ -317,7 +317,6 @@ unsafe {
     *ref2_at_1 += 2;
     *ref1_at_0 += 1;
 
-    // Should be [3, 3, 0, ...]
     println!("{:?}", &data[..]);
 }
 ```
