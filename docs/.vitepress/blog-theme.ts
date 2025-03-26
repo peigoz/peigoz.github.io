@@ -18,7 +18,7 @@ const blogTheme = getThemeConfig({
   comment: {
     type: 'giscus',
     options: {
-      repo: 'peigoz/peigoz.github.io',
+      repo: 'pejaz/pejaz.github.io',
       repoId: 'MDEwOlJlcG9zaXRvcnkzMzAyMzI2NTQ=',
       category: 'Announcements',
       categoryId: 'DIC_kwDOE67zTs4Cge7H',
@@ -43,6 +43,7 @@ const blogTheme = getThemeConfig({
      * 阅读时间分析展示位置
      */
     readingTimePosition: 'inline',
+    analyzeTitles: {}
   },
   // 页脚
   footer: {
@@ -65,6 +66,20 @@ const blogTheme = getThemeConfig({
 
   // 友链
   friend: [
+    // {
+    //   nickname: '粥里有勺糖',
+    //   des: '你的指尖用于改变世界的力量',
+    //   avatar:
+    //     'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
+    //   url: 'https://sugarat.top',
+    // },
+    // {
+    //   nickname: 'Vitepress',
+    //   des: 'Vite & Vue Powered Static Site Generator',
+    //   avatar:
+    //     'https://vitepress.dev/vitepress-logo-large.webp',
+    //   url: 'https://vitepress.dev/',
+    // },
   ],
 
   // 公告
@@ -96,7 +111,14 @@ const blogTheme = getThemeConfig({
     closeTitle: '下次一定',
     content: '<img src="https://blog.peigo.top/peigo/qrcode-wechat.png">',
     icon: 'wechatPay'
-  }
+  },
+  authorList: [
+    {
+      nickname: 'pejaz',
+      url: 'http://localhost:5173/about.html',
+      des: '每天更新自己，慢慢理解世界'
+    }
+  ]
 })
 
 export { blogTheme }
