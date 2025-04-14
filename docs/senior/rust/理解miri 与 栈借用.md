@@ -1,5 +1,5 @@
 ---
-title: 理解miri 与 栈借用(抄录文章)
+title: 理解miri 与 栈借用
 date: 2025-03-24 01:29:27
 tags:
  - Rust

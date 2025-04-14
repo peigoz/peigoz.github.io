@@ -23,16 +23,16 @@ const blogTheme = getThemeConfig({
       category: 'Announcements',
       categoryId: 'DIC_kwDOE67zTs4Cge7H',
       inputPosition: 'top',
-      loading: 'lazy'
+      loading: 'lazy',
     },
-    mobileMinify: true
+    mobileMinify: true,
   },
   home: {
     analysis: {
       articles: {
-        title: ['博客文章']
-      }
-    }
+        title: ['博客文章'],
+      },
+    },
   },
   article: {
     /**
@@ -43,14 +43,15 @@ const blogTheme = getThemeConfig({
      * 阅读时间分析展示位置
      */
     readingTimePosition: 'inline',
-    analyzeTitles: {}
+    // [TODO]: 动态展示隐藏内容
+    analyzeTitles: {},
   },
   // 页脚
   footer: {
     version: false,
     icpRecord: {
       name: '粤ICP备19037674号',
-      link: 'https://beian.miit.gov.cn/'
+      link: 'https://beian.miit.gov.cn/',
     },
     // securityRecord: {
     //   name: '公网安备xxxxx',
@@ -110,15 +111,15 @@ const blogTheme = getThemeConfig({
     openTitle: '赞赏',
     closeTitle: '下次一定',
     content: '<img src="https://blog.peigo.top/peigo/qrcode-wechat.png">',
-    icon: 'wechatPay'
+    icon: 'wechatPay',
   },
   authorList: [
     {
       nickname: 'pejaz',
       url: 'http://localhost:5173/about.html',
-      des: '每天更新自己，慢慢理解世界'
-    }
-  ]
+      des: '每天更新自己，慢慢理解世界',
+    },
+  ],
 })
 
 export { blogTheme }
