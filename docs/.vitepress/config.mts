@@ -35,11 +35,14 @@ export default defineConfig({
     ],
     ['script', { charset: 'utf-8', src: '/js/disable-user-zoom.js' }], // 移动端,禁止用户缩放,引入你写的js
   ],
+  sitemap: {
+    hostname: 'https://peigo.top',
+  },
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {
       level: [2, 3],
-      label: '目录'
+      label: '目录',
     },
     // 默认文案修改
     returnToTopLabel: '回到顶部',
@@ -62,8 +65,8 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/pejaz'
+        link: 'https://github.com/pejaz',
       },
     ],
-  }
+  },
 })
