@@ -6,11 +6,34 @@ function hasH1Header(content) {
   // 标准化处理：统一换行符并分割为行数组
   const lines = content.replace(/\r\n/g, '\n').split('\n')
 
-  // 方案一：检测 # 语法标题
-  const sharpPattern = /^#\s+(?!#).+$/ // 排除连续的 ##
-  if (lines.some(line => sharpPattern.test(line))) {
-    return true
+  // 检测 h1 # 语法标题
+  const h1Pattern = /^#\s+(?!#).+$/ // 排除连续的 ##
+  // 检测 h2 ## 语法标题
+  const h2Pattern = /^##\s+(?!#).+$/
+  const h2Idx = lines.findIndex(line => h2Pattern.test(line))
+  // 只检测 h2 标题前的部分
+  const beforeH2Lines = lines.slice(0, h2Idx)
+
+  let isCodeScope = false
+  for (let line of beforeH2Lines) {
+    line = line.trim()
+
+    if (line.startsWith('```')) {
+      if (isCodeScope) {
+        isCodeScope = false
+      } else {
+        isCodeScope = true
+      }
+    }
+
+    if (isCodeScope) continue
+
+    if (h1Pattern.test(line)) {
+      return true
+    }
   }
+
+  return false
 }
 
 export const titlePlugin = md => {
