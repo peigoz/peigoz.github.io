@@ -122,6 +122,7 @@ fi
 1. leetcode 插件不支持动态配置新建题目文件的模版，这里我们需要去修改 leetcode 插件源码
 2. **mac** 目录： ~/.vscode/extensions/leetcode.vscode-leetcode-xxx/out/src/leetCodeExecutor.js
 3. **window** 目录： C:\Users\<用户名>\.vscode\extensions\leetcode.vscode-leetcode-xxx\...
+4. 测试的时候可以通过`RUSTFLAGS="-A unused" cargo test -- --nocapture`命令忽略 unused 告警
 
 ```js
 showProblem(){
