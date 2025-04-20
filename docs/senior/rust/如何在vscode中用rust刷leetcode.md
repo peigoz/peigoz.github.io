@@ -122,7 +122,7 @@ fi
 1. leetcode 插件不支持动态配置新建题目文件的模版，这里我们需要去修改 leetcode 插件源码
 2. **mac** 目录： ~/.vscode/extensions/leetcode.vscode-leetcode-xxx/out/src/leetCodeExecutor.js
 3. **window** 目录： C:\Users\<用户名>\.vscode\extensions\leetcode.vscode-leetcode-xxx\...
-4. 测试的时候可以通过`RUSTFLAGS="-A unused" cargo test -- --nocapture`命令忽略 unused 告警
+4. 测试的时候也可以通过`RUSTFLAGS="-A unused" cargo test -- --nocapture`命令忽略 unused 告警
 
 ```js
 showProblem(){
@@ -132,14 +132,23 @@ showProblem(){
     const codeTemplate = yield this.executeCommandWithProgressEx("Fetching problem data...", this.nodeExecutable, cmd);
     yield fse.writeFile(filePath, codeTemplate);
   }
-  // 在这里后添加插桩代码  // [!code ++:26]
+  // 在这里后添加插桩代码  // [!code ++:39]
   if (language == 'rust') {
-    const code = yield fse.readFile(filePath, 'utf-8');
-    if (code && !code.includes("mod test")) {
+  let code = yield fse.readFile(filePath, 'utf-8');
+
+  if (code) {
+    const solutionIdx = code.indexOf('impl Solution')
+    const beforeStr = code.slice(0, solutionIdx)
+
+    if (!beforeStr.includes('#[allow(unused)]')) {
+      code = beforeStr + '\n#[allow(unused)]\n' + code.slice(solutionIdx)
+    }
+
+    if (!code.includes("mod test")) {
       const regex = /.*pub\s+fn\s+(\w+)/s; // 匹配最后一个 pub fn Name
       const match = code.match(regex);
       const funcName = match ? match[1] : 'fn'
-      const rustTemplate = `
+      const rustCode = `
 #[allow(unused)]
 struct Solution;
 
@@ -155,7 +164,10 @@ mod test {
     }
 }
 `
-      yield fse.appendFile(filePath, rustTemplate);
+        code += rustCode
+      }
+
+      yield fse.writeFile(filePath, code);
     }
   }
   // 插桩结束
