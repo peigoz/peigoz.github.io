@@ -131,7 +131,7 @@ showProblem(){
     const codeTemplate = yield this.executeCommandWithProgressEx("Fetching problem data...", this.nodeExecutable, cmd);
     yield fse.writeFile(filePath, codeTemplate);
   }
-  // 在这里后添加插桩代码  // [!code ++:25]
+  // 在这里后添加插桩代码  // [!code ++:26]
   if (language == 'rust') {
     const code = yield fse.readFile(filePath, 'utf-8');
     if (code && !code.includes("mod test")) {
@@ -144,6 +144,7 @@ struct Solution;
 
 #[cfg(test)]
 mod test {
+    #[allow(unused)]
     use super::*;
 
     #[test]
