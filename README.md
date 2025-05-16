@@ -1,7 +1,6 @@
 <h1 align="center">Hi 👋, I'm Pejaz, Welcome my blog</h1>
 <h3 align="center">A software developer from China</h3>
   
-  
 ### 📅 Hobbies
 
 - Visit the technical community
@@ -12,7 +11,7 @@
 ### 😄 Talking about Personal Stuffs
 
 - 🌱 I'm currently into Web Development
-- 📖 Recently reading books on js
+- 📖 Recently reading books on rust
 - 🔭 working on my Data Structures and Algorithms
-- 🚀 In the future, I hope to become Full Stack Development.
-- ⚡ Interested in Go and Rust
+- 🚀 In the future, I hope can work life balance
+- 💬 Ask me about anything, I am happy to help.
