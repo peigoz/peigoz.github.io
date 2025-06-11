@@ -10,7 +10,7 @@ publish: true
 
 1. 安装相关依赖
 
-   ```dos
+   ```sh
    npm install --save @nestjs/passport passport @nestjs/jwt passport-jwt
    ```
 

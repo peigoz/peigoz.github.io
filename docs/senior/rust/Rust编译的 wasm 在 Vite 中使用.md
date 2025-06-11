@@ -11,13 +11,13 @@ publish: true
 
 1. 下载安装 rust 相关环境: `rustup`(rust的版本管理工具)、`cargo`(rust 依赖管理工具)
   
-    ```shell(linux|mac)
+    ```sh(linux|mac)
     curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
     ```
 
 2. 下载安装 wasm 相关环境：`wasm-pack`(负责将 rust 编译为 wasm)、`cargo-generate`(wasm 项目脚手架)。
 
-    ```shell(linux|mac)
+    ```sh(linux|mac)
     curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
     # 要求有OpenSSL环境
@@ -28,7 +28,7 @@ publish: true
 
 3. 创建一个 wasm 项目
 
-    ```shell
+    ```sh
     cargo generate --git https://github.com/rustwasm/wasm-pack-template
     ```
 
@@ -50,7 +50,7 @@ publish: true
 
 5. 编译为 wasm
 
-    ```shell
+    ```sh
     wasm-pack build --target web
     ```
 
@@ -60,7 +60,8 @@ publish: true
 
 1. 安装 `vite-plugin-wasm` 插件并配置
 
-    ```vite.config.js
+    ```js
+    // vite.config.js
     import wasm from "vite-plugin-wasm";
 
     export default defineConfig({
@@ -86,7 +87,8 @@ publish: true
 
 3. 使用方式二：pkg 其实是一个npm包，可以直接发布至内网并通过 npm 安装使用, 但此时需要配置 optimizeDeps 选项（ 支持 [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) 语法  ）避免 wasm 被优化
 
-    ```vite.config.js
+    ```js
+    // vite.config.js
     import wasm from "vite-plugin-wasm";
 
     export default defineConfig({

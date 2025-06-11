@@ -138,7 +138,7 @@ println!("Modified value: {}", x);
 
 这就是miri做的事。
 
-```shell
+```sh
 # 不想每次都加 +nightly-2025-03-22 也可以通过rustup override set nightly-2025-03-22 对当前项目的Rust版本进行覆盖
 # 安装 miri
 rustup +nightly-2025-03-22 component add miri

@@ -25,13 +25,13 @@ publish: true
 
 1. 下载 `acme.sh` 脚本
 
-    ```shell
+    ```sh
     curl https://get.acme.sh | sh -s email=my@example.com // 你的邮箱
     ```
 
 2. 生成证书
 
-    ```shell
+    ```sh
     export Tencent_SecretId="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     export Tencent_SecretKey="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     acme.sh --issue --dns dns_tencent -d example.com -d *.example.com
@@ -39,7 +39,7 @@ publish: true
 
 3. 编写 `acmedepoly.sh` 部署证书至七牛云
 
-    ```bash
+    ```sh
     #!/bin/bash
 
     export QINIU_AK="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -55,7 +55,7 @@ publish: true
 
     4.1 新建任务脚本
 
-    ```shell
+    ```sh
     vi ~/Library/LaunchAgents/com.user.acmedepoly.sh.plist
     ```
 
@@ -93,7 +93,7 @@ publish: true
 
     4.3 加载并启动任务
 
-    ```shell
+    ```sh
     # 加载任务
     launchctl load ~/Library/LaunchAgents/com.user.acmedepoly.sh.plist
     # 启动任务

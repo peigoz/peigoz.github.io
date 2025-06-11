@@ -32,7 +32,7 @@ publish: true
 
 ##### 方法一
 
-```git
+```sh
 git remote -v  #查看远端地址
 git remote #查看远端仓库名
 git remote set-url origin https://gitee.com/xx/xx.git (新地址)
@@ -49,13 +49,13 @@ git remote add origin  https://gitee.com/xx/xx.git(新地址) #重新添加远�
 
 ##### 合并单个commit
 
-```git
+```sh
 git cherry-pick XXX(commit) #单独合并某个commit
 ```
 
 ##### 合并多个commit
 
-```git
+```sh
 git cherry-pick AAA..BBB #合并 (AAA,BBB] 区间的commit记录,不包括AAA
 
 git cherry-pick --continue #合并过程出现冲突会中断,解完冲突后需要使用--continue继续合并
@@ -63,7 +63,7 @@ git cherry-pick --continue #合并过程出现冲突会中断,解完冲突后需
 
 ### 取消rebase过程
 
-```git
+```sh
 git rebase --abort
 ```
 
@@ -118,7 +118,7 @@ ni
 1. window: git的安装目录下的etc/profile.d，在aliases.sh文件最后面加入以下即可(可根据自己需要自行更改)。
 2. 效果: 输入 gp 相当于 git pull
 
-```bash
+```sh
 alias g='git'
 alias gpr='git pull --rebase'
 alias gp='git push'
@@ -144,7 +144,7 @@ alias gcld='git clone --depth 1'
 1. gitconfig文件位置: C:\Users\用户名\.gitconfig。加入下列配置
 2. 效果: 可以美化git log输出
 
-```bash
+```sh
 [alias]
   p = pull
   pr = pull --rebase

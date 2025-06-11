@@ -95,7 +95,7 @@ pub mod solutions {
 
 3. 编写 onsave.sh 脚本，window 可以让 ai 重新改写下
 
-```bash .vscode/onsave.sh
+```sh .vscode/onsave.sh
 #!/bin/bash
 
 # 触发保存的文件名

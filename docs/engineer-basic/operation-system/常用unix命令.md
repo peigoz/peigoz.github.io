@@ -162,7 +162,7 @@ top: 1
     - `u` 键，表示选中变为小写； `U` 键，表示选中变为大写。  
 6. `~/.vimrc`
 
-```bash
+```sh
 set number " 显示行号
 syntax on " 激活语法高亮
 set showcmd " 实时看到输入的命令

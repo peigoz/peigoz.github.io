@@ -44,7 +44,7 @@ publish: true
 
 1. 这样一段请求
 
-   ```url
+   ```txt
    http://localhost:3000/home/greeting?from=hello
    ```
 
@@ -82,7 +82,7 @@ publish: true
 
 #### @Param - 路径动态参数装饰器
 
-```url
+```txt
 http://www.myblog.com/articles/20191110
 http://www.myblog.com/articles/20191111
 http://www.myblog.com/articles/20191112
@@ -104,7 +104,7 @@ export class ArticleController {
 
 获取 body 数据
 
-```test
+```txt
 {
   "title": "你好！",
   "content": "世界。"

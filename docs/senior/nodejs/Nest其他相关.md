@@ -263,7 +263,7 @@ export class AccountDto {
 
 1. 首先，安装 webpack 相关依赖:
 
-   ```dos
+   ```sh
    npm i --save-dev webpack webpack-cli webpack-node-externals ts-loader
    ```
 
