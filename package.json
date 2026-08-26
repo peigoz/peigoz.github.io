@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@sugarat/theme": "^0.5.4",
+    "@sugarat/theme": "^0.5.27",
     "element-plus": "^2.7.2",
-    "vue": "3.4.26"
+    "vue": "3.4.26",
+    "xmind-embed-viewer": "^1.2.0"
   },
   "directories": {
     "doc": "docs"
