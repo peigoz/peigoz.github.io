@@ -68,7 +68,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/pejaz',
+        link: 'https://github.com/peigoz',
       },
     ],
   },
@@ -76,5 +76,5 @@ export default defineConfig({
     config: md => {
       md.use(fmTitlePlugin)
     },
-  },
+  }
 })
