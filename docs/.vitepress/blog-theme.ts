@@ -115,7 +115,7 @@ const blogTheme = getThemeConfig({
   },
   authorList: [
     {
-      nickname: 'pejaz',
+      nickname: 'peigoz',
       url: 'http://localhost:5173/about.html',
       des: '每天更新自己，慢慢理解世界',
     },
