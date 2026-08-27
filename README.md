@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Pejaz, Welcome my blog</h1>
+<h1 align="center">Hi 👋, I'm Peigoz（Zack）, Welcome my blog</h1>
 <h3 align="center">A software developer from China</h3>
   
 ### 📅 Hobbies
