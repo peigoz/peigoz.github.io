@@ -35,6 +35,12 @@ export const sidebarCache = {
     "算法刷题总结一.md",
     "算法刷题总结二.md",
   ],
+  "./docs/engineer-basic/team": [
+    "GitHub搜索技巧.md",
+    "Volta常用命令.md",
+    "git-rebase和git-merge区别.md",
+    "工作中常见的Git命令.md",
+  ],
   "./docs/mixture/interview": [
     "手撕系列.md",
     "数组转对象.md",
@@ -83,12 +89,6 @@ export const sidebarCache = {
     "Rust生命周期的消除规则.md",
     "理解miri 与 栈借用.md",
     "Rust编译的 wasm 在 Vite 中使用.md",
-  ],
-  "./docs/senior/team": [
-    "GitHub搜索技巧.md",
-    "Volta常用命令.md",
-    "git-rebase和git-merge区别.md",
-    "工作中常见的Git命令.md",
   ],
   "./docs/senior/typescript": [
     "TypeScript知识点.md",
