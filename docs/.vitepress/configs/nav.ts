@@ -14,6 +14,7 @@ export const nav = [
       { text: '大前端', link: '/senior/frontend/Vue与React各个生命周期' },
       { text: 'TypeScript', link: '/senior/typescript/TypeScript知识点' },
       { text: 'NodeJs', link: '/senior/nodejs/Node的CPU过载保护机制' },
+      { text: '后端', link: '/senior/backend/缓存' },
       { text: '百宝箱', link: '/senior/peculiar/一些有趣的JS工具类方法' },
       { text: 'Rust', link: '/senior/rust/前端视角下的Rust简单概念理解' },
       { text: 'AI', link: '/senior/ai/大模型提示词技巧' },
@@ -22,9 +23,9 @@ export const nav = [
   {
     text: '工程基础',
     items: [
-      { text: '数据结构与算法', link: '/engineer-basic/structure-algorithm/二叉树的DFS' },
       { text: '设计模式', link: '/engineer-basic/design-pattern/如何优雅的解耦if-else' },
       { text: '操作系统', link: '/engineer-basic/operation-system/常用unix命令' },
+      { text: '数据结构与算法', link: '/engineer-basic/structure-algorithm/二叉树的DFS' },
       { text: '代码协同', link: '/engineer-basic/team/Volta常用命令' },
     ],
   },

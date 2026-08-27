@@ -10,6 +10,7 @@ export const DirnameTranslateMap = {
   frontend: '大前端',
   typescript: 'TypeScript',
   nodejs: 'Nodejs',
+  backend: '后端',
   team: '代码协同',
   peculiar: '百宝箱',
   rust: 'Rust',

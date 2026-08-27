@@ -57,6 +57,9 @@ export const sidebarCache = {
     "RAG查询质量优化.md",
     "AI信息片段随记.md",
   ],
+  "./docs/senior/backend": [
+    "缓存.md",
+  ],
   "./docs/senior/frontend": [
     "2023-2025年前端领域的技术演进Top5.md",
     "Vue与React各个生命周期.md",
