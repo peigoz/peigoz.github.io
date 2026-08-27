@@ -2,7 +2,7 @@
 title: 理解Cell和RefCell
 date: 2025-06-16 06:19:04
 tags:
- - Rust
+  - Rust
 isShowComments: true
 publish: true
 ---
@@ -23,12 +23,12 @@ fn main() {
 
 // --------------------------
 fn main(){
-let mut x = 1;
-let y = &x; // 可以对一个可变值进行不可变借用。
-let z = &x;
-println!("{x},{y},{z}"); // 1,1,1
-x += 1; // 修改前所有不可变借用已 drop
-println!("{x}"); // 2
+    let mut x = 1;
+    let y = &x; // 可以对一个可变值进行不可变借用。
+    let z = &x;
+    println!("{x},{y},{z}"); // 1,1,1
+    x += 1; // 修改前所有不可变借用已 drop
+    println!("{x}"); // 2
 }
 ```
 

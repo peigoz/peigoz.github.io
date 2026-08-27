@@ -3,4 +3,7 @@
   "cSpell.words": [
     "Vitepress"
   ],
+  "[markdown]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
 }
