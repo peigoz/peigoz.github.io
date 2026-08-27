@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0",
+  "project": "peigoz-blog",
+  "generatedAt": "2026-08-27T18:13:48+08:00",
+  "rootDoc": "CLAUDE.md",
+  "truncated": false,
+  "summary": {
+    "estimatedTotalFiles": 83,
+    "scannedFilesDeep": 20,
+    "scannedFilesEnumerated": 83,
+    "modulesCovered": 5,
+    "modulesTotal": 5,
+    "articlesEnumerated": 69,
+    "articlesDeepRead": 4
+  },
+  "modules": [
+    {
+      "name": "docs/.vitepress",
+      "path": "docs/.vitepress",
+      "doc": "docs/.vitepress/CLAUDE.md",
+      "responsibility": "VitePress 主配置、@sugarat/theme 主题配置、自定义样式、导航与动态侧边栏生成",
+      "entry": ["docs/.vitepress/config.mts", "docs/.vitepress/blog-theme.ts", "docs/.vitepress/theme/index.ts"],
+      "interfaces": ["config.mts -> defineConfig 站点全局配置", "blog-theme.ts -> getThemeConfig 主题配置", "configs/nav.ts -> nav", "configs/sidebar.ts -> sidebar"],
+      "tests": "无自动化测试，以 pnpm build 通过为质量门槛",
+      "importantPaths": ["docs/.vitepress/configs/sidebar.ts", "docs/.vitepress/configs/sidebar-cache.ts", "docs/.vitepress/configs/dirname-translate.ts", "docs/.vitepress/configs/utils.ts", "docs/.vitepress/theme/style.scss"],
+      "coverage": "10/10 文本文件已读取",
+      "gaps": []
+    },
+    {
+      "name": "docs/basic",
+      "path": "docs/basic",
+      "doc": "docs/basic/CLAUDE.md",
+      "responsibility": "前端基础（html/css/javascript）知识笔记",
+      "entry": [],
+      "interfaces": ["URL 模式 /basic/<子分类>/<文章名>", "子分类目录名映射见 dirname-translate.ts"],
+      "tests": "无自动化测试",
+      "importantPaths": ["docs/basic/html/HTML常见问题.md", "docs/basic/css/CSS知识点.md", "docs/basic/javascript/JS类型转换.md"],
+      "coverage": "16/16 文章路径已枚举，1 篇深度读取（JS闭包.md）",
+      "gaps": ["docs/basic/javascript 剩余 12 篇正文", "docs/basic/css 全部 2 篇正文"]
+    },
+    {
+      "name": "docs/engineer-basic",
+      "path": "docs/engineer-basic",
+      "doc": "docs/engineer-basic/CLAUDE.md",
+      "responsibility": "设计模式、操作系统、数据结构与算法",
+      "entry": [],
+      "interfaces": ["URL 模式 /engineer-basic/<子分类>/<文章名>"],
+      "tests": "无自动化测试",
+      "importantPaths": ["docs/engineer-basic/structure-algorithm/算法刷题总结一.md", "docs/engineer-basic/structure-algorithm/算法刷题总结二.md"],
+      "coverage": "8/8 文章路径已枚举，1 篇深度读取（二叉树的DFS.md）",
+      "gaps": ["docs/engineer-basic/structure-algorithm 剩余 5 篇正文"]
+    },
+    {
+      "name": "docs/senior",
+      "path": "docs/senior",
+      "doc": "docs/senior/CLAUDE.md",
+      "responsibility": "进阶内容（frontend/nodejs/team/typescript/peculiar/rust/ai）",
+      "entry": [],
+      "interfaces": ["URL 模式 /senior/<子分类>/<文章名>", "导航入口见 configs/nav.ts（工程进阶分组）"],
+      "tests": "无自动化测试",
+      "importantPaths": ["docs/senior/rust/Rust 中的拷贝和克隆.md", "docs/senior/ai/大模型提示词技巧.md", "docs/senior/nodejs/Nest入门.md", "docs/senior/rust/Rust编译的 wasm 在 Vite 中使用.md"],
+      "coverage": "38/38 文章路径已枚举，2 篇深度读取（Rust拷贝克隆、大模型提示词技巧）",
+      "gaps": ["docs/senior/rust 剩余 8 篇正文", "docs/senior/nodejs 全部 8 篇正文", "docs/senior/frontend 全部 5 篇正文", "docs/senior/ai 剩余 4 篇正文"]
+    },
+    {
+      "name": "docs/mixture",
+      "path": "docs/mixture",
+      "doc": "docs/mixture/CLAUDE.md",
+      "responsibility": "杂项（interview/tools）",
+      "entry": [],
+      "interfaces": ["URL 模式 /mixture/<子分类>/<文章名>", "导航入口见 configs/nav.ts（大杂烩分组）"],
+      "tests": "无自动化测试",
+      "importantPaths": ["docs/mixture/interview/手撕系列.md", "docs/mixture/tools/低成本拥有自己的一个博客网站.md"],
+      "coverage": "5/5 文章路径已枚举",
+      "gaps": ["docs/mixture/interview 全部 2 篇正文", "docs/mixture/tools 全部 3 篇正文"]
+    }
+  ],
+  "specialPages": [
+    { "path": "docs/index.md", "role": "首页（home layout + blog frontmatter）" },
+    { "path": "docs/about.md", "role": "关于我（hidden 页面）" }
+  ],
+  "ignoreStats": {
+    "node_modules": "忽略规则（.gitignore）",
+    "docs/.vitepress/dist": "构建产物",
+    "二进制/图片资源": "bg.webp、favicon.ico、avatar.jpg、listen.png、grid.svg 等仅记录路径",
+    "文章正文（未深度读取）": "65 篇文章仅枚举路径与分类，按需续扫"
+  },
+  "nextStepSuggestions": [
+    "docs/senior/rust（9 篇）",
+    "docs/senior/nodejs（8 篇）",
+    "docs/senior/frontend（5 篇）",
+    "docs/basic/javascript（13 篇）",
+    "docs/senior/ai（5 篇）",
+    "docs/mixture/interview + tools（5 篇）"
+  ]
+}
