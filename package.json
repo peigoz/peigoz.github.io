@@ -29,6 +29,12 @@
     "vitepress-plugin-frontmatter": "^2.0.0"
   },
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp",
+      "vue-demi"
+    ],
     "peerDependencyRules": {
       "ignoreMissing": [
         "@algolia/client-search",
