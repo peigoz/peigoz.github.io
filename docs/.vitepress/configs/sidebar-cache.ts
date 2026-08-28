@@ -51,6 +51,7 @@ export const sidebarCache = {
     "定时获取免费SSL证书.md",
   ],
   "./docs/senior/ai": [
+    "Agent 开发思维导图.md",
     "Agent使用技巧整理.md",
     "大模型提示词技巧.md",
     "AI设计模式理解与能力选择.md",
