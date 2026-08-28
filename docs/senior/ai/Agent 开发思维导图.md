@@ -7,4 +7,4 @@ isShowComments: true
 publish: true
 ---
 
-<XmindViewer url="https://blog.peigo.top/peigo/Agent%20%E5%BC%80%E5%8F%91.xmind" />
+<XmindViewer url="https://blog.peigo.top/peigo/agent.xmind" />
