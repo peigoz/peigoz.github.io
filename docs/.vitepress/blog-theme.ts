@@ -18,7 +18,7 @@ const blogTheme = getThemeConfig({
   comment: {
     type: 'giscus',
     options: {
-      repo: 'pejaz/pejaz.github.io',
+      repo: 'peigoz/peigoz.github.io',
       repoId: 'MDEwOlJlcG9zaXRvcnkzMzAyMzI2NTQ=',
       category: 'Announcements',
       categoryId: 'DIC_kwDOE67zTs4Cge7H',
@@ -63,7 +63,7 @@ const blogTheme = getThemeConfig({
   themeColor: 'el-blue',
 
   // 文章默认作者
-  author: 'pejaz',
+  author: 'peigoz',
 
   // 友链
   friend: [
