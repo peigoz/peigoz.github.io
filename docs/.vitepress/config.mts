@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 import { blogTheme } from './blog-theme'
 import { nav } from './configs/nav'
 import { sidebar } from './configs/sidebar'
+import { BLOG_ASSET_BASE } from './configs/constants'
 import { fmTitlePlugin } from 'vitepress-plugin-frontmatter'
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -56,7 +57,7 @@ export default defineConfig({
       next: '下一页',
     },
     // 设置logo
-    logo: 'https://blog.peigo.top/peigo/favicon.ico',
+    logo: `${BLOG_ASSET_BASE}/favicon.ico`,
 
     // editLink: {
     //   pattern:

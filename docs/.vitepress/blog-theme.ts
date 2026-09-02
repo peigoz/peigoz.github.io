@@ -1,5 +1,6 @@
 // 主题独有配置
 import { getThemeConfig } from '@sugarat/theme/node'
+import { BLOG_ASSET_BASE } from './configs/constants'
 
 // 开启RSS支持（RSS配置）
 // import type { Theme } from '@sugarat/theme'
@@ -110,13 +111,13 @@ const blogTheme = getThemeConfig({
   buttonAfterArticle: {
     openTitle: '赞赏',
     closeTitle: '下次一定',
-    content: '<img src="https://blog.peigo.top/peigo/qrcode-wechat.png">',
+    content: `<img src="${BLOG_ASSET_BASE}/qrcode-wechat.png">`,
     icon: 'wechatPay',
   },
   authorList: [
     {
       nickname: 'peigoz',
-      url: 'http://localhost:5173/about.html',
+      url: '/about.html',
       des: '每天更新自己，慢慢理解世界',
     },
   ],

@@ -44,6 +44,7 @@ export const sidebarCache = {
   "./docs/mixture/interview": [
     "手撕系列.md",
     "数组转对象.md",
+    "利用 Async 和 Await 创建一个并发任务队列.md",
   ],
   "./docs/mixture/tools": [
     "软件推荐.md",
