@@ -4,6 +4,6 @@
     "Vitepress"
   ],
   "[markdown]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
 }
