@@ -7,6 +7,8 @@ isShowComments: true
 publish: true
 ---
 
+## 模型信息
+
 - 意图检测模型：jev（闭源）、laya（开源）
 - 国外主流通用模型：Gemini、Claude、ChatGPT、Grok
 - 国内主流通用模型：DeepSeek、Qwen、GLM、Kimi、Hy4、MiniMax、Mimo、Seed、
@@ -19,6 +21,7 @@ publish: true
 - 视觉合成：Kimi 视觉模型、 字节即梦 AI
 - 语音识别：Azure
 - 海外文件存储和 CDN：Bunny.net
+- 模型社区：[hugginFace](https://huggingface.co/models?sort=trending)、[modelscope](https://www.modelscope.ai/models)
 
 ## 中文向量模型
 
