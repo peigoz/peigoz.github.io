@@ -60,6 +60,7 @@ export const sidebarCache = {
     "AI信息片段随记.md",
   ],
   "./docs/senior/backend": [
+    "数据库基本概念.md",
     "Mysql 基本概念.md",
     "Redis 常用数据结构和应用场景.md",
     "缓存.md",
