@@ -60,8 +60,9 @@ export const sidebarCache = {
     "AI信息片段随记.md",
   ],
   "./docs/senior/backend": [
-    "缓存.md",
+    "Mysql 基本概念.md",
     "Redis 常用数据结构和应用场景.md",
+    "缓存.md",
   ],
   "./docs/senior/frontend": [
     "2023-2025年前端领域的技术演进Top5.md",

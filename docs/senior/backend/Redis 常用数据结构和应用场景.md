@@ -1,8 +1,9 @@
 ---
 title: Redis 常用数据结构和应用场景
-date: 2026-09-19 19:26:26
+date: 2026-07-19 19:26:26
 tags:
-  - 后端
+  - 数据库
+  - 数据库
   - Redis
 isShowComments: true
 publish: true

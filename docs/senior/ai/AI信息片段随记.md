@@ -22,6 +22,7 @@ publish: true
 - 语音识别：Azure
 - 海外文件存储和 CDN：Bunny.net
 - 模型社区：[hugginFace](https://huggingface.co/models?sort=trending)、[modelscope](https://www.modelscope.ai/models)
+- 个人本地部署模型：Bonsai
 
 ## 中文向量模型
 
