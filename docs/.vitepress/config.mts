@@ -5,6 +5,7 @@ import { nav } from './configs/nav'
 import { sidebar } from './configs/sidebar'
 import { BLOG_ASSET_BASE } from './configs/constants'
 import { fmTitlePlugin } from 'vitepress-plugin-frontmatter'
+import llmstxt from 'vitepress-plugin-llms'
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
@@ -41,6 +42,10 @@ export default defineConfig({
   ],
   sitemap: {
     hostname: 'https://peigo.top',
+  },
+  // vitepress-plugin-llms: 构建时生成 llms.txt / llms-full.txt,供 LLM 高效读取站点内容
+  vite: {
+    plugins: [llmstxt()],
   },
   themeConfig: {
     // 展示 2,3 级标题在目录中

@@ -87,12 +87,12 @@ hidden: true
 - 《你不知道的 JavaScript (上)》🌟🌟🌟
 - 没什么印象的...
 
+## 📫聊天交流
+
+1. QQ 群 ：512250251
+
 ## 👏博客答疑
 
 - 使用 Vitepress 构建
 - 感谢粥里有勺糖的主题 [@sugarat/theme](https://github.com/ATQQ/sugar-blog)
 - 部署在 Github 上,通过 Github Actions 自动部署和国内 CDN 加速
-
-## 📫聊天交流
-
-1. QQ 群 ：512250251
