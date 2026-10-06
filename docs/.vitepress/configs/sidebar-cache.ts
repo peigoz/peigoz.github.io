@@ -48,6 +48,7 @@ export const sidebarCache = {
   ],
   "./docs/mixture/tools": [
     "软件推荐.md",
+    "开发者工具推荐.md",
     "低成本拥有自己的一个博客网站.md",
     "定时获取免费SSL证书.md",
   ],
