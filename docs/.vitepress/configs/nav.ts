@@ -1,23 +1,30 @@
 export const nav = [
   { text: '主页', link: '/' },
   {
-    text: '前端基础',
+    text: '前端',
     items: [
-      { text: 'HTML', link: '/basic/html/HTML常见问题' },
-      { text: 'CSS', link: '/basic/css/CSS知识点' },
-      { text: 'JavaScript', link: '/basic/javascript/JS类型转换' },
+      {text: 'HTML', link: '/frontend/html/HTML常见问题'},
+      {text: 'CSS', link: '/frontend/css/CSS知识点'},
+      {text: 'JavaScript', link: '/frontend/javascript/JS类型转换'},
+      {text: 'TypeScript', link: '/frontend/typescript/TypeScript知识点'},
+      {text: '框架与工程化', link: '/frontend/senior/Vue与React各个生命周期'},
+      {text: '奇技淫巧', link: '/frontend/tricks/一些有趣的JS工具类方法'},
     ],
   },
   {
-    text: '工程进阶',
+    text: '后端',
     items: [
-      { text: '大前端', link: '/senior/frontend/Vue与React各个生命周期' },
-      { text: 'TypeScript', link: '/senior/typescript/TypeScript知识点' },
-      { text: 'NodeJs', link: '/senior/nodejs/Node的CPU过载保护机制' },
-      { text: '后端', link: '/senior/backend/缓存' },
-      { text: '百宝箱', link: '/senior/peculiar/一些有趣的JS工具类方法' },
-      { text: 'Rust', link: '/senior/rust/前端视角下的Rust简单概念理解' },
-      { text: 'AI', link: '/senior/ai/大模型提示词技巧' },
+      {text: '基础', link: '/backend/basic/缓存'},
+      {text: '数据库', link: '/backend/sql/数据库基本概念'},
+      {text: 'NodeJs', link: '/backend/nodejs/Node的CPU过载保护机制'},
+      {text: 'Rust', link: '/backend/rust/前端视角下的Rust简单概念理解'},
+    ],
+  },
+  {
+    text: 'AI',
+    items: [
+      {text: '模型', link: '/ai/model/大模型提示词技巧'},
+      {text: 'Agent', link: '/ai/agent/Agent 开发思维导图'},
     ],
   },
   {
@@ -29,9 +36,9 @@ export const nav = [
       { text: '代码协同', link: '/engineer-basic/team/Volta常用命令' },
     ],
   },
-  // { text: '踩坑笔记', link: '/fix-bug/' },
+  // { text: '踩坑笔记', link: '/bug-fix/' },
   {
-    text: '大杂烩',
+    text: '其他',
     items: [
       { text: '面试系列', link: '/mixture/interview/手撕系列' },
       { text: '工具软件', link: '/mixture/tools/软件推荐' },
