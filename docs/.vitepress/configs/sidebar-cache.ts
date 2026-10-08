@@ -1,16 +1,21 @@
 export const sidebarCache = {
-  "./docs/ai/agent": [
-    "Agent 开发思维导图.md",
-    "AI设计模式理解与能力选择.md",
-    "RAG查询质量优化.md",
-  ],
   "./docs/ai/model": [
     "大模型提示词技巧.md",
     "AI信息片段随记.md",
     "Agent使用技巧整理.md",
   ],
+  "./docs/ai/agent": [
+    "Agent 开发思维导图.md",
+    "AI设计模式理解与能力选择.md",
+    "RAG查询质量优化.md",
+  ],
   "./docs/backend/basic": [
     "缓存.md",
+  ],
+  "./docs/backend/sql": [
+    "数据库基本概念.md",
+    "Mysql 基本概念.md",
+    "Redis 常用数据结构和应用场景.md",
   ],
   "./docs/backend/nodejs": [
     "Nest入门.md",
@@ -33,11 +38,6 @@ export const sidebarCache = {
     "理解Rc和Arc.md",
     "理解miri 与 栈借用.md",
   ],
-  "./docs/backend/sql": [
-    "数据库基本概念.md",
-    "Mysql 基本概念.md",
-    "Redis 常用数据结构和应用场景.md",
-  ],
   "./docs/engineer-basic/design-pattern": [
     "如何优雅的解耦if-else.md",
   ],
@@ -58,12 +58,12 @@ export const sidebarCache = {
     "git-rebase和git-merge区别.md",
     "工作中常见的Git命令.md",
   ],
+  "./docs/frontend/html": [
+    "HTML常见问题.md",
+  ],
   "./docs/frontend/css": [
     "CSS知识点.md",
     "Flex布局.md",
-  ],
-  "./docs/frontend/html": [
-    "HTML常见问题.md",
   ],
   "./docs/frontend/javascript": [
     "ES6知识点.md",
@@ -80,6 +80,12 @@ export const sidebarCache = {
     "JS闭包.md",
     "JS面向对象之对象创建模式.md",
   ],
+  "./docs/frontend/typescript": [
+    "TypeScript知识点.md",
+    "几个常用类型之间区别.md",
+    "新版本类型体操的一些新特性.md",
+    "类型体操中的一些特殊情况.md",
+  ],
   "./docs/frontend/senior": [
     "2023-2025年前端领域的技术演进Top5.md",
     "Vue与React各个生命周期.md",
@@ -91,12 +97,6 @@ export const sidebarCache = {
     "01.两数之和-类型体操版本.md",
     "CSS冷门技巧(一).md",
     "一些有趣的JS工具类方法.md",
-  ],
-  "./docs/frontend/typescript": [
-    "TypeScript知识点.md",
-    "几个常用类型之间区别.md",
-    "新版本类型体操的一些新特性.md",
-    "类型体操中的一些特殊情况.md",
   ],
   "./docs/mixture/interview": [
     "手撕系列.md",
