@@ -8,7 +8,7 @@ export const nav = [
       {text: 'JavaScript', link: '/frontend/javascript/JS类型转换'},
       {text: 'TypeScript', link: '/frontend/typescript/TypeScript知识点'},
       {text: '框架与工程化', link: '/frontend/senior/Vue与React各个生命周期'},
-      {text: '奇技淫巧', link: '/frontend/tricks/一些有趣的JS工具类方法'},
+      {text: '工具集散', link: '/frontend/tricks/一些有趣的JS工具类方法'},
     ],
   },
   {

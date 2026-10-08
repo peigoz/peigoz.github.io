@@ -12,7 +12,7 @@ export const DirnameTranslateMap = {
   nodejs: 'Nodejs',
   backend: '后端',
   team: '代码协同',
-  tricks: '奇技淫巧',
+  tricks: '工具集散',
   rust: 'Rust',
   'bug-fix': '踩坑笔记',
   agent: 'Agent',
