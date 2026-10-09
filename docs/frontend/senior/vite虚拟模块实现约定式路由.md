@@ -2,7 +2,7 @@
 title: vite虚拟模块实现约定式路由
 date: 2025-06-19 04:28:59
 tags:
- - Vite
+ - Web
 isShowComments: true
 publish: true
 ---

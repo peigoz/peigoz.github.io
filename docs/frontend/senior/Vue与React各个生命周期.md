@@ -2,7 +2,7 @@
 title: Vue与React各个生命周期
 date: 2021-04-23 00:41:34
 tags:
-  - WebFramework
+  - Web
 isShowComments: true
 publish: true
 ---

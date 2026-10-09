@@ -2,7 +2,7 @@
 title: ES6知识点
 date: 2021-03-08 15:45:06
 tags:
-  - ES6
+  - JavaScript
 publish: true
 ---
 

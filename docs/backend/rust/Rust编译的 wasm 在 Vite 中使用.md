@@ -2,8 +2,8 @@
 title: Rust编译的 wasm 在 Vite 中使用
 date: 2025-03-17 18:06:20
 tags:
- - Wasm
  - Rust
+ - Web
 isShowComments: true
 publish: true
 ---
