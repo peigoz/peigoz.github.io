@@ -13,7 +13,6 @@ publish: true
 - 国外主流通用模型：Gemini、Claude、ChatGPT、Grok
 - 国内主流通用模型：DeepSeek、Qwen、GLM、Kimi、Hy4、MiniMax、Mimo、Seed、
 - 向量模型：bge-m3、 qwen3-embedding:0.6b、nomic-embed-text（非中文）、gte-large-zh、bge-large-zh-v1.5、m3e-base、tao8k
-- 搜索引擎 SaaS 服务：serper.dev
 - 本地可以用 ollama，企业部署一般使用 vllm。
 - 工作流： dify、coze、n8n 等智能体工作流平台
 - AI 绘图领域：Stable Diffusion、 Black Forest Labs 团队的 FLUX 、智谱清言的 CogView 模型以及快手的可灵 AI
@@ -31,14 +30,18 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 
 ## 常用 API 服务
 
-- DeepSeek：[https://platform.deepseek.com/](https://platform.deepseek.com/)  
 - Flux：[https://api.us1.bfl.ai/](https://api.us1.bfl.ai/)  
 - 可灵：[https://klingai.kuaishou.com/](https://klingai.kuaishou.com/)  
-- Kimi：[https://platform.moonshot.cn/](https://platform.moonshot.cn/)  
-- serper：[serper.dev](https://serper.dev/)  
+- Kimi：[https://platform.moonshot.cn/](https://platform.moonshot.cn/)
 - Azure：[https://portal.azure.com](https://portal.azure.com/#home)  
-- Coze: <https://www.coze.cn/>  
+- Coze: [https://www.coze.cn/](https://www.coze.cn/)  
 - Bunny：[https://bunny.net/](https://bunny.net/)
+
+### WebSeach API 服务
+
+- Serper：[serper.dev](https://serper.dev/)  
+- Tavily：[tavily.com](https://tavily.com/)
+- 博查：[open.bochaai.com](https://open.bochaai.com/)
 
 ## 常用业务组件
 
