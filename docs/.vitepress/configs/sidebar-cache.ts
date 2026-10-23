@@ -1,6 +1,5 @@
 export const sidebarCache = {
   "./docs/ai/model": [
-    "我对AI的一些看法.md",
     "大模型提示词技巧.md",
     "AI信息片段随记.md",
     "Agent使用技巧整理.md",
@@ -9,6 +8,9 @@ export const sidebarCache = {
     "Agent 开发思维导图.md",
     "AI设计模式理解与能力选择.md",
     "RAG查询质量优化.md",
+  ],
+  "./docs/ai/essay": [
+    "我对AI的一些看法.md",
   ],
   "./docs/backend/basic": [
     "缓存.md",

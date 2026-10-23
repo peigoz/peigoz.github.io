@@ -19,4 +19,5 @@ export const DirnameTranslateMap = {
   model: '模型',
   sql: '数据库',
   basic: '基础',
+  essay: '随笔'
 }

@@ -25,6 +25,7 @@ export const nav = [
     items: [
       {text: '模型', link: '/ai/model/大模型提示词技巧'},
       {text: 'Agent', link: '/ai/agent/Agent 开发思维导图'},
+      {text: '随笔', link: '/ai/essay/我对AI的一些看法'},
     ],
   },
   {
