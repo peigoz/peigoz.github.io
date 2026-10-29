@@ -2,7 +2,8 @@
   // 自定义首页背景图
   &::before {
     // 图片来源：https://zhuanlan.zhihu.com/p/54060187
-    background-image: url(./assets/bg.webp);
+    // 浅色模式背景，深色模式在下方 html.dark 中覆盖
+    background-image: url(./assets/blog-bg-light.webp);
     background-size: cover;
     // background-color: rgb(10, 10, 11);
     // background-image: url("/grid.svg");
@@ -13,6 +14,11 @@
     rgba(var(--bg-gradient-home), 1) 0%,
     rgba(var(--bg-gradient-home), 0) 150%
   );
+}
+
+// 深色模式背景图
+html.dark .VPHome::before {
+  background-image: url(./assets/blog-bg-dark.webp);
 }
 
 // popover 公告样式

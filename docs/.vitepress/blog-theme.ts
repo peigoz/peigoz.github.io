@@ -63,6 +63,10 @@ const blogTheme = getThemeConfig({
   // 主题色修改
   themeColor: 'el-blue',
 
+  // 关闭主题切换的圆形 View Transition 扩散动画（默认开启），
+  // 该动画与本站样式配合时会闪烁，改为瞬时切换
+  darkTransition: false,
+
   // 文章默认作者
   author: 'peigoz',
 
