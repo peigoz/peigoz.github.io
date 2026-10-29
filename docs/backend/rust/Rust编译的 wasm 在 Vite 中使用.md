@@ -10,13 +10,13 @@ publish: true
 
 ## Rust 编译为 wasm
 
-1. 下载安装 rust 相关环境: `rustup`(rust的版本管理工具)、`cargo`(rust 依赖管理工具)
+1. 下载安装 rust 相关环境：`rustup`（rust 的版本管理工具）、`cargo`（rust 依赖管理工具）
   
     ```sh(linux|mac)
     curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
     ```
 
-2. 下载安装 wasm 相关环境：`wasm-pack`(负责将 rust 编译为 wasm)、`cargo-generate`(wasm 项目脚手架)。
+2. 下载安装 wasm 相关环境：`wasm-pack`（负责将 rust 编译为 wasm）、`cargo-generate`（wasm 项目脚手架）。
 
     ```sh(linux|mac)
     curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
@@ -86,7 +86,7 @@ publish: true
     run();
     ```
 
-3. 使用方式二：pkg 其实是一个npm包，可以直接发布至内网并通过 npm 安装使用, 但此时需要配置 optimizeDeps 选项（ 支持 [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) 语法  ）避免 wasm 被优化
+3. 使用方式二：pkg 其实是一个 npm 包，可以直接发布至内网并通过 npm 安装使用，但此时需要配置 optimizeDeps 选项（ 支持 [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) 语法  ）避免 wasm 被优化
 
     ```js
     // vite.config.js

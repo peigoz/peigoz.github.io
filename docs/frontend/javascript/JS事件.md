@@ -69,7 +69,7 @@ ul.onclick = function(event) {
 ## 事件的绑定
 
 1. 使用 `对象.事件 = 函数` 的形式绑定响应函数，它只能同时为一个元素的一个事件绑定一个响应函数，不能为一个元素绑定多个响应函数，否则后添加的会把前面的覆盖掉。
-2. 如果需要为一个元素同时绑定多个事件，我们可以通过`addEventListener()`方法为元素绑定响应函数。
+2. 如果需要为一个元素同时绑定多个事件，我们可以通过 `addEventListener()` 方法为元素绑定响应函数。
 
 ```javascript
 /*
@@ -150,16 +150,16 @@ function bind(obj, eventStr, callback) {
      事件从目标元素向它的祖先元素传递。，依次触发祖先元素上的事件。
    ```
 
-5. 如果希望在捕获阶段就触发事件，可以将 `addEventListener()`的第三个参数设置为 true。一般情况下我们不会希望在捕获阶段触发事件，所以这个参数一般都是 false。
-6. 在 IE8 及以下的浏览器中没有捕获阶段（没有 `addEventListener()`函数）。
+5. 如果希望在捕获阶段就触发事件，可以将 `addEventListener()` 的第三个参数设置为 true。一般情况下我们不会希望在捕获阶段触发事件，所以这个参数一般都是 false。
+6. 在 IE8 及以下的浏览器中没有捕获阶段（没有 `addEventListener()` 函数）。
 
 ## 拖拽事件
 
 1. 拖拽的流程
 
-   1. onmousedown:当鼠标在被拖拽元素上按下左键时，开始拖拽。
-   2. onmousemove:当鼠标移动时被拖拽元素跟随鼠标移动。
-   3. onmouseup:当鼠标松开时，被拖拽元素固定在当前位置。
+   1. onmousedown：当鼠标在被拖拽元素上按下左键时，开始拖拽。
+   2. onmousemove：当鼠标移动时被拖拽元素跟随鼠标移动。
+   3. onmouseup：当鼠标松开时，被拖拽元素固定在当前位置。
 
    ```JavaScript
    //拖拽box1元素
@@ -210,7 +210,7 @@ function bind(obj, eventStr, callback) {
 
 2. 取消浏览器默认行为
    1. 当我们拖拽一个网页中的内容时，浏览器会默认去搜索引擎中搜索内容，此时会导致拖拽功能的异常。这个是浏览器提供的默认行为，如果不希望发生这个行为，可通过 return false 来取消默认行为。
-   2. 但是这个方法对 IE8 不起作用。如果要兼容 IE8 需要对拖拽元素使用 `setCapture()`方法
+   2. 但是这个方法对 IE8 不起作用。如果要兼容 IE8 需要对拖拽元素使用 `setCapture()` 方法
 
 ```text
 setCapture()
@@ -223,11 +223,11 @@ setCapture()
 
 1. onmousewheel
    1. 该事件会在鼠标滚轮滚动时触发，但是火狐不支持该属性。
-   2. 在火狐中需要使用 DOMMousecroll 来绑定滚动事件，且该事件需要通过 `addEventListener()`函数来绑定。
-2. event.wheelDelta(在 IE 是 window.event.wheelDelta)
+   2. 在火狐中需要使用 DOMMousecroll 来绑定滚动事件，且该事件需要通过 `addEventListener()` 函数来绑定。
+2. event.wheelDelta（在 IE 是 window.event.wheelDelta）
 
    1. 可以获取鼠标滚轮滚动的方向。
-   2. 向上滚动返回 120；向下滚动返回 -120(每滚动一次返回一次)
+   2. 向上滚动返回 120；向下滚动返回 -120（每滚动一次返回一次）
    3. wheelDelta 这个值一般不看大小，只看正负。
    4. wheelDelta 这个属性火狐也不支持，在火狐中需要使用 event.detail 来获取滚动的方向，且向上返回 -3 ，向下返回 3。
 
@@ -270,8 +270,8 @@ setCapture()
 
 3. 取消浏览器默认滚动行为
    1. 当滚轮滚动时，如果浏览器有滚动条，滚动条会随之滚动，这是浏览器的默认行为，如果不希望发生默认行为，需要使用 return false 取消默认行为。
-   2. 但是在火狐浏览器中，使用的是`addEventListener()`方法绑定的响应函数（DOMMouseScroll），该方法取消默认行为时不能使用 return false。`addEventListener()`方法需要调用 `event.preventDefault()`方法取消默认行为。
-   3. 但是在 IE8 中不支持`event.preventDefault()`方法，直接调用会报错。故如需使用需要添加 if 判断或与运算短路。
+   2. 但是在火狐浏览器中，使用的是 `addEventListener()` 方法绑定的响应函数（DOMMouseScroll），该方法取消默认行为时不能使用 return false。`addEventListener()` 方法需要调用 `event.preventDefault()` 方法取消默认行为。
+   3. 但是在 IE8 中不支持 `event.preventDefault()` 方法，直接调用会报错。故如需使用需要添加 if 判断或与运算短路。
 
 ## 键盘事件
 
@@ -279,8 +279,8 @@ setCapture()
 
    1. 键盘按键被按下时触发该事件
    2. 对于 onkeydown 事件来说，如果一直按着某个按键不松开，则此时事件会一直被触发。
-   3. 当 onkeydown 连续触发(按下键盘按键不放)时，第一次和第二次之间会间隔时间稍微长一点，之后触发时间会非常短。这种设计是为了防止用户误操作的发生(防止按下一个 a 键立马出现多个 a)。
-   4. 在文本框中输入内容属于 onkeydown 的默认行为，如果在 onkeydown 事件中取消默认行为，则输入的内容将不会出现在文本框中(但此时依然会触发 onkeydown 事件)。
+   3. 当 onkeydown 连续触发（按下键盘按键不放）时，第一次和第二次之间会间隔时间稍微长一点，之后触发时间会非常短。这种设计是为了防止用户误操作的发生（防止按下一个 a 键立马出现多个 a）。
+   4. 在文本框中输入内容属于 onkeydown 的默认行为，如果在 onkeydown 事件中取消默认行为，则输入的内容将不会出现在文本框中（但此时依然会触发 onkeydown 事件）。
 
 2. onkeyup
    1. 键盘按键松开时触发该事件，且默认只会触发一次。

@@ -15,7 +15,7 @@ publish: true
 2. CodeLLDB （ Debug Rust ）
 3. rust-analyzer （ Rust 编译器代码提示）
 4. pucelle.run-on-save （新建的题目保存触发脚本修改 lib.rs ，从而触发编译器检查）
-    - 注： emeraldwalk的那个插件不支持配置正则搜索文件夹触发脚本，只能配置文件名后缀
+    - 注： emeraldwalk 的那个插件不支持配置正则搜索文件夹触发脚本，只能配置文件名后缀
 
 ### 创建 leetcode 项目
 
@@ -41,7 +41,7 @@ publish: true
 
 ### 修改 leetcode 插件配置
 
-1. 因为 leetcode 插件默认新建题目的文件名都是  `${id}.${kebab-case-name}.${ext}` 格式（1.两数之和.rs），rust 项目规范中文件名不能包含点 **.** ，所以这里要替换以下默认的格式。同时配置 leetcoe 文件夹目录。
+1. 因为 leetcode 插件默认新建题目的文件名都是 `${id}.${kebab-case-name}.${ext}` 格式（1.两数之和.rs），rust 项目规范中文件名不能包含点 **.** ，所以这里要替换以下默认的格式。同时配置 leetcoe 文件夹目录。
 
 ```json
 // settings.json
@@ -122,7 +122,7 @@ fi
 1. leetcode 插件不支持动态配置新建题目文件的模版，这里我们需要去修改 leetcode 插件源码
 2. **mac** 目录： ~/.vscode/extensions/leetcode.vscode-leetcode-xxx/out/src/leetCodeExecutor.js
 3. **window** 目录： C:\Users\<用户名>\.vscode\extensions\leetcode.vscode-leetcode-xxx\...
-4. 测试的时候也可以通过`RUSTFLAGS="-A unused" cargo test -- --nocapture`命令忽略 unused 告警
+4. 测试的时候也可以通过 `RUSTFLAGS="-A unused" cargo test -- --nocapture` 命令忽略 unused 告警
 
 ```js
 showProblem(){
@@ -175,4 +175,4 @@ mod test {
 }
 ```
 
-### 开始1_两数之和.rs🤪
+### 开始 1_两数之和.rs🤪

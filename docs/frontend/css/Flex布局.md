@@ -13,7 +13,7 @@ publish: true
 
    1. content-box：平时普通盒子模型，向外扩展。改变 padding、border 的值后，盒子会变大变小
    2. border-box：盒子模型，向内扩展。改变 padding、border 的值后，盒子整体大小不受影响，content 内容区大小会相应改变
-   3. calc(公式)：
+   3. calc（公式）：
 
       1. 注意：+ - \* / 运算符两边需要加空格隔开数据
 
@@ -28,7 +28,7 @@ publish: true
 3. flex 布局
 
    1. 父级盒子：display:flex;
-   2. 兼容其他浏览器：添加浏览器前缀(-webkit-),真实开发工作中，使用 postCss、css-auto-prefix 等插件自动添加
+   2. 兼容其他浏览器：添加浏览器前缀（-webkit-），真实开发工作中，使用 postCss、css-auto-prefix 等插件自动添加
    3. 如果父元素用了弹性（flex）布局，子元素不需要浮动（float）
    4. 父元素上的其他属性：
       1. justify-content：子元素水平排列方式
@@ -51,7 +51,7 @@ publish: true
          2. row-reverse 横向倒序排列
          3. column 纵向排列
          4. column-reverse 纵向倒序排列
-         5. 注意：设置 column 和 column-reverse 后,子元素的 justify-content 和 align-items 会互换，即 justify-content:center，会变成视觉上的垂直居中。
+         5. 注意：设置 column 和 column-reverse 后，子元素的 justify-content 和 align-items 会互换，即 justify-content:center，会变成视觉上的垂直居中。
       5. flex-wrap：设置子元素（超出父元素宽度后）是否在一行显示
          1. nowrap 不换行，默认值
          2. wrap 换行

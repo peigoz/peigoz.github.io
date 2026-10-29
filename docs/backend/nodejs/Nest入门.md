@@ -1,6 +1,6 @@
 ---
 title: Nest入门
-date: 2021-6-27 17:19:29
+date: 2021-06-27 17:19:29
 tags:
   - Node
 publish: true
@@ -62,7 +62,7 @@ publish: true
    }
    ```
 
-3. 特定库模式(express)下获取参数的代码
+3. 特定库模式（express）下获取参数的代码
 
    ```ts
    import { Controller, Get, Req, Res } from '@nestjs/common'
@@ -145,12 +145,12 @@ test(@Headers("Authorization ") token: string) {
    在 Nestjs 中，AOP 分为下面几个部分（按顺序排列）：
    1. Middlewares
    2. Guards
-   3. Interceptors (在流被操纵之前)
+   3. Interceptors （在流被操纵之前）
    4. Pipes
-   5. Interceptors (在流被操纵之后)
-   6. Exception filters (如果发现任何异常)
+   5. Interceptors （在流被操纵之后）
+   6. Exception filters （如果发现任何异常）
 
-### Middlewares(中间件)
+### Middlewares（中间件）
 
 1. Middleware 和 express 的中间件一样，可以直接使用 express 中的中间件
 
@@ -174,7 +174,7 @@ async function bootstrap() {
 }
 ```
 
-### Guards(守卫)
+### Guards（守卫）
 
 1. Guards 和前端路由中的路由守卫一样，主要确定请求是否应该由路由处理程序处理。通过守卫可以知道将要执行的上下文信息，所以和 middleware 相比，守卫可以确切知道将要执行什么。
 2. 守卫在每个中间件之后执行的，但在拦截器和管道之前。
@@ -195,7 +195,7 @@ export class AuthGuard implements CanActivate {
 }
 ```
 
-### Interceptors(拦截器)
+### Interceptors（拦截器）
 
 1. Interceptors 可以给每一个需要执行的函数绑定，拦截器将在该函数执行前或者执行后运行。可以转换函数执行后返回的结果，扩展基本函数行为等。
 
@@ -219,7 +219,7 @@ export class TransformInterceptor<T> implements NestInterceptor<T, Response<T>> 
 }
 ```
 
-### Pipes(管道)
+### Pipes（管道）
 
 1. Pipe 是具有 @Injectable() 装饰器的类，并实现了 PipeTransform 接口。通常 pipe 用来将输入数据转换为所需的输出或者处理验证。
 
@@ -263,7 +263,7 @@ async function bootstrap() {
 bootstrap()
 ```
 
-### Exception filters(异常处理)
+### Exception filters（异常处理）
 
 1. 内置的 Exception filters 负责处理整个应用程序中的所有抛出的异常，也是 Nestjs 中在 response 前，最后能捕获异常的机会。
 
@@ -361,16 +361,16 @@ async function bootstrap() {
 
 ## NestJS 中依赖注入
 
-1. 基于 IoC(Inversion of Control 控制反转) 框架的应用程序开发中，我们编写的代码都依赖于这个容器，容器管理着代码中各个对象间的关联关系，为它们注入需要的外部资源。容器最适合管理的资源是那些具有高可复用性的内容，如：配置信息、全局常量、可复用的业务逻辑组件、以及工具类等等。
+1. 基于 IoC（Inversion of Control 控制反转） 框架的应用程序开发中，我们编写的代码都依赖于这个容器，容器管理着代码中各个对象间的关联关系，为它们注入需要的外部资源。容器最适合管理的资源是那些具有高可复用性的内容，如：配置信息、全局常量、可复用的业务逻辑组件、以及工具类等等。
 2. 在使用了依赖注入功能的程序中，从资源的角度，可以把代码中的对象角色分为以下 3 种：
-   - 容器(module) - 是所有资源的管理者。程序中可被注入的资源都由容器来发起创建和维护其生命周期
-   - 资源提供者(service) - 资源创建的实际执行者。所有的资源提供者都需要在容器进行注册登记，然后由容器来进行统一调度
-   - 资源使用者(controller) - 就是那些需要使用到容器中管理的那些资源的消费者了
+   - 容器（module） - 是所有资源的管理者。程序中可被注入的资源都由容器来发起创建和维护其生命周期
+   - 资源提供者（service） - 资源创建的实际执行者。所有的资源提供者都需要在容器进行注册登记，然后由容器来进行统一调度
+   - 资源使用者（controller） - 就是那些需要使用到容器中管理的那些资源的消费者了
      有些情况下，资源提供者本身即是提供者也是使用者。记住一点，只要依赖于其他资源的对象，它就是一个资源使用者。
 3. NestJS 命令行工具提供的代码生成器功能，可以帮我们快速生成一个模块（Module）代码文件。
-   1. 在 Nest 项目下执行`nest g module product`后，可以看到项目的 src 目录下多了一个 product 子目录，且下面生成了一个名为 product.module.ts 的模块代码文件。
-   2. 执行命令`nest g service product`, 可以在 product 目录下生成了一个名为 product.service.ts 的文件，以及一个同名的 spec 文件，前者就是一个典型的类资源提供者，后者是它对应的单元测试类。
-   3. 执行命令`nest g co product`,可以在 product 目录又生成了一个名为 product.controller.ts 的文件，以及一个同名的 spec 文件。
+   1. 在 Nest 项目下执行 `nest g module product` 后，可以看到项目的 src 目录下多了一个 product 子目录，且下面生成了一个名为 product.module.ts 的模块代码文件。
+   2. 执行命令 `nest g service product`，可以在 product 目录下生成了一个名为 product.service.ts 的文件，以及一个同名的 spec 文件，前者就是一个典型的类资源提供者，后者是它对应的单元测试类。
+   3. 执行命令 `nest g co product`，可以在 product 目录又生成了一个名为 product.controller.ts 的文件，以及一个同名的 spec 文件。
 4. 在 MVC 模式中，controller 通过 model 获取数据。对应的，在 Nestjs 中，controller 负责处理传入的请求，并调用对应的 service 完成业务处理，返回对客户端的响应。
 5. 如果需要在所有请求之前加上 prefix，可以在 main.ts 中直接设置 GlobalPrefix
 
@@ -432,7 +432,7 @@ bootstrap()
    }
    ```
 
-3. 步骤三：在模块配置中，配置 Car 类的对象提供器(将 Car 类注入容器中使其可被 controller 注入)
+3. 步骤三：在模块配置中，配置 Car 类的对象提供器（将 Car 类注入容器中使其可被 controller 注入）
 
    ```ts
    // app.module.ts
@@ -643,7 +643,7 @@ export class CategoryService {
 
 ### 依赖注入边界
 
-1. 在日常开发中也会遇到，但不是那么高频的依赖问题:
+1. 在日常开发中也会遇到，但不是那么高频的依赖问题：
    1. 异步资源提供者
    2. 循环依赖问题与解决方式
    3. 注入范围
@@ -768,7 +768,7 @@ export class CategoryService implements OnModuleInit {
    ```
 
 ::: danger 注意
-资源依赖路径上的范围会有层级关系，是一个从底至上的冒泡关系，比如下面这样一个 A 依赖 B，B 依赖 C 的关系中,如果我们指定 BService 的范围为 REQUEST，那么上层的 AService 也会变成 REQUEST 的，而下层的 CService 则仍保持默认的 SINGLETON。
+资源依赖路径上的范围会有层级关系，是一个从底至上的冒泡关系，比如下面这样一个 A 依赖 B，B 依赖 C 的关系中，如果我们指定 BService 的范围为 REQUEST，那么上层的 AService 也会变成 REQUEST 的，而下层的 CService 则仍保持默认的 SINGLETON。
 :::
 
 ```text
@@ -778,7 +778,7 @@ AService <- BService <- CService
 ## 模块系统
 
 1. NestJS 框架中，在使用了 JavaScript 模块系统的基础上，又引入了一种特有的模块系统，它只用于管理 NestJS 应用程序中的特定资源内容，声明它们在依赖注入环境下的作用域。
-2. NestJS 中存在容器(module)，容器中存在一个个 NestJS 模块，每个模块拥有控制器(controller)、资源提供者(service)。
+2. NestJS 中存在容器（module），容器中存在一个个 NestJS 模块，每个模块拥有控制器（controller）、资源提供者（service）。
 3. 每个 NestJS 应用程序其实是由模块组合而成的，它至少需要有一个模块（称为根模块）。多个模块组成一个树状结构。小型应用可能只需要一个根模块就行了，大型应用通常会由大量模块组织而成。
 
 ### 模块的创建
@@ -788,7 +788,7 @@ AService <- BService <- CService
    1. imports - 需要引入其他模块或者第三方模块，需要将它注册到 imports
    2. providers - 属于当前模块的资源提供者
    3. controllers - 属于当前模块的路由控制器
-   4. exports - 模块默认情况对外界访问是封闭的。也就是说，一个模块在未作特别声明的情况下，其内部的资源是不能在两个模块间进行互相依赖注入的，只有本模块内部的资源才能互相注入。如果要支持跨模块注入，需要使用 exports 共享出去。当其他模块导入当前模块后，可访问到的属于当前模块的资源提供者(当前 providers 中的资源)、或由当前模块导入的其他三方模块(当前 import 中的模块)
+   4. exports - 模块默认情况对外界访问是封闭的。也就是说，一个模块在未作特别声明的情况下，其内部的资源是不能在两个模块间进行互相依赖注入的，只有本模块内部的资源才能互相注入。如果要支持跨模块注入，需要使用 exports 共享出去。当其他模块导入当前模块后，可访问到的属于当前模块的资源提供者（当前 providers 中的资源）、或由当前模块导入的其他三方模块（当前 import 中的模块）
 
 ```ts
 import { Module } from '@nestjs/common'
@@ -862,7 +862,7 @@ export class DemoModule {}
 
 ### 动态模块
 
-1. 通过配置参数的形式来提供具有差异化的功能(如数据库连接模块，接受不同地址连接不同数据库)。
+1. 通过配置参数的形式来提供具有差异化的功能（如数据库连接模块，接受不同地址连接不同数据库）。
 
 ```ts
 import { Module, DynamicModule } from '@nestjs/common'

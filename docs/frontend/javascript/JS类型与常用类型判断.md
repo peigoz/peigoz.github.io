@@ -8,10 +8,10 @@ publish: true
 
 ## JS 数据类型
 
-1. JS 目前有 8 种数据类型:分为基本数据类型和引用数据类型两大类。  
-   基本数据类型有 7 种:number、string、boolean、null、undefined、symbol(ES6)、BigInt(ES2020）  
-    引用数据类型只有 1 种:Object
-2. Object 包含以下多种引用类型:Function,Array,Object，Date、RegExp、Math、String、Boolean、Number(区别前面三种是指 JS 内置的对象，通过 new 创建，如[`a = new String('aaa')`])和自定义类
+1. JS 目前有 8 种数据类型：分为基本数据类型和引用数据类型两大类。  
+   基本数据类型有 7 种：number、string、boolean、null、undefined、symbol(ES6)、BigInt（ES2020）  
+    引用数据类型只有 1 种：Object
+2. Object 包含以下多种引用类型：Function,Array,Object，Date、RegExp、Math、String、Boolean、Number（区别前面三种是指 JS 内置的对象，通过 new 创建，如[`a = new String('aaa')`]）和自定义类
 
 ## undefined 与 null 的区别
 
@@ -23,16 +23,16 @@ publish: true
 
 ## 严格区别变量类型与数据类型
 
-1. 数据的类型:
-   1. 基本类型:保存的就是基本类型的数据值。
-   2. 对象类型:保存的内存空间地址值(该值指向一块内存空间地址)。
-2. 变量的类型(变量内存值的类型)：
+1. 数据的类型：
+   1. 基本类型：保存的就是基本类型的数据值。
+   2. 对象类型：保存的内存空间地址值（该值指向一块内存空间地址）。
+2. 变量的类型（变量内存值的类型）：
    1. 基本类型：保存的就是基本类型的数据。
    2. 引用类型：保存的内存空间地址值。
 
 ## 关于赋值和内存的问题
 
-1. 问题：var a = xxx，a 内存中保存的是什么?
+1. 问题：var a = xxx，a 内存中保存的是什么？
    如果 xxx 是基本数据，保存的就是这个数据。
    如果 xxx 是对象，保存的就是这个对象的地址值。
    如果 xxx 是变量，保存的就是这个变量内存中保存的内容（可能是基本数据也可能是地址值）。
@@ -63,7 +63,7 @@ function fn2(obj){
 fn2(a);  //13
 ```
 
-## 在 js 调用函数时传递变量参数是值传递还是引用传递?
+## 在 js 调用函数时传递变量参数是值传递还是引用传递？
 
 - 理解 1：都是值（包括基本值/地址值）传递。
 - 理解 2：可能是值传递，也可能是引用传递（地址值）。
@@ -77,7 +77,7 @@ fn(a); //此时传递的是全局变量a的值3
 console.log(a);  //输出的是全局变量a，不是函数中的a
 ```
 
-## JS 引擎如何管理内存?
+## JS 引擎如何管理内存？
 
 1. 内存生命周期
    1. 分配一块小空间，得到它的使用权。
@@ -85,7 +85,7 @@ console.log(a);  //输出的是全局变量a，不是函数中的a
    3. 释放小内存空间。
 2. 释放内存
    1. 局部变量：函数执行时创建，函数执行完毕即刻自动释放。
-   2. 对象：成为垃圾对象 ==> 垃圾回收器(Garbage Collection）回收
+   2. 对象：成为垃圾对象 ==> 垃圾回收器（Garbage Collection）回收
 
 ```JavaScript
 var a =3;
@@ -106,7 +106,7 @@ fn();  //b是自动释放，b所指向的对象是在后面的某个时刻被垃
 
 ## 常用类型判断
 
-1. Number、String、Boolean、BigInt:判断是否是该类型用 typeof,判断具体用全等: === 、`toString()`
+1. Number、String、Boolean、BigInt：判断是否是该类型用 typeof，判断具体用全等：=== 、`toString()`
 
    ::: danger
 
@@ -130,7 +130,7 @@ fn();  //b是自动释放，b所指向的对象是在后面的某个时刻被垃
    console.log(a === undefined)
    ```
 
-3. Null:只能用===
+3. Null：只能用===
    ::: danger
 
    ```javascript
@@ -156,7 +156,7 @@ fn();  //b是自动释放，b所指向的对象是在后面的某个时刻被垃
    console.log(Array.isArray(arr)) //true
    ```
 
-6. Function:使用 typeof 检查一个函数对象时，会返回 function。一般只会用 instanceof 判断是否为某个类下面的实例
+6. Function：使用 typeof 检查一个函数对象时，会返回 function。一般只会用 instanceof 判断是否为某个类下面的实例
 
    ```JavaScript
    let a = new Person()

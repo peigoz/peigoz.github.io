@@ -104,7 +104,7 @@ export class SharedModule {}
 
 ## 模板渲染
 
-1. 在 Nestjs 中，一般使用 hbs 作为模板渲染引擎,通过`npm install --save hbs`命令引入包
+1. 在 Nestjs 中，一般使用 hbs 作为模板渲染引擎，通过 `npm install --save hbs` 命令引入包
 
    ```ts
    import { NestFactory } from '@nestjs/core'
@@ -150,7 +150,7 @@ export class SharedModule {}
    }
    ```
 
-   实现模版如下,需要注意的是，如果有拦截器，数据会先经过拦截器的处理，然后再填充到模板中。
+   实现模版如下，需要注意的是，如果有拦截器，数据会先经过拦截器的处理，然后再填充到模板中。
 
    ```html
    <body>
@@ -261,7 +261,7 @@ export class AccountDto {
 
 在开发的时候，运行 npm run start:dev 的时候，是进行全量编译，如果项目比较大，全量编译耗时会比较长，这时候我们可以利用 webpack 来帮我们做增量编译，这样会大大增加开发效率
 
-1. 首先，安装 webpack 相关依赖:
+1. 首先，安装 webpack 相关依赖：
 
    ```sh
    npm i --save-dev webpack webpack-cli webpack-node-externals ts-loader
@@ -332,7 +332,7 @@ export class AccountDto {
    }
    ```
 
-5. 运行 `npm run webpack`之后，webpack 开始监视文件，然后在另一个命令行窗口中运行 `npm start`。
+5. 运行 `npm run webpack` 之后，webpack 开始监视文件，然后在另一个命令行窗口中运行 `npm start`。
 
 ::: info
 参考 [tc9011](https://juejin.cn/post/6844903903792742407#heading-2)

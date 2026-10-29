@@ -65,7 +65,7 @@ const postorderTraversal = function(root) {
 };
 ```
 
-## 迭代法(利用栈和标记节点)
+## 迭代法（利用栈和标记节点）
 
 ### 前序遍历
 

@@ -8,7 +8,7 @@ publish: true
 
 ## 异步版本
 
-1. 不调用await next()会阻塞后面流程
+1. 不调用 await next()会阻塞后面流程
 
 ```js
 class AsyncInterceptor {
@@ -92,7 +92,7 @@ asyncInter.run({ count: 0 })
 
 ## 同步版本
 
-1. 在浏览器端可能我们并不希望阻塞主流程，如果不调用next()就简单跳过后面函数即可
+1. 在浏览器端可能我们并不希望阻塞主流程，如果不调用 next()就简单跳过后面函数即可
 
 ```js
 class Interceptor {

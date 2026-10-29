@@ -12,10 +12,10 @@ publish: true
 2. 减少请求资源的大小
    - html 压缩：HTML 代码压缩就是压缩这些在文本文件中有意义，但是在 HTML 中不显示的字符，包括空格，制表符，换行符等，还有一些其他意义的字符，如 HTML 注释也可以被压缩。
    - 如何进行 html 压缩：
-     1. 使用在线网站进行压缩(现代一般使用 webpack 等打包压缩)
+     1. 使用在线网站进行压缩（现代一般使用 webpack 等打包压缩）
      2. nodejs 提供了 html-minifier 工具
      3. 后端模板引擎渲染压缩
-   - css 压缩：删除无效代码、css 语义合并(多使用简写属性)
+   - css 压缩：删除无效代码、css 语义合并（多使用简写属性）
    - 如何进行 css 压缩：
      1. 使用在线网站进行压缩
      2. 使用 html-minifier 对 html 中的 css 进行压缩
@@ -50,7 +50,7 @@ publish: true
    1. 把你的网站上用到的一些图片整合到一张单独的图片中
    2. 减少你的网站的 HTTP 请求数量
    3. 缺点：整合图片比较大时，一次加载比较慢
-   4. 雪碧图样式生成网站:www.spritecow.com
+   4. 雪碧图样式生成网站：www.spritecow.com
    5. 使用 CssSprite 软件一键生成
    6. 使用构建工具一键生成
 3. Image inline
@@ -69,11 +69,11 @@ publish: true
 ## HTML 渲染过程的一些特点
 
 1. 顺序执行、并发加载
-   - 并发加载：一个域名的并发数量有限制的(大约 20 个)，所以会设置 3-4 个 cdn 域名进行托管，防止一个域名达到浏览器并发请求的上限
+   - 并发加载：一个域名的并发数量有限制的（大约 20 个），所以会设置 3-4 个 cdn 域名进行托管，防止一个域名达到浏览器并发请求的上限
 2. 是否阻塞
 3. 依赖关系
 4. 引入方式
-   - link:可以利用缓存
+   - link：可以利用缓存
    - import
 
 ## css 阻塞
@@ -140,7 +140,7 @@ publish: true
       - Chrome 创建图层的条件
         1. 3D 或透视变换 CSS 属性(perspective transform:translateZ(0) will-change:transform)
         2. 使用加速视频解码的 video 节点
-        3. 拥有 3D(WebGL)上下文或加速的 2D 上下文的`<canvas>`节点
+        3. 拥有 3D(WebGL)上下文或加速的 2D 上下文的 `<canvas>` 节点
         4. 混合插件（如 Flash）
         5. 对自己的 opacity 做 CSS 动画或使用一个动画 webkit 变换的元素
         6. 拥有加速 CSS 过滤器的元素
@@ -150,10 +150,10 @@ publish: true
    3. 实战优化点：
       1. 用 translate 替代 top 改变，top 会触发 Layout 回流，translate 不会
       2. 用 opacity 替代 visibility，前提要将 opacity 所修改的图层独立出去。visibility 会触发 Print 重绘，opacity 重绘和回流都不会触发
-      3. 不要一条一条地修改 DOM 的样式,预先定义好 class ,然后修改 DOM 的 className
-      4. 把 DOM 离线后修改,比如:先把 DOM 给 display:none (有一次 Reflow) ,然后你修改 100 次,然后再把它显示出来
-      5. 不要把 DOM 结点的属性值（offsetHeight offsetWidth）放在一个循环里当成循环里的变量,可使用一个变量储存起来它的值，不要多次读取
-      6. 不要使用 table 布局,可能很小的一个小改动会造成整个 table 的重新布局
+      3. 不要一条一条地修改 DOM 的样式，预先定义好 class，然后修改 DOM 的 className
+      4. 把 DOM 离线后修改，比如：先把 DOM 给 display:none （有一次 Reflow），然后你修改 100 次，然后再把它显示出来
+      5. 不要把 DOM 结点的属性值（offsetHeight offsetWidth）放在一个循环里当成循环里的变量，可使用一个变量储存起来它的值，不要多次读取
+      6. 不要使用 table 布局，可能很小的一个小改动会造成整个 table 的重新布局
       7. 动画实现的速度的选择，选择合适的动画速度和间隔时间
       8. 对于动画新建图层
       9. 启用 GPU 硬件加速
@@ -161,8 +161,8 @@ publish: true
 ## 浏览器存储
 
 1. Cookie
-   1. 用于浏览器端和服务器端的交互:因为 HTTP 请求无状态，所以需要 cookie 去维持客户端状态(设计出来的初衷)
-   2. 客户端自身数据的存储,但是存在限制:
+   1. 用于浏览器端和服务器端的交互：因为 HTTP 请求无状态，所以需要 cookie 去维持客户端状态（设计出来的初衷）
+   2. 客户端自身数据的存储，但是存在限制：
       1. 作为浏览器存储，大小 4KB 左右
       2. 需要设置过期时间 expire
       3. 在 cookie 中设置了 HttpOnly 属性，那么通过 js 脚本将无法读取到 cookie 信息，这样能有效的防止 XSS 攻击
@@ -323,9 +323,9 @@ publish: true
 
 1. max-age
    - 服务器告诉客户端，在 0~max-age 这段时间内资源都是最新的，不必向服务端重新发起请求，可以直接从缓存中读取
-   - max-age 优先级比 expires(过期时间)要更高
+   - max-age 优先级比 expires（过期时间）要更高
 2. s-maxage
-   - s-maxage 优先级高于 max-age，但是只对 public 缓存设备(例如 CDN)才生效，此时会重新向 CDN 发起请求，CDN 返回 304 状态码，并将缓存资源发送给客户端
+   - s-maxage 优先级高于 max-age，但是只对 public 缓存设备（例如 CDN）才生效，此时会重新向 CDN 发起请求，CDN 返回 304 状态码，并将缓存资源发送给客户端
    - 在 s-maxage 设置的时间内，CDN 不会更新，超过 s-maxage 后才会去源服务器请求更新资源
 3. private
    - 可从私有服务器读取，如浏览器客户端
@@ -363,9 +363,9 @@ publish: true
 
 ### 分级缓存策略
 
-1. 200 状态(from cache):这一层由 expires/cache-control 控制
+1. 200 状态（from cache）：这一层由 expires/cache-control 控制
    1. expires（http 1.0 版有效）是绝对时间
-   2. cache-control（http1.1 版有效），相对时间，两者都存在时 cache-control 覆盖 expires,只要 cache-control 没有失效，浏览器只访问自己的缓存
+   2. cache-control（http1.1 版有效），相对时间，两者都存在时 cache-control 覆盖 expires，只要 cache-control 没有失效，浏览器只访问自己的缓存
 2. 304 状态：这一层由 last-modified/etag 控制
    1. 当上一层失效时或用户点击 refresh，F5 时，浏览器就会发送请求给服务器，如果服务器端没有变化，则返回 304 给浏览器
 3. 200 状态：当浏览器本地没有缓存或者上一层失效时，或者用户使用 CTL+F5 强制时，浏览器直接去服务器下载最新数据

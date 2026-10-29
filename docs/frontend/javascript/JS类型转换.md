@@ -8,14 +8,14 @@ publish: true
 
 ## 其他类型转化为 String
 
-1. 调用被转换数据类型的 `toString()`方法
+1. 调用被转换数据类型的 `toString()` 方法
 
    ```text
    1. 该方法不会影响原变量，它会将转换结果返回，可通过 a = a.toString(); 重新赋值给原变量。
    2. 注意：null 和 undefined 这两个值没有 toString() 方法，如果调用会报错。
    ```
 
-2. 调用 `String()`函数，并将被转换的数据作为参数传递给函数。`a = String(a)`
+2. 调用 `String()` 函数，并将被转换的数据作为参数传递给函数。`a = String(a)`
 
    ```text
    1. 使用 String() 函数做强制转换时，对于 Number 和 Boolean 实际上就是调用的 toString() 方法.
@@ -32,7 +32,7 @@ publish: true
 
 ## 其他类型转化为 Number
 
-1. 使用 `Number()`函数
+1. 使用 `Number()` 函数
 
    1. 字符串 --> 数字
 
@@ -53,23 +53,23 @@ publish: true
 
    4. Undefined --> 数字 NaN
 
-2. `parseInt()`与`parseFloat()`函数
+2. `parseInt()` 与 `parseFloat()` 函数
 
-   1. `parseInt()`函数 把一个字符串转换为一个整数
+   1. `parseInt()` 函数 把一个字符串转换为一个整数
 
       ```text
       1. 将一个字符串中有效的整数内容提取出来，转换为 Number。如 "123px" --> 123 "a123" --> NaN "12.a3" --> 12
       2. 可传递第二个参数表示以什么进制解析。a = parseInt(a , 10) 表示以 10 进制解析
       ```
 
-   2. `parseFloat()`函数 把一个字符串转换为一个浮点数
+   2. `parseFloat()` 函数 把一个字符串转换为一个浮点数
 
       ```text
       作用和`parseInt()`类似，不同的是可以提取出小数。如 "123.45.67" --> 123.45 "123.5px" --> 123.5
       ```
 
    ::: danger
-   如果对非 String(数值也一样)使用这两个函数，它会将值先转换为 String，然后再操作。 True --> "True" --> NaN
+   如果对非 String（数值也一样）使用这两个函数，它会将值先转换为 String，然后再操作。 True --> "True" --> NaN
    :::
 
 3. Number 隐式类型转换

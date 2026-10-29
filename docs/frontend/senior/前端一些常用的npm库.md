@@ -11,7 +11,7 @@ publish: true
 1. moon(3kb mini->1kb) 一个类似 vue 风格的轻量 mvvm 库
 2. hyperapp(1kb mini->0.3kb) 一个类似 react 风格的轻量 mvvm 库
 3. [mp-html](https://github.com/jin-yufeng/mp-html) 小程序富文本解析库
-4. [常用的文件夹名字](https://github.com/hujiulong/blog/blob/master/demo/data/the_most_frequent_names.md) (起名困难症)
+4. [常用的文件夹名字](https://github.com/hujiulong/blog/blob/master/demo/data/the_most_frequent_names.md) （起名困难症）
 
 ## 可视化 Mock 接口管理工具
 
@@ -36,7 +36,7 @@ publish: true
 1. oocss.org
 2. meyerweb.com/eric/tools/css/reset
 3. github:necolas/normalize.css
-4. thx.github.io/cube/doc/neat (推荐)
+4. thx.github.io/cube/doc/neat （推荐）
 5. type.css 针对中文字体排版的库
 
 ## js 工具类
@@ -45,13 +45,13 @@ publish: true
 2. ramda 一个很重要的库，提供了许多有用的方法，每个 JavaScript 程序员都应该掌握这个工具
 3. day.js 一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样，体积只有 2kb
 4. big.js 一个小型，快速的 JavaScript 库，用于任意精度的十进制算术运算
-5. qs 一个 url 参数转化 (parse 和 stringify) 的轻量级 js 库
+5. qs 一个 url 参数转化 （parse 和 stringify） 的轻量级 js 库
 6. decimal.js 实现 JavaScript 的任意精度的十进制类型库
 7. immer.js 是 mobx 的作者写的一个 immutable 库，核心实现是利用 ES6 的 proxy，几乎以最小的成本实现了 js 的不可变数据结构，解决了许多日常开发中的棘手问题。
-8. mitt 一个小而精美的模拟事件总线的发布订阅库,
+8. mitt 一个小而精美的模拟事件总线的发布订阅库，
 9. crypto-js 是一个纯 javascript 写的加密算法类库 ，可以非常方便地在 javascript 进行 MD5、SHA1、SHA2、SHA3、RIPEMD-160 哈希散列，进行 AES、DES、Rabbit、RC4、Triple DES 加解密
-10. nanoid 生成唯一 id 的库,性能比 uuid 要好
-11. comlink 谷歌的专用于 webWorker 的库,原始基于 RPC 实现 postMessage 和 ES6 代理
+10. nanoid 生成唯一 id 的库，性能比 uuid 要好
+11. comlink 谷歌的专用于 webWorker 的库，原始基于 RPC 实现 postMessage 和 ES6 代理
 
 ## 表单验证
 
@@ -63,7 +63,7 @@ publish: true
 
 1. JQuery 封装了各种 dom / 事件操作，设计思想值得研究借鉴
 2. zepto jquery 的轻量级版本，适合移动端操作
-3. fastclick 一个简单易用的库，它消除了移动端浏览器上的物理点击和触发一个 click 事件之间的 300ms 的延迟。目的就是在不干扰你目前的逻辑的同时，让你的应用感觉不到延迟，反应更加灵敏。(已修复)
+3. fastclick 一个简单易用的库，它消除了移动端浏览器上的物理点击和触发一个 click 事件之间的 300ms 的延迟。目的就是在不干扰你目前的逻辑的同时，让你的应用感觉不到延迟，反应更加灵敏。（已修复）
 
 ## 文件处理
 
@@ -74,12 +74,12 @@ publish: true
 
 1. axios 一个基于 Promise 的 HTTP 库，可用在 Node.js 和浏览器上发起 HTTP 请求，支持所有现代浏览器，甚至包括 IE8+
 2. superagent 基于 Ajax 的优化，可以与 Node.js HTTP 客户端搭配使用
-3. fly.js 一个基于 promise 的 http 请求库，可以用在 node.js, Weex, 微信小程序，浏览器，React Native 中
+3. fly.js 一个基于 promise 的 http 请求库，可以用在 node.js, Weex，微信小程序，浏览器，React Native 中
 
 ## 动画库
 
 1. Anime.js 一个 JavaScript 动画库，可以处理 CSS 属性，单个 CSS 转换，SVG 或任何 DOM 属性以及 JavaScript 对象
-2. Velocity 一个高效的 Javascript 动画引擎，与 jQuery 的 \$.animate () 有相同的 API, 同时还支持彩色动画、转换、循环、画架、SVG 支持和滚动等效果
+2. Velocity 一个高效的 Javascript 动画引擎，与 jQuery 的 \$.animate () 有相同的 API，同时还支持彩色动画、转换、循环、画架、SVG 支持和滚动等效果
 3. Vivus 一个零依赖的 JavaScript 动画库，可以让我们用 SVG 制作动画，使其具有被绘制的外观
 4. GreenSock JS 一个 JavaScript 动画库，用于创建高性能、零依赖、跨浏览器动画，已在超过 400 万个网站上使用，并且可以在 React、Vue、Angular 项目中使用
 5. Scroll Reveal 零依赖，为 web 和移动浏览器提供了简单的滚动动画，以动画的方式显示滚动中的内容
@@ -116,5 +116,5 @@ publish: true
 
 ## node 相关库
 
-1. undici 一个可以替代 node 原生 http 服务器的库,官方宣称性能比 http 要好
+1. undici 一个可以替代 node 原生 http 服务器的库，官方宣称性能比 http 要好
 2. undici-fetch 可在服务器使用 fetch 进行网络请求

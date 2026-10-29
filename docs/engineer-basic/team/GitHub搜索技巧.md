@@ -51,7 +51,7 @@ pushed:>YYYY-MM-DD
 ```
 
 ::: danger
-tips:多项匹配之间用空格隔开，如下
+tips：多项匹配之间用空格隔开，如下
 :::
 
 ```sh

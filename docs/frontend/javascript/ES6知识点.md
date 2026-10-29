@@ -19,7 +19,7 @@ publish: true
 
 ### let 注意
 
-1. 不存在变量提升,在代码块内，只要 let 定义的变量，在定义语句之前使用都会报错未定义，必须在定义语句之后使用
+1. 不存在变量提升，在代码块内，只要 let 定义的变量，在定义语句之前使用都会报错未定义，必须在定义语句之后使用
 
    ```javascript
    let a = 12
@@ -71,7 +71,7 @@ for (let i = 0; i < 3; i++) {
    ```
 
 3. const 定义变量必须同时赋值，不能先定义再赋值
-4. const 定义数组和对象时可通过方法修改,如果固定对象和数组，可通过 Object.freeze()方法冻结。
+4. const 定义数组和对象时可通过方法修改，如果固定对象和数组，可通过 Object.freeze()方法冻结。
 
    ```javascript
    const arr = ['apple', 'banana']
@@ -87,7 +87,7 @@ for (let i = 0; i < 3; i++) {
 
 ### 与 var 区别
 
-1. 用 var 在全局作用域定义一个变量,属于 window。而 let 和 const 则不属于，其存在于全局块级作用域中(打印 `new Function()` 可以看到)
+1. 用 var 在全局作用域定义一个变量，属于 window。而 let 和 const 则不属于，其存在于全局块级作用域中（打印 `new Function()` 可以看到）
 
 ## 解构赋值
 
@@ -146,16 +146,16 @@ import {a,b,c} from './mod'
      2. str.indexOf() 有返回索引位置，没有则返回-1
      3. 判断浏览器：includes，查找单词：正则表达式
    - 字符串是否以谁开头：
-     1. str.statsWith(检测信息) 返回值 true/false
+     1. str.statsWith（检测信息） 返回值 true/false
      2. 正则表达式
    - 字符串是否以谁结尾：
-     1. str.endsWith(检测信息) 返回值 true/false
+     1. str.endsWith（检测信息） 返回值 true/false
      2. 正则表达式
    - 重复字符串：
-     1. str.repeat(重复次数)
+     1. str.repeat（重复次数）
    - 填充字符串：
-     1. str.padStart(整个字符串长度，填充数据) 从前面开始填充
-     2. str.padEnd(整个字符串长度，填充数据) 从后面开始填充
+     1. str.padStart（整个字符串长度，填充数据） 从前面开始填充
+     2. str.padEnd（整个字符串长度，填充数据） 从后面开始填充
 
 ## 函数的默认参数
 
@@ -203,7 +203,7 @@ show(1, 2, 3, 4, 5)
 
 ## 箭头函数
 
-### 语法:函数名= (参数)=>{函数执行语句}
+### 语法：函数名= （参数）=>{函数执行语句}
 
 ### 箭头函数简写
 
@@ -281,15 +281,15 @@ console.log(testArr[0]) //{TEST:[{a:'test1',b:'test2',c:'test3'}]}
 
 ### filter
 
-1. `arr.filter()` :筛选，return 返回 true 则保留对应 item
+1. `arr.filter()`：筛选，return 返回 true 则保留对应 item
 
 ### some
 
-1. `arr.some()`: 查找，遍历数组里面某一个条件符合条件返回 true
+1. `arr.some()`：查找，遍历数组里面某一个条件符合条件返回 true
 
 ### every
 
-1. `arr.every()`:查找，遍历数组里面所有元素都符合条件才返回 true
+1. `arr.every()`：查找，遍历数组里面所有元素都符合条件才返回 true
 
 ```javascript
 let b = arr.some((item, index, arr) => {
@@ -325,7 +325,7 @@ const newGraph = graph.reduce((graph, family) => {
 
 ### reduceRight
 
-1. `arr.reduceRight()`: 与 reduce 区别在于 reduceRight 是从右往左计算的
+1. `arr.reduceRight()`：与 reduce 区别在于 reduceRight 是从右往左计算的
 
 ### 以上方法接收两个函数
 
@@ -361,7 +361,7 @@ for (let [key, value] of arr.entries()) {
 
 ### find
 
-1. `arr.find()`: 查找第一个符合条件的数组成员，如果没找到则返回 undefined
+1. `arr.find()`：查找第一个符合条件的数组成员，如果没找到则返回 undefined
 
 ```javascript
 let arr = [23, 12, 34, 60, 78, 23]
@@ -381,7 +381,7 @@ let res = arr.find((val, index, arr) => {
 ### includes
 
 1. `arr.includes()`：和字符串的 str.includes()一样
-2. 区别 indexOf(),返回值不同。
+2. 区别 indexOf()，返回值不同。
 
 ### Array.from()
 
@@ -444,9 +444,9 @@ console.log(Object.is(+0, -0)) //false
 ### Object.assign(target,source1,source2...)
 
 1. 作用：
-   1. 用来合并对象（json,数组）
+   1. 用来合并对象（json，数组）
    2. 合并参数
-2. 与...的区别:
+2. 与...的区别：
    1. Object.assign 会改变原数据，解构赋值不会改变原数据
 
 ```javascript
@@ -490,7 +490,7 @@ console.log(json2) //{a:1,c:3}
 
 ### 作用
 
-1. 解决异步回调问题(传统方式，大部分用回调函数，事件)
+1. 解决异步回调问题（传统方式，大部分用回调函数，事件）
 
    ```javascript
    let a = 10
@@ -636,7 +636,7 @@ export default 12
    4. 有提升效果，import 会自动提升至顶部，首先执行（类似函数提升）
    5. 导入的模块内容，如果模块里面有定时器更行数据，那么外部也会跟着改动，不像 Common 规范缓存。
 2. import()
-   1. 类似 node 中的 require,可以动态引入,默认的 import 语法不能写到 if、for 之类里面,
+   1. 类似 node 中的 require，可以动态引入，默认的 import 语法不能写到 if、for 之类里面，
    2. 返回值是一个 promise 对象，可以使用 then 等方法
    3. 优点：
       1. 按需加载
@@ -683,13 +683,13 @@ export default 12
 
 1. 注意：ES6 类的定义没有提升特性，必须先定义再 new，在 ES5 中构造函数模拟就可以，函数有提升特性
 2. 矫正 this：
-   1. fn.call(this 指向,args1,args2...)
-   2. fn.apply(this 指向,[args1,args2...])
+   1. fn.call（this 指向，args1,args2...）
+   2. fn.apply（this 指向，[args1,args2...]）
    3. fn.bind()
 
 ### class 里面取值函数（getter），存值函数（setter）
 
-### 静态方法:类身上的方法
+### 静态方法：类身上的方法
 
 1. 静态方法可以被子类继承
 
@@ -1014,7 +1014,7 @@ let newArr = [...new Set(arr)]
 
 ### set 数据结构变成数组
 
-1. 目的:可以使用 map 和 filter 循环等数据方法
+1. 目的：可以使用 map 和 filter 循环等数据方法
 2. 用法：[...set]
 
 ```javascript
@@ -1023,7 +1023,7 @@ set = new Set([...set].map(val => val * 2))
 console.log(set) //2,4,6
 ```
 
-### WeakSet(不推荐使用)
+### WeakSet（不推荐使用）
 
 1. WeakSet 没有 size、clear()
 2. 官方建议：
@@ -1034,7 +1034,7 @@ console.log(set) //2,4,6
 
 ### Map 数据结构
 
-1. 类似 json,区别是 json 中数据的 key 只能是字符串，而 Map 中的 key 可以是任意数据类型
+1. 类似 json，区别是 json 中数据的 key 只能是字符串，而 Map 中的 key 可以是任意数据类型
 
 ### 使用 Map
 
@@ -1093,7 +1093,7 @@ map.forEach((value, index) => {
    1. Math.abs() 返回绝对值
    2. Math.sqrt() 返回平方根
    3. Math.cbrt() 返回开立方根
-   4. Math.sin（）返回正弦
+   4. Math.sin() 返回正弦
    5. Math.trunc() 截取保留浮点数中的整数部分
    6. Math.sign() 判断是否是负数，负数返回-1，整数返回 1，0 返回 0，-0 返回-0，非数值返回 NaN
    7. Math.ceil() 向上舍入
@@ -1151,7 +1151,7 @@ str.replace(reg, (...args) => {
 })
 ```
 
-3.dotAll 模式 /s 1. 之前 '.' 在正则里表示匹配任意东西，但是不包括\n、\t 等,加上 s 后'.'会匹配任意东西包括\n、\t 等
+3.dotAll 模式 /s 1. 之前 '.' 在正则里表示匹配任意东西，但是不包括\n、\t 等，加上 s 后'.'会匹配任意东西包括\n、\t 等
 
 ```javascript
 let reg = /^\w+.\w+$/s
@@ -1168,17 +1168,17 @@ function fn(args) {
 console.log(fn`aaa`) //AAA
 ```
 
-### proxy:代理
+### proxy：代理
 
 1. 扩展（增强）对象、方法（函数）一些功能
 2. proxy 是设计模式的一种，代理模式
 3. 作用：比如 Vue 中拦截、平时预警、上报、扩展功能、统计、增强对象...
-4. 语法：new Proxy(target[被代理对象],handler[对代理对象进行的操作])
+4. 语法：new Proxy（target[被代理对象],handler[对代理对象进行的操作]）
 
-### Reflect:反射
+### Reflect：反射
 
 1. 类似 fn.call()、fn.apply()
-2. Reflect.apply(fn[调用的函数],this[this 指向],args[参数数组])
+2. Reflect.apply（fn[调用的函数],this[this 指向],args[参数数组]）
 3. Object.xxx 语言内部方法未来将逐渐放到 Reflect 对象身上，未来将通过 Reflect 对象身上直接拿到语言内部的方法
 
 ```javascript
