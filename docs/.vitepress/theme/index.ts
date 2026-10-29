@@ -5,8 +5,8 @@ import XmindViewer from './components/XmindViewer.vue'
 // 自定义样式重载
 import './style.scss'
 
-// 自定义主题色
-// import './user-theme.css'
+// 自定义主题色与正文样式重载（浅色/深色两套配色）
+import './user-theme.scss'
 
 export default {
   ...BlogTheme,

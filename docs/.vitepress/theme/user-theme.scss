@@ -1,0 +1,206 @@
+/* ------------------------------------------------------------------
+ * 文章正文样式重载
+ * 变量清单：https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ *
+ * 浅色配色参考 vitesse-light，深色配色参考 vitesse-dark
+ * https://github.com/antfu/prism-theme-vars/tree/master/themes
+ *
+ * 所有色值都以 --vp-c-brand-1 为基底少量混色，切换 blog-theme.ts 的
+ * themeColor 时整套配色跟随变化；每项先写纯色兜底，再由 color-mix
+ * 覆盖，不支持 color-mix 的浏览器自动降级为兜底色。
+ * 对比度（light 于白底 / dark 于 #1b1b1f）均 ≥ 4.5:1。
+ *
+ * 主题色已在下方覆盖为可读的深蓝（见「主题色」段），因此
+ * brand-1 / brand-2 可直接作正文链接与 hover 色；brand-3 只作
+ * 实心按钮底色（配白字），不要再拿来当文字色或细图形色。
+ * ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------
+ * 主题色：覆盖 @sugarat/theme 的 el-blue 映射
+ *
+ * el-blue 的色阶是为按钮设计的，直接当主题色偏亮：
+ *   brand-1 #409eff 白底仅 2.78:1，brand-3 #a0cfff 配白字仅 1.6:1。
+ * 这里保持同一色相（约 211°），压深并降低饱和度一档。
+ * 正文标题的彩虹层次仍由下方 color-mix 跟随 brand-1 派生。
+ *
+ * :root:root 用于压过 html[theme="el-blue"] 的 (0,1,1) 权重。
+ * ------------------------------------------------------------------ */
+:root:root {
+  --vp-c-brand-1: #2b70b3; /* 白底 5.16:1 —— 链接、导航激活项 */
+  --vp-c-brand-2: #1f5f9c; /* 白底 6.61:1 —— hover 加深 */
+  --vp-c-brand-3: #3d86cc; /* 实心按钮底，白字 3.83:1 */
+  --vp-c-brand-soft: #e8f1fa;
+}
+
+html.dark:root {
+  --vp-c-brand-1: #6aaee6; /* #1b1b1f 上 7.20:1 */
+  --vp-c-brand-2: #9ccdff; /* 10.29:1 —— hover 提亮 */
+  --vp-c-brand-3: #2b70b3; /* 白字 5.16:1 */
+  --vp-c-brand-soft: #182231; /* 深一档，保证表头 h2 在其上仍有 4.67:1 */
+}
+
+.vp-doc {
+  /* 标题：h1 品牌蓝 → h2 青绿 → h3 紫 → h4 橙 → h5 玫红 → h6 灰 */
+  --doc-h1: #2968a7;
+  --doc-h1: color-mix(in oklab, var(--vp-c-brand-1) 92%, #0f172a);
+  --doc-h2: #1c6d59;
+  --doc-h2: color-mix(in oklab, var(--vp-c-brand-1) 15%, #1c6b48);
+  --doc-h3: #664dbe;
+  --doc-h3: color-mix(in oklab, var(--vp-c-brand-1) 20%, #6f42c1);
+  --doc-h4: #965a37;
+  --doc-h4: color-mix(in oklab, var(--vp-c-brand-1) 8%, #9c5626);
+  --doc-h5: #915374;
+  --doc-h5: color-mix(in oklab, var(--vp-c-brand-1) 15%, #9c4a68);
+  --doc-h6: #5b6d84;
+  --doc-h6: color-mix(in oklab, var(--vp-c-brand-1) 10%, #5f6c7f);
+
+  /* 行内元素 */
+  --doc-strong: #2866a3;
+  --doc-strong: color-mix(in oklab, var(--vp-c-brand-1) 90%, #0b1220);
+  --doc-em: #1f7384;
+  --doc-em: color-mix(in oklab, var(--vp-c-brand-1) 15%, #1e737b);
+  --doc-code: #96503f; /* vitesse string 加深，原本 #a85b4b 仅 4.56:1 */
+  --doc-mark: #f7e2a1;
+  --doc-del-line: #ab5959;
+
+  /* 链接：主题色已压深到 5.16:1，直接复用品牌色，跟随 themeColor 联动 */
+  --doc-link: #2b70b3;
+  --doc-link: var(--vp-c-brand-1);
+  --doc-link-hover: #1f5f9c;
+  --doc-link-hover: var(--vp-c-brand-2);
+
+  /* 引用块（brand-soft 本身已随深色模式切换，无需单独覆盖） */
+  /* 边框改用链接色：brand-3 在深色下仅 2.36:1，几乎不可见 */
+  --doc-quote-border: var(--doc-link);
+  --doc-quote-bg: transparent;
+  --doc-quote-bg: color-mix(in oklab, var(--vp-c-brand-soft) 60%, transparent);
+
+  /* 行内代码使用独立色，与正文链接区分 */
+  --vp-code-color: var(--doc-code);
+}
+
+/* 深色方案（vitesse-dark） */
+html.dark .vp-doc {
+  --doc-h1: #81baea;
+  --doc-h1: color-mix(in oklab, var(--vp-c-brand-1) 85%, #ffffff);
+  --doc-h2: #519786;
+  --doc-h2: color-mix(in oklab, var(--vp-c-brand-1) 15%, #4d9375);
+  --doc-h3: #aa97ef;
+  --doc-h3: color-mix(in oklab, var(--vp-c-brand-1) 15%, #b392f0);
+  --doc-h4: #d6a779;
+  --doc-h4: color-mix(in oklab, var(--vp-c-brand-1) 10%, #e0a569);
+  --doc-h5: #d28da2;
+  --doc-h5: color-mix(in oklab, var(--vp-c-brand-1) 10%, #db889a);
+  --doc-h6: #96a2ad;
+  --doc-h6: color-mix(in oklab, var(--vp-c-brand-1) 10%, #9aa0a6);
+
+  --doc-strong: #bddbf5;
+  --doc-strong: color-mix(in oklab, var(--vp-c-brand-1) 45%, #ffffff);
+  --doc-em: #489c96;
+  --doc-em: color-mix(in oklab, var(--vp-c-brand-1) 15%, #429988);
+  --doc-code: #d48372;
+  --doc-mark: rgba(247, 226, 161, 0.25);
+  --doc-del-line: #d48372;
+
+  /* --doc-link / --doc-link-hover 已在浅色区定义为 brand-1 / brand-2，
+     两者本身随深色模式切换，无需重复覆盖 */
+
+  /* 深色下 brand-soft 偏暗，提高一点不透明度保证可见 */
+  --doc-quote-bg: color-mix(in oklab, var(--vp-c-brand-soft) 80%, transparent);
+}
+
+/* ---------- 标题 ---------- */
+.vp-doc h1 {
+  color: var(--doc-h1);
+}
+.vp-doc h2 {
+  color: var(--doc-h2);
+  /* 仅换分隔线颜色，保留 VitePress 原有粗细与间距 */
+  border-top-color: var(--vp-c-divider);
+  border-top-color: color-mix(in oklab, var(--doc-h2) 30%, var(--vp-c-divider));
+}
+.vp-doc h3 {
+  color: var(--doc-h3);
+}
+.vp-doc h4 {
+  color: var(--doc-h4);
+}
+.vp-doc h5 {
+  color: var(--doc-h5);
+}
+.vp-doc h6 {
+  color: var(--doc-h6);
+}
+
+/* 锚点跟随标题自身颜色 */
+.vp-doc .header-anchor {
+  color: inherit;
+}
+
+/* ---------- 行内元素 ---------- */
+/* 链接：下划线与悬停底色 */
+.vp-doc a:not(.header-anchor) {
+  color: var(--doc-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  padding: 0 2px;
+  margin: 0 -2px;
+  border-radius: 3px;
+}
+.vp-doc a:not(.header-anchor):hover {
+  /* 悬停加深（浅色）/ 提亮（深色），不再回落到 brand-1 */
+  color: var(--doc-link-hover);
+  background-color: var(--vp-c-brand-soft);
+  text-decoration-style: solid;
+}
+
+.vp-doc strong {
+  color: var(--doc-strong);
+}
+.vp-doc em {
+  color: var(--doc-em);
+}
+.vp-doc del {
+  color: var(--vp-c-text-2);
+  text-decoration-color: var(--doc-del-line);
+}
+.vp-doc mark {
+  padding: 0 3px;
+  border-radius: 3px;
+  color: inherit;
+  background-color: rgba(247, 226, 161, 0.9);
+  background-color: color-mix(in oklab, var(--doc-mark) 90%, transparent);
+}
+
+/* ---------- 块级元素 ---------- */
+.vp-doc blockquote {
+  margin: 20px 0;
+  padding: 2px 16px;
+  border-left: 3px solid var(--doc-quote-border);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--doc-quote-bg);
+}
+
+.vp-doc hr {
+  height: 1px;
+  border: none;
+  background: linear-gradient(90deg, var(--vp-c-brand-3), transparent 70%);
+}
+
+/* 列表符号：brand-2 浅色仅 2.02:1 / 深色 3.57:1，改用链接色 */
+.vp-doc ul > li::marker,
+.vp-doc ol > li::marker {
+  color: var(--doc-link);
+  font-weight: 600;
+}
+
+/* 表格表头着色 */
+.vp-doc th {
+  color: var(--doc-h2);
+  background-color: var(--vp-c-brand-soft);
+}
+
+/* 折叠块标题 */
+.vp-doc summary {
+  color: var(--vp-c-brand-1);
+}
