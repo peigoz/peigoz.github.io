@@ -41,7 +41,7 @@ export default defineConfig({
     ['script', { charset: 'utf-8', src: '/js/disable-user-zoom.js' }], // 移动端,禁止用户缩放,引入你写的js
   ],
   sitemap: {
-    hostname: 'https://peigo.top',
+    hostname: 'https://peigoz.cn',
   },
   // vitepress-plugin-llms: 构建时生成 llms.txt / llms-full.txt,供 LLM 高效读取站点内容
   vite: {
