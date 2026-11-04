@@ -37,7 +37,7 @@ export default defineConfig({
       },
     ],
     // 百度sitemap
-    ['meta', { name: 'baidu-site-verification', content: 'codeva-5MOIXPOEYQ' }],
+    [ 'meta', {name: 'baidu-site-verification', content: 'codeva-6sNx91wnES'} ],
     ['script', { charset: 'utf-8', src: '/js/disable-user-zoom.js' }], // 移动端,禁止用户缩放,引入你写的js
   ],
   sitemap: {
