@@ -36,8 +36,10 @@ export default defineConfig({
           'width=device-width,width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no',
       },
     ],
-    // 百度sitemap
+    // 百度 sitemap
     [ 'meta', {name: 'baidu-site-verification', content: 'codeva-6sNx91wnES'} ],
+    // 必应 sitemap
+    [ 'meta', {name: 'msvalidate.01', content: '4B1EB3F2DD17ED61B1C728C09A1FBD06'} ],
     ['script', { charset: 'utf-8', src: '/js/disable-user-zoom.js' }], // 移动端,禁止用户缩放,引入你写的js
   ],
   sitemap: {
