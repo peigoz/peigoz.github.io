@@ -9,18 +9,21 @@ publish: true
 
 ## 模型信息
 
-- 意图检测模型：jev（闭源）、laya（开源）
 - 国外主流通用模型：Gemini、Claude、ChatGPT、Grok
-- 国内主流通用模型：DeepSeek、Qwen、GLM、Kimi、Hy4、MiniMax、Mimo、Seed、
+- 国内主流通用模型：DeepSeek、Qwen、GLM、Kimi、Hy4、MiniMax、Mimo、Seed
+- 意图检测模型：Jev、Laya、Kev、SetFit
+- 文字提取模型：Gliner、OpenLID（语言识别）
 - 向量模型：bge-m3、 qwen3-embedding:0.6b、nomic-embed-text（非中文）、gte-large-zh、bge-large-zh-v1.5、m3e-base、tao8k
-- Rag 重排小模型： Electra 、Voyage、Cohere
+- Rag 重排小模型： Electra 、Voyage、Cohere、Jina Reranker
 - 文档解析模型：OXR
+- 语音识别：Azure、SenseVoiceSmall
+- 语音合成：F5-TTS、火山引擎
+- 图像类：Real-ESRGAN、LaMa
+- 时序类：Chronos-Bolt（销量流量预测）
+- 视觉合成：Kimi 视觉模型、 字节即梦 AI
 - 本地可以用 ollama，企业部署一般使用 vllm。
 - 工作流： dify、coze、n8n 等智能体工作流平台
 - AI 绘图领域：Stable Diffusion、 Black Forest Labs 团队的 FLUX 、智谱清言的 CogView 模型以及快手的可灵 AI
-- 语音合成：火山引擎
-- 视觉合成：Kimi 视觉模型、 字节即梦 AI
-- 语音识别：Azure
 - 海外文件存储和 CDN：Bunny.net
 - 模型社区：[hugginFace](https://huggingface.co/models?sort=trending)、[modelscope](https://www.modelscope.ai/models)
 - 个人本地部署模型：Bonsai
