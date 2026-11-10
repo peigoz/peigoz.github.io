@@ -62,3 +62,7 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 
 - Agent 全链路检测方案：LangSmith、LangFuse、OpenTelemetry.
 ![Agent全链路检测方案](https://blog.peigo.top/peigo/2026-09-19-19-01-41.png)
+
+## 知识库方案
+
+AgentRAG（传统方式解决多跳） VS LLMWiKi（提前编译知识库解决多跳） VS SAG2（关键词检索，多跳）
