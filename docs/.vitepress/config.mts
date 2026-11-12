@@ -38,6 +38,8 @@ export default defineConfig({
     ],
     // 百度 sitemap
     [ 'meta', {name: 'baidu-site-verification', content: 'codeva-6sNx91wnES'} ],
+    // 搜狗 sitemap
+    [ 'meta', {name: 'sogou_site_verification', content: '7a7hhbJpbn'} ],
     // 必应 sitemap
     [ 'meta', {name: 'msvalidate.01', content: '4B1EB3F2DD17ED61B1C728C09A1FBD06'} ],
     ['script', { charset: 'utf-8', src: '/js/disable-user-zoom.js' }], // 移动端,禁止用户缩放,引入你写的js
