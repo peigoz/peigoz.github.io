@@ -11,4 +11,4 @@ top: 1
 ## 内容
 
 学习 Agent 开发的思维导图，帮助理解 Agent 的开发流程和关键概念。**点击图片**查看 PDF 详情。
-[![Agent 开发思维导图](https://blog.peigo.top/peigo/2026-08-29-01-14-10.png)](https://blog.peigo.top/peigo/agent.pdf)
+[![Agent 开发思维导图](https://blog.peigoz.cn/peigo/2026-08-29-01-14-10.png)](https://blog.peigoz.cn/peigo/agent.pdf)

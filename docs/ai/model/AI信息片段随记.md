@@ -31,7 +31,7 @@ publish: true
 ## 中文向量模型
 
 TOP@n 表示前 n 个结果中相关检索的正确性：  
-![中文向量模型对比](https://blog.peigo.top/peigo/2025-08-19-23-49-01.png)
+![中文向量模型对比](https://blog.peigoz.cn/peigo/2025-08-19-23-49-01.png)
 
 ## 常用 API 服务
 
@@ -61,7 +61,7 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 ## 相关框架
 
 - Agent 全链路检测方案：LangSmith、LangFuse、OpenTelemetry.
-![Agent全链路检测方案](https://blog.peigo.top/peigo/2026-09-19-19-01-41.png)
+![Agent全链路检测方案](https://blog.peigoz.cn/peigo/2026-09-19-19-01-41.png)
 
 ## 知识库方案
 

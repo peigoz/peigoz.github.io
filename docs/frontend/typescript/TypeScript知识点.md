@@ -809,12 +809,12 @@ publish: true
    function logClass(params: string) {
      return function(target: any) {
        console.log(target)
-       console.log(params) //http://www.peigo.top
+       console.log(params) //http://www.peigoz.cn
        target.prototype.apiUrl = params
      }
    }
    //调用装饰器工厂(可传参),表示把 hello 赋值给 params，把当前类赋值给 target
-   @logClass('http://www.peigo.top')
+   @logClass('http://www.peigoz.cn')
    class HttpClient {
      constructor() {}
      getData() {}
@@ -835,7 +835,7 @@ publish: true
      }
    }
 
-   @logClass('http://www.peigo.top')
+   @logClass('http://www.peigoz.cn')
    class HttpClient {
      public apiUrl: string | undefined
      constructor() {
@@ -866,16 +866,16 @@ publish: true
    //属性装饰器
    function logProperty(params: any) {
      return function(target: any, attr: any) {
-       console.log(params) //http://www.peigo.top
+       console.log(params) //http://www.peigoz.cn
        console.log(target)
        console.log(attr) //url
-       target[attr] = params //将 url 的值从 xxxx 修改为http://www.peigo.top
+       target[attr] = params //将 url 的值从 xxxx 修改为http://www.peigoz.cn
      }
    }
    //调用装饰器工厂(可传参),表示把 hello 赋值给 params，把当前类赋值给 target
    @logClass('xxxx')
    class HttpClient {
-     @logProperty('http://www.peigo.top') //属性装饰器装饰 url，后面不需要加分号
+     @logProperty('http://www.peigoz.cn') //属性装饰器装饰 url，后面不需要加分号
      public url: any | undefined
      constructor() {}
      getData() {
@@ -883,7 +883,7 @@ publish: true
      }
    }
    const http = new HttpClient()
-   http.getData() //http://www.peigo.top
+   http.getData() //http://www.peigoz.cn
    ```
 
 4. 方法装饰器
@@ -921,7 +921,7 @@ publish: true
    class HttpClient {
      public url: any | undefined
      constructor() {}
-     @logMethod('http://www.peigo.top')
+     @logMethod('http://www.peigoz.cn')
      getData() {
        console.log(this.url)
      }

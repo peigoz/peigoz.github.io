@@ -4,7 +4,7 @@ layout: home
 blog:
  name: '别来无恙'
  author: '别来无恙'
- logo: https://blog.peigo.top/peigo/avatar.jpg
+ logo: https://blog.peigoz.cn/peigo/avatar.jpg
  motto: 每天更新自己，慢慢理解世界
  # inspiring:
  # - 迷茫时读书，忙碌时运动，独处时思考。
@@ -15,6 +15,6 @@ blog:
  buttonAfterArticle:
   openTitle: 投币
   closeTitle: 下次一定
-  content: '<img src="https://blog.peigo.top/peigo/qrcode-wechat.png">'
+  content: '<img src="https://blog.peigoz.cn/peigo/qrcode-wechat.png">'
   icon: wechatPay 
 ---

@@ -6,7 +6,7 @@
 
 **peigoz-blog**（别来无恙）是基于 VitePress 与 `@sugarat/theme` 的个人技术博客，用于沉淀前端、工程、Rust、AI 等领域的学习笔记与面试总结。内容以 Markdown 文章为主体，通过 GitHub Actions 自动构建并部署到 GitHub Pages。
 
-- 站点：<https://peigo.top>
+- 站点：<https://peigoz.cn>
 - 源码仓库：<https://github.com/peigoz/peigoz>
 - 作者：peigoz（别来无恙）
 - 核心价值：低成本维护、目录即结构、纯 Markdown 写作。
