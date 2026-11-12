@@ -14,7 +14,6 @@ hidden: true
 
 - 学习 AI Agent
 - 学习 Rust
-- 补充后端知识
 - 找工作中...
 
 ## 📖阅读进行时
