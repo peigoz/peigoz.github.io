@@ -14,7 +14,7 @@ publish: true
 - 意图检测模型：Jev、Laya、Kev、SetFit
 - 文字提取模型：Gliner、OpenLID（语言识别）
 - 向量模型：bge-m3、 qwen3-embedding:0.6b、nomic-embed-text（非中文）、gte-large-zh、bge-large-zh-v1.5、m3e-base、tao8k
-- Rag 重排小模型： Electra 、Voyage、Cohere、Jina Reranker
+- Rag 重排小模型： 基于 Electra 架构的模型 、Voyage、Cohere、Jina Reranker
 - 文档解析模型：OXR
 - 语音识别：Azure、SenseVoiceSmall
 - 语音合成：F5-TTS、火山引擎
