@@ -65,4 +65,4 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 
 ## 知识库方案
 
-AgentRAG（传统方式解决多跳） VS LLMWiKi（提前编译知识库解决多跳） VS SAG2（关键词检索，多跳）VS GraphRAG(知识图谱)
+AgentRAG（传统方式解决多跳） VS LLMWiKi（提前编译知识库解决多跳） VS GraphRAG(知识图谱) VS SAG2（关键词检索，多跳）
