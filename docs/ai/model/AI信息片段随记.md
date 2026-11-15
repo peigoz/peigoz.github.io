@@ -52,7 +52,7 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 
 - 图数据库：Neo4j
 - 向量数据库：Milvus
-- 关系型数据库：Mysql、PostgreSql
+- 关系型数据库：Mysql、PostgreSql(支持向量检索)
 - 全文检索数据库：ElasticSearch
 - 缓存中间件：Redis
 - 对象存储： Minio、RustFS
