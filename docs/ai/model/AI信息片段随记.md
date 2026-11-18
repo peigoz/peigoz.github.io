@@ -55,13 +55,14 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 - 关系型数据库：Mysql、PostgreSql(支持向量检索)
 - 全文检索数据库：ElasticSearch
 - 缓存中间件：Redis
-- 对象存储： Minio、RustFS
+- 对象存储： Minio、RustFS、云OSS服务
 - 消息队列：RabbitMQ
 
 ## 相关框架
 
 - Agent 全链路检测方案：LangSmith、LangFuse、OpenTelemetry.
 ![Agent全链路检测方案](https://blog.peigoz.cn/peigo/2026-09-19-19-01-41.png)
+- Agent长期记忆方案：Mem0、Claude-mem
 
 ## 知识库方案
 
