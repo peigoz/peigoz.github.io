@@ -35,18 +35,16 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 
 ## 常用 API 服务
 
-- Flux：[https://api.us1.bfl.ai/](https://api.us1.bfl.ai/)  
-- 可灵：[https://klingai.kuaishou.com/](https://klingai.kuaishou.com/)  
-- Kimi：[https://platform.moonshot.cn/](https://platform.moonshot.cn/)
-- Azure：[https://portal.azure.com](https://portal.azure.com/#home)  
-- Coze: [https://www.coze.cn/](https://www.coze.cn/)  
-- Bunny：[https://bunny.net/](https://bunny.net/)
+
+- Azure：[https://portal.azure.com](https://portal.azure.com/#home) —— 微软云服务平台，常用来申请 Azure OpenAI 等模型 API 资源
+- Bunny：[https://bunny.net/](https://bunny.net/) —— 海外文件存储与 CDN 服务，适合放图片、静态资源
+- MinerU：[https://mineru.net/](https://mineru.net/) —— 文档解析服务，把 PDF 等文件转成可检索的 Markdown 文本
 
 ### WebSeach API 服务
 
-- Serper：[serper.dev](https://serper.dev/)  
-- Tavily：[tavily.com](https://tavily.com/)
-- 博查：[open.bochaai.com](https://open.bochaai.com/)
+- Serper：[serper.dev](https://serper.dev/) —— Google 搜索 API，把搜索结果以结构化数据返回给程序
+- Tavily：[tavily.com](https://tavily.com/) —— 面向 LLM / Agent 的搜索 API，返回适合喂给模型的网页摘要
+- 博查：[open.bochaai.com](https://open.bochaai.com/) —— 国内搜索 API，为大模型和 RAG 应用提供中文网页检索结果
 
 ## 常用业务组件
 
@@ -67,3 +65,7 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 ## 知识库方案
 
 AgentRAG（传统方式解决多跳） VS LLMWiKi（提前编译知识库解决多跳） VS GraphRAG(知识图谱) VS SAG2（关键词检索，多跳）
+
+### 指标评估
+
+![RAG指标评估](https://blog.peigoz.cn/peigo/2026-11-19-19-11-06.png)
