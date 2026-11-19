@@ -66,6 +66,9 @@ TOP@n 表示前 n 个结果中相关检索的正确性：
 
 AgentRAG（传统方式解决多跳） VS LLMWiKi（提前编译知识库解决多跳） VS GraphRAG(知识图谱) VS SAG2（关键词检索，多跳）
 
+传统方式检索路径：
+- 路径：问题重写 （可选）=> 关键词BM25 + 向量化检索 => RRF 加权融合 + Rerank 重排 
+- 强专业领域： 可加上HyDE假设文档检索
 ### 指标评估
 
 ![RAG指标评估](https://blog.peigoz.cn/peigo/2026-11-19-19-11-06.png)
