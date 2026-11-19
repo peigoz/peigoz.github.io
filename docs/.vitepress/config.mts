@@ -50,6 +50,9 @@ export default defineConfig({
   // vitepress-plugin-llms: 构建时生成 llms.txt / llms-full.txt,供 LLM 高效读取站点内容
   vite: {
     plugins: [llmstxt()],
+    server:{
+      allowedHosts: [".peigoz.cn"]
+    }
   },
   themeConfig: {
     // 展示 2,3 级标题在目录中

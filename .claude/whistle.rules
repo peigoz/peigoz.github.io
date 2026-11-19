@@ -1,0 +1,9 @@
+# peigoz-blog 本地调试
+# 1. w2 start（默认代理端口 8899）
+# 2. 浏览器代理指向 127.0.0.1:8899
+# 3. 把本文件导入 whistle Rules 并启用
+# 4. 访问 http://local.peigoz.cn:5173
+# 只用 http：https 需要额外安装 whistle 根证书。
+
+# 让页面 Referer 命中七牛云防盗链白名单 *.peigoz.cn
+local.peigoz.cn:5173 [::1]:5173

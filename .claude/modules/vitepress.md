@@ -36,6 +36,14 @@ docs/.vitepress/
 - **llmstxt 插件**：`config.mts` 的 `vite.plugins` 引入 `vitepress-plugin-llms`，构建时产出 `llms.txt` / `llms-full.txt`。
 - **移动端缩放禁用**：`head` 中覆盖 viewport 并引入 `/js/disable-user-zoom.js`。
 
+## 站点信息与本地资源调试
+
+- **站点**：<https://peigoz.cn>，`sitemap.hostname` 配在 `config.mts`。静态资源（图床）托管在七牛云 CDN，域名 `https://blog.peigoz.cn`，项目前缀 `peigo`。
+- **资源引用**：`configs/constants.ts` 的 `BLOG_ASSET_BASE = 'https://blog.peigoz.cn/peigo'` 统一管理配置内的引用（`config.mts` 的 logo、`blog-theme.ts` 的赞赏二维码）；`docs/index.md` frontmatter 与文章正文插图仍是字面量 URL，换域名时需全局替换。
+- **防盗链**：七牛云只放行 Referer 命中 `*.peigoz.cn` 的请求。本地用 `http://localhost:5173` 调试时 Referer 不匹配，图片会 403。
+- **本地调试**：用 whistle（规则见 [`../../whistle.rules`](../../whistle.rules)）把 `local.peigoz.cn:5173` 转发到 `[::1]:5173`（本机 IPv6 回环；Vite 只监听 IPv4 时改成 `127.0.0.1:5173`）；页面 Referer 变成 `http://local.peigoz.cn:5173/`，命中白名单。`config.mts` 的 `vite.server.allowedHosts` 已包含 `.peigoz.cn`，否则 Vite 会拒绝该 Host。
+- **步骤**：`w2 start` → 浏览器代理指向 `127.0.0.1:8899` → 导入规则文件 → 访问 `http://local.peigoz.cn:5173`。走 http 即可，https 还需安装 whistle 根证书。
+
 ## 常见改动
 
 | 想改什么 | 改哪里 |

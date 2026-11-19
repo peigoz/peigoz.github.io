@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------------
+ * 淡蓝 · 柔和六色相主题（覆盖 user-theme.scss 的配色变量）
+ *
+ * 搭配逻辑：以淡蓝（约 205°）为锚点，标题保持「蓝 → 青绿 → 紫 →
+ * 橙 → 玫红 → 灰」的六色相层级。h1/h2 走蓝的邻近冷色（208°/176°），
+ * h3 紫是蓝的邻色，h4/h5 用低饱和的互补暖色（31°/335°）作分组提示，
+ * h6 中性灰收尾 —— 冷色主导、暖色只占小面积，整体不刺眼。
+ * 相邻层级色相差 32°/76°/139°/56°，h2 与 h3 不再撞色。
+ *
+ * 「不鲜艳」靠两条约束落实：饱和度压到浅色 14%~55%、深色 15%~56%，
+ * 明度统一在浅色 L 31%~48% / 深色 L 66%~83%，层级靠色相区分而非
+ * 某一级突然变亮变纯。
+ *
+ * 每项先写纯色兜底，再写 color-mix 让配色跟随 brand-1 微调 4%；
+ * 不支持 color-mix 的浏览器自动降级为兜底色。所有文字色按实测底色
+ * （浅 #FFFFFF / soft #e6f2fd / 深 #1b1b1f）验算 ≥4.5:1。
+ * ------------------------------------------------------------------ */
+
+:root:root {
+  --vp-c-brand-1: #35719f; /* 白底 5.23:1 —— 链接、导航激活项 */
+  --vp-c-brand-2: #28577e; /* 7.62:1 —— hover 加深 */
+  --vp-c-brand-3: #35719f; /* 实心按钮底，白字 5.23:1 */
+  --vp-c-brand-soft: #e6f2fd; /* 淡蓝落在色块上：表头、引用块、hover */
+}
+
+html.dark:root {
+  --vp-c-brand-1: #a8d2f5; /* #1b1b1f 上 10.79:1 —— 真正的淡蓝 */
+  --vp-c-brand-2: #cfe9fd; /* 13.68:1 —— hover 提亮 */
+  --vp-c-brand-3: #35719f; /* 白字 5.23:1 */
+  --vp-c-brand-soft: #14263a;
+}
+
+.vp-doc {
+  /* 标题：蓝 → 青绿 → 紫 → 橙 → 玫红 → 灰 */
+  --doc-h1: #2a5f8f;
+  --doc-h1: color-mix(in oklab, var(--vp-c-brand-1) 4%, #2a5f8f);
+  --doc-h2: #2d7069;
+  --doc-h2: color-mix(in oklab, var(--vp-c-brand-1) 4%, #2d7069);
+  --doc-h3: #6554a0;
+  --doc-h3: color-mix(in oklab, var(--vp-c-brand-1) 4%, #6554a0);
+  --doc-h4: #8f622f;
+  --doc-h4: color-mix(in oklab, var(--vp-c-brand-1) 4%, #8f622f);
+  --doc-h5: #8f5069;
+  --doc-h5: color-mix(in oklab, var(--vp-c-brand-1) 4%, #8f5069);
+  --doc-h6: #5c6876;
+  --doc-h6: color-mix(in oklab, var(--vp-c-brand-1) 4%, #5c6876);
+
+  /* 行内元素：沿用标题色相，避免正文里冒出第三种颜色 */
+  --doc-strong: #2a5f8f;
+  --doc-strong: color-mix(in oklab, var(--vp-c-brand-1) 4%, #2a5f8f);
+  --doc-em: #2d7069;
+  --doc-em: color-mix(in oklab, var(--vp-c-brand-1) 4%, #2d7069);
+  --doc-code: #8a5b3a;
+  --doc-code: color-mix(in oklab, var(--vp-c-brand-1) 4%, #8a5b3a);
+  --doc-mark: #f7e2a1;
+  --doc-del-line: #8a4a63;
+  --doc-del-line: color-mix(in oklab, var(--vp-c-brand-1) 4%, #8a4a63);
+
+  --doc-link: #35719f;
+  --doc-link: var(--vp-c-brand-1);
+  --doc-link-hover: #28577e;
+  --doc-link-hover: var(--vp-c-brand-2);
+
+  --doc-quote-border: var(--doc-link);
+  --doc-quote-bg: transparent;
+  --doc-quote-bg: color-mix(in oklab, var(--vp-c-brand-soft) 60%, transparent);
+
+  --vp-code-color: var(--doc-code);
+}
+
+html.dark .vp-doc {
+  --doc-h1: #93bde0;
+  --doc-h1: color-mix(in oklab, var(--vp-c-brand-1) 4%, #93bde0);
+  --doc-h2: #8ac4b8;
+  --doc-h2: color-mix(in oklab, var(--vp-c-brand-1) 4%, #8ac4b8);
+  --doc-h3: #ada2d4;
+  --doc-h3: color-mix(in oklab, var(--vp-c-brand-1) 4%, #ada2d4);
+  --doc-h4: #d7b287;
+  --doc-h4: color-mix(in oklab, var(--vp-c-brand-1) 4%, #d7b287);
+  --doc-h5: #cfa6bb;
+  --doc-h5: color-mix(in oklab, var(--vp-c-brand-1) 4%, #cfa6bb);
+  --doc-h6: #9fa9b6;
+  --doc-h6: color-mix(in oklab, var(--vp-c-brand-1) 4%, #9fa9b6);
+
+  --doc-strong: #b8d4ee;
+  --doc-strong: color-mix(in oklab, var(--vp-c-brand-1) 4%, #b8d4ee);
+  --doc-em: #8ac4b8;
+  --doc-em: color-mix(in oklab, var(--vp-c-brand-1) 4%, #8ac4b8);
+  --doc-code: #d8a487;
+  --doc-code: color-mix(in oklab, var(--vp-c-brand-1) 4%, #d8a487);
+  --doc-mark: rgba(247, 226, 161, 0.25);
+  --doc-del-line: #d093ae;
+  --doc-del-line: color-mix(in oklab, var(--vp-c-brand-1) 4%, #d093ae);
+
+  /* brand-soft 深色下偏暗，提高不透明度保证可见 */
+  --doc-quote-bg: color-mix(in oklab, var(--vp-c-brand-soft) 80%, transparent);
+}
+
+/* 标题里的 **加粗** 跟随标题本身的颜色，否则会被 strong 的品牌色撕开 */
+.vp-doc :is(h1, h2, h3, h4, h5, h6) strong {
+  color: inherit;
+}
