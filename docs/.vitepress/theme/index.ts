@@ -6,7 +6,7 @@ import XmindViewer from './components/XmindViewer.vue'
 import './style.scss'
 
 // 自定义主题色与正文样式重载（浅色/深色两套配色）
-import './user-theme.scss'
+// import './user-theme.scss'
 
 // 淡蓝柔和主题：后引入覆盖 user-theme.scss 的 CSS 变量；注释掉即回到原深蓝主题
 import './rainbow-azure.scss'
