@@ -20,7 +20,7 @@ publish: true
 - 语音合成：F5-TTS、火山引擎
 - 图像类：Real-ESRGAN、LaMa
 - 时序类：Chronos-Bolt（销量流量预测）
-- 视觉合成：Kimi 视觉模型、 字节即梦 AI
+- 视频合成模型：Seedance、Kling、Magi-2、MiniMax、Wan等
 - 本地可以用 ollama，企业部署一般使用 vllm。
 - 工作流： dify、coze、n8n 等智能体工作流平台
 - AI 绘图领域：Stable Diffusion、 Black Forest Labs 团队的 FLUX 、智谱清言的 CogView 模型以及快手的可灵 AI
